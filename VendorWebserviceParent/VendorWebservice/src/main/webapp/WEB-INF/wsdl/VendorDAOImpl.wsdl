@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://impl.ws.sims.apria.com" xmlns:impl="http://impl.ws.sims.apria.com" xmlns:intf="http://impl.ws.sims.apria.com" xmlns:tns2="http://logger.ws.sims.apria.com" xmlns:tns3="http://bean.ws.sims.apria.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema targetNamespace="http://impl.ws.sims.apria.com" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns3="http://bean.ws.sims.apria.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://bean.ws.sims.apria.com"/>
+   <element name="searchVendorNameResponse">
+    <complexType>
+     <sequence>
+      <element name="searchVendorNameReturn" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchVendor">
+    <complexType>
+     <sequence>
+      <element name="vendorNameVendor" nillable="true" type="xsd:string"/>
+      <element name="srcvndrcd" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchVendorResponse">
+    <complexType>
+     <sequence>
+      <element name="searchVendorReturn" nillable="true" type="impl:ArrayOf_tns3_nillable_VendorBean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchVendorName">
+    <complexType>
+     <sequence>
+      <element name="vendorNameVendor" nillable="true" type="xsd:string"/>
+      <element name="srcvndrcd" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_tns3_nillable_VendorBean">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="VendorBean" nillable="true" type="tns3:VendorBean"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema targetNamespace="http://logger.ws.sims.apria.com" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <complexType name="WSFaultType">
+    <sequence>
+     <element name="message" nillable="true" type="xsd:string"/>
+     <element name="type" nillable="true" type="xsd:string"/>
+     <element name="code" nillable="true" type="xsd:string"/>
+     <element name="severity" nillable="true" type="xsd:string"/>
+     <element name="state" nillable="true" type="xsd:string"/>
+     <element name="exceptionState" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="WSFaultType" nillable="true" type="tns2:WSFaultType"/>
+  </schema>
+  <schema targetNamespace="http://bean.ws.sims.apria.com" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <complexType name="VendorBean">
+    <sequence>
+     <element name="srcvndrcd" nillable="true" type="xsd:string"/>
+     <element name="vendorNameVendor" nillable="true" type="xsd:string"/>
+     <element name="vndrsk" type="xsd:int"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="WSFaultType">
+     <wsdl:part element="tns2:WSFaultType" name="fault"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="searchVendorResponse">
+     <wsdl:part element="impl:searchVendorResponse" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="searchVendorNameRequest">
+     <wsdl:part element="impl:searchVendorName" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="searchVendorRequest">
+     <wsdl:part element="impl:searchVendor" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="searchVendorNameResponse">
+     <wsdl:part element="impl:searchVendorNameResponse" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:portType name="VendorDAOImpl">
+     <wsdl:operation name="searchVendorName">
+       <wsdl:input message="impl:searchVendorNameRequest" name="searchVendorNameRequest"/>
+
+       <wsdl:output message="impl:searchVendorNameResponse" name="searchVendorNameResponse"/>
+
+       <wsdl:fault message="impl:WSFaultType" name="WSFaultType"/>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="searchVendor">
+       <wsdl:input message="impl:searchVendorRequest" name="searchVendorRequest"/>
+
+       <wsdl:output message="impl:searchVendorResponse" name="searchVendorResponse"/>
+
+       <wsdl:fault message="impl:WSFaultType" name="WSFaultType"/>
+
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+   <wsdl:binding name="VendorDAOImplSoapBinding" type="impl:VendorDAOImpl">
+ <wsaw:UsingAddressing wsdl:required="false" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+
+     <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+     <wsdl:operation name="searchVendorName">
+       <wsdlsoap:operation soapAction="searchVendorName"/>
+
+       <wsdl:input name="searchVendorNameRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="searchVendorNameResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+       <wsdl:fault name="WSFaultType">
+         <wsdlsoap:fault name="WSFaultType" use="literal"/>
+
+      </wsdl:fault>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="searchVendor">
+       <wsdlsoap:operation soapAction="searchVendor"/>
+
+       <wsdl:input name="searchVendorRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="searchVendorResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+       <wsdl:fault name="WSFaultType">
+         <wsdlsoap:fault name="WSFaultType" use="literal"/>
+
+      </wsdl:fault>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+   <wsdl:service name="VendorDAOImplService">
+     <wsdl:port binding="impl:VendorDAOImplSoapBinding" name="VendorDAOImpl">
+       <wsdlsoap:address location="http://localhost:9081/VendorWebservice/services/VendorDAOImpl"/>
+
+    </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>

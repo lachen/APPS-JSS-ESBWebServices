@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?><java-wsdl-mapping version="1.1" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://www.ibm.com/webservices/xsd/j2ee_jaxrpc_mapping_1_1.xsd">
+    <package-mapping>
+        <package-type>com.apria.sims.ws.logger</package-type>
+        <namespaceURI>http://logger.ws.sims.apria.com</namespaceURI>
+    </package-mapping>
+    <package-mapping>
+        <package-type>com.apria.sims.ws.impl</package-type>
+        <namespaceURI>http://impl.ws.sims.apria.com</namespaceURI>
+    </package-mapping>
+    <package-mapping>
+        <package-type>com.apria.sims.ws.bean</package-type>
+        <namespaceURI>http://bean.ws.sims.apria.com</namespaceURI>
+    </package-mapping>
+    <java-xml-type-mapping>
+        <java-type>com.apria.sims.ws.logger.WSFaultType</java-type>
+        <root-type-qname xmlns:rtq="http://logger.ws.sims.apria.com">rtq:WSFaultType</root-type-qname>
+        <qname-scope>complexType</qname-scope>
+        <variable-mapping>
+            <java-variable-name>message</java-variable-name>
+            <xml-element-name>message</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>type</java-variable-name>
+            <xml-element-name>type</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>code</java-variable-name>
+            <xml-element-name>code</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>severity</java-variable-name>
+            <xml-element-name>severity</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>state</java-variable-name>
+            <xml-element-name>state</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>exceptionState</java-variable-name>
+            <xml-element-name>exceptionState</xml-element-name>
+        </variable-mapping>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>com.apria.sims.ws.logger.WSFaultType</java-type>
+        <root-type-qname xmlns:rtq="http://logger.ws.sims.apria.com">rtq:WSFaultType</root-type-qname>
+        <qname-scope>element</qname-scope>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>java.lang.String</java-type>
+        <root-type-qname xmlns:rtq="http://www.w3.org/2001/XMLSchema">rtq:string</root-type-qname>
+        <qname-scope>simpleType</qname-scope>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>int</java-type>
+        <root-type-qname xmlns:rtq="http://www.w3.org/2001/XMLSchema">rtq:int</root-type-qname>
+        <qname-scope>simpleType</qname-scope>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>com.apria.sims.ws.bean.VendorBean[]</java-type>
+        <anonymous-type-qname>http://bean.ws.sims.apria.com:VendorBean[0,unbounded]</anonymous-type-qname>
+        <qname-scope>complexType</qname-scope>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>com.apria.sims.ws.bean.VendorBean</java-type>
+        <root-type-qname xmlns:rtq="http://bean.ws.sims.apria.com">rtq:VendorBean</root-type-qname>
+        <qname-scope>complexType</qname-scope>
+        <variable-mapping>
+            <java-variable-name>srcvndrcd</java-variable-name>
+            <xml-element-name>srcvndrcd</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>vendorNameVendor</java-variable-name>
+            <xml-element-name>vendorNameVendor</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>vndrsk</java-variable-name>
+            <xml-element-name>vndrsk</xml-element-name>
+        </variable-mapping>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>com.apria.sims.ws.bean.VendorBean[]</java-type>
+        <root-type-qname xmlns:rtq="http://impl.ws.sims.apria.com">rtq:ArrayOf_tns3_nillable_VendorBean</root-type-qname>
+        <qname-scope>complexType</qname-scope>
+        <variable-mapping>
+            <java-variable-name>vendorBean</java-variable-name>
+            <xml-element-name>VendorBean</xml-element-name>
+        </variable-mapping>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>com.apria.sims.ws.bean.VendorBean[]</java-type>
+        <anonymous-type-qname>http://impl.ws.sims.apria.com:ArrayOf_tns3_nillable_VendorBean&gt;VendorBean[0,unbounded]</anonymous-type-qname>
+        <qname-scope>complexType</qname-scope>
+    </java-xml-type-mapping>
+    <exception-mapping>
+        <exception-type>com.apria.sims.ws.logger.WSFaultType</exception-type>
+        <wsdl-message xmlns:em="http://impl.ws.sims.apria.com">em:WSFaultType</wsdl-message>
+        <constructor-parameter-order>
+            <element-name>message</element-name>
+            <element-name>type</element-name>
+            <element-name>code</element-name>
+            <element-name>severity</element-name>
+            <element-name>state</element-name>
+            <element-name>exceptionState</element-name>
+        </constructor-parameter-order>
+    </exception-mapping>
+    <service-interface-mapping>
+        <service-interface>com.apria.sims.ws.impl.VendorDAOImplService</service-interface>
+        <wsdl-service-name xmlns:sim="http://impl.ws.sims.apria.com">sim:VendorDAOImplService</wsdl-service-name>
+        <port-mapping>
+            <port-name>VendorDAOImpl</port-name>
+            <java-port-name>VendorDAOImpl</java-port-name>
+        </port-mapping>
+    </service-interface-mapping>
+    <service-endpoint-interface-mapping>
+        <service-endpoint-interface>com.apria.sims.ws.impl.VendorDAOImpl</service-endpoint-interface>
+        <wsdl-port-type xmlns:seimwpt="http://impl.ws.sims.apria.com">seimwpt:VendorDAOImpl</wsdl-port-type>
+        <wsdl-binding xmlns:seimwb="http://impl.ws.sims.apria.com">seimwb:VendorDAOImplSoapBinding</wsdl-binding>
+        <service-endpoint-method-mapping>
+            <java-method-name>searchVendorName</java-method-name>
+            <wsdl-operation>searchVendorName</wsdl-operation>
+            <wrapped-element/>
+            <method-param-parts-mapping>
+                <param-position>0</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://impl.ws.sims.apria.com">mppm:searchVendorNameRequest</wsdl-message>
+                    <wsdl-message-part-name>vendorNameVendor</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>1</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://impl.ws.sims.apria.com">mppm:searchVendorNameRequest</wsdl-message>
+                    <wsdl-message-part-name>srcvndrcd</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <wsdl-return-value-mapping>
+                <method-return-value>java.lang.String</method-return-value>
+                <wsdl-message xmlns:wrvm="http://impl.ws.sims.apria.com">wrvm:searchVendorNameResponse</wsdl-message>
+                <wsdl-message-part-name>searchVendorNameReturn</wsdl-message-part-name>
+            </wsdl-return-value-mapping>
+        </service-endpoint-method-mapping>
+        <service-endpoint-method-mapping>
+            <java-method-name>searchVendor</java-method-name>
+            <wsdl-operation>searchVendor</wsdl-operation>
+            <wrapped-element/>
+            <method-param-parts-mapping>
+                <param-position>0</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://impl.ws.sims.apria.com">mppm:searchVendorRequest</wsdl-message>
+                    <wsdl-message-part-name>vendorNameVendor</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>1</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://impl.ws.sims.apria.com">mppm:searchVendorRequest</wsdl-message>
+                    <wsdl-message-part-name>srcvndrcd</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <wsdl-return-value-mapping>
+                <method-return-value>com.apria.sims.ws.bean.VendorBean[]</method-return-value>
+                <wsdl-message xmlns:wrvm="http://impl.ws.sims.apria.com">wrvm:searchVendorResponse</wsdl-message>
+                <wsdl-message-part-name>searchVendorReturn</wsdl-message-part-name>
+            </wsdl-return-value-mapping>
+        </service-endpoint-method-mapping>
+    </service-endpoint-interface-mapping>
+</java-wsdl-mapping>
