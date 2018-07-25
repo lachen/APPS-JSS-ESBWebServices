@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions targetNamespace="http://impl.ws.sims.apria.com" xmlns:impl="http://impl.ws.sims.apria.com" xmlns:intf="http://impl.ws.sims.apria.com" xmlns:tns2="http://bean.ws.sims.apria.com" xmlns:tns3="http://logger.ws.sims.apria.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema targetNamespace="http://impl.ws.sims.apria.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://bean.ws.sims.apria.com"/>
+   <element name="getMaskCodesResponse">
+    <complexType>
+     <sequence>
+      <element name="getMaskCodesReturn" nillable="true" type="tns2:EquipmentDetailsBean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEquipmentHistory">
+    <complexType>
+     <sequence>
+      <element name="modelNumber" nillable="true" type="xsd:string"/>
+      <element name="serialNumber" nillable="true" type="xsd:string"/>
+      <element name="eqpmtsk" type="xsd:long"/>
+      <element name="vendorsk" type="xsd:long"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEquipmentHistoryResponse">
+    <complexType>
+     <sequence>
+      <element name="getEquipmentHistoryReturn" nillable="true" type="impl:ArrayOf_tns2_nillable_EquipmentDetailsBean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchEquipmentParameters">
+    <complexType>
+     <sequence>
+      <element name="vendorName" nillable="true" type="xsd:string"/>
+      <element name="modelNumber" nillable="true" type="xsd:string"/>
+      <element name="serialNumber" nillable="true" type="xsd:string"/>
+      <element name="productID" nillable="true" type="xsd:string"/>
+      <element name="function" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchEquipmentParametersResponse">
+    <complexType>
+     <sequence>
+      <element name="searchEquipmentParametersReturn" nillable="true" type="impl:ArrayOf_tns2_nillable_EquipmentDetailsBean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEquipmentNotes">
+    <complexType>
+     <sequence>
+      <element name="modelNumber" nillable="true" type="xsd:string"/>
+      <element name="serialNumber" nillable="true" type="xsd:string"/>
+      <element name="vendorsk" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEquipmentNotesResponse">
+    <complexType>
+     <sequence>
+      <element name="getEquipmentNotesReturn" nillable="true" type="impl:ArrayOf_tns2_nillable_EquipmentDetailsBean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchEquipment">
+    <complexType>
+     <sequence>
+      <element name="vendorName" nillable="true" type="xsd:string"/>
+      <element name="modelNumber" nillable="true" type="xsd:string"/>
+      <element name="serialNumber" nillable="true" type="xsd:string"/>
+      <element name="productID" nillable="true" type="xsd:string"/>
+      <element name="vendorsk" type="xsd:int"/>
+      <element name="eqpmtsk" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchEquipmentResponse">
+    <complexType>
+     <sequence>
+      <element name="searchEquipmentReturn" nillable="true" type="impl:ArrayOf_tns2_nillable_EquipmentDetailsBean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="loadVendorNames">
+    <complexType>
+     <sequence/>
+    </complexType>
+   </element>
+   <element name="loadVendorNamesResponse">
+    <complexType>
+     <sequence>
+      <element name="loadVendorNamesReturn" nillable="true" type="impl:ArrayOf_tns2_nillable_EquipmentDetailsBean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="checkSerialNumber">
+    <complexType>
+     <sequence>
+      <element name="Vendorsk" type="xsd:int"/>
+      <element name="serialnumber" nillable="true" type="xsd:string"/>
+      <element name="modelnumber" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="checkSerialNumberResponse">
+    <complexType>
+     <sequence>
+      <element name="checkSerialNumberReturn" nillable="true" type="impl:ArrayOf_xsd_int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getMaskCodes">
+    <complexType>
+     <sequence>
+      <element name="modelNumber" nillable="true" type="xsd:string"/>
+      <element name="vendorsk" type="xsd:int"/>
+      <element name="productid" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_tns2_nillable_MaskCodeBean">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="MaskCodeBean" nillable="true" type="tns2:MaskCodeBean"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_tns2_nillable_EquipmentDetailsBean">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="EquipmentDetailsBean" nillable="true" type="tns2:EquipmentDetailsBean"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_xsd_int">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="int" type="xsd:int"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema targetNamespace="http://bean.ws.sims.apria.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://impl.ws.sims.apria.com"/>
+   <complexType name="EquipmentDetailsBean">
+    <sequence>
+     <element name="vendorName" nillable="true" type="xsd:string"/>
+     <element name="vendorsk" type="xsd:int"/>
+     <element name="eqpmtsk" type="xsd:int"/>
+     <element name="modelNumber" nillable="true" type="xsd:string"/>
+     <element name="serialNumber" nillable="true" type="xsd:string"/>
+     <element name="productID" nillable="true" type="xsd:string"/>
+     <element name="eqpmtstatus" nillable="true" type="xsd:string"/>
+     <element name="manufatureDate" nillable="true" type="xsd:string"/>
+     <element name="manufacturSerialNumber" nillable="true" type="xsd:string"/>
+     <element name="nextTestDate" nillable="true" type="xsd:string"/>
+     <element name="generalNotes" nillable="true" type="xsd:string"/>
+     <element name="eqpmtnotetxt" nillable="true" type="xsd:string"/>
+     <element name="statusHistoryDate" nillable="true" type="xsd:string"/>
+     <element name="statusHistoryStatusCode" nillable="true" type="xsd:string"/>
+     <element name="statusHistorySystemUser" nillable="true" type="xsd:string"/>
+     <element name="notesHistoryDate" nillable="true" type="xsd:string"/>
+     <element name="notesHistoryText" nillable="true" type="xsd:string"/>
+     <element name="notesHistorySystemUser" nillable="true" type="xsd:string"/>
+     <element name="maskcodes" nillable="true" type="impl:ArrayOf_tns2_nillable_MaskCodeBean"/>
+     <element name="buid" nillable="true" type="xsd:string"/>
+     <element name="systemid" nillable="true" type="xsd:string"/>
+     <element name="customerId" nillable="true" type="xsd:string"/>
+     <element name="dlvWorkOrder" nillable="true" type="xsd:string"/>
+     <element name="pkpWorkOrder" nillable="true" type="xsd:string"/>
+     <element name="offsetMonth" type="xsd:int"/>
+     <element name="pmPaintDueMonths" type="xsd:int"/>
+     <element name="nexttestmonth" nillable="true" type="xsd:string"/>
+     <element name="buName" nillable="true" type="xsd:string"/>
+     <element name="acisbuid" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="MaskCodeBean">
+    <sequence>
+     <element name="modelmasksk" type="xsd:int"/>
+     <element name="modelmaskcode" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema targetNamespace="http://logger.ws.sims.apria.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <complexType name="WSFaultType">
+    <sequence>
+     <element name="message" nillable="true" type="xsd:string"/>
+     <element name="type" nillable="true" type="xsd:string"/>
+     <element name="code" nillable="true" type="xsd:string"/>
+     <element name="severity" nillable="true" type="xsd:string"/>
+     <element name="state" nillable="true" type="xsd:string"/>
+     <element name="exceptionState" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="WSFaultType" nillable="true" type="tns3:WSFaultType"/>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getEquipmentHistoryRequest">
+     <wsdl:part element="impl:getEquipmentHistory" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="searchEquipmentParametersResponse">
+     <wsdl:part element="impl:searchEquipmentParametersResponse" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="loadVendorNamesRequest">
+     <wsdl:part element="impl:loadVendorNames" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="loadVendorNamesResponse">
+     <wsdl:part element="impl:loadVendorNamesResponse" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="searchEquipmentParametersRequest">
+     <wsdl:part element="impl:searchEquipmentParameters" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="getEquipmentHistoryResponse">
+     <wsdl:part element="impl:getEquipmentHistoryResponse" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="WSFaultType">
+     <wsdl:part element="tns3:WSFaultType" name="fault"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="checkSerialNumberResponse">
+     <wsdl:part element="impl:checkSerialNumberResponse" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="getEquipmentNotesRequest">
+     <wsdl:part element="impl:getEquipmentNotes" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="searchEquipmentResponse">
+     <wsdl:part element="impl:searchEquipmentResponse" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="getMaskCodesResponse">
+     <wsdl:part element="impl:getMaskCodesResponse" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="checkSerialNumberRequest">
+     <wsdl:part element="impl:checkSerialNumber" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="getEquipmentNotesResponse">
+     <wsdl:part element="impl:getEquipmentNotesResponse" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="getMaskCodesRequest">
+     <wsdl:part element="impl:getMaskCodes" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="searchEquipmentRequest">
+     <wsdl:part element="impl:searchEquipment" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:portType name="EquipmentDetailsDAOImpl">
+     <wsdl:operation name="getMaskCodes">
+       <wsdl:input message="impl:getMaskCodesRequest" name="getMaskCodesRequest"/>
+
+       <wsdl:output message="impl:getMaskCodesResponse" name="getMaskCodesResponse"/>
+
+       <wsdl:fault message="impl:WSFaultType" name="WSFaultType"/>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="getEquipmentHistory">
+       <wsdl:input message="impl:getEquipmentHistoryRequest" name="getEquipmentHistoryRequest"/>
+
+       <wsdl:output message="impl:getEquipmentHistoryResponse" name="getEquipmentHistoryResponse"/>
+
+       <wsdl:fault message="impl:WSFaultType" name="WSFaultType"/>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="searchEquipmentParameters">
+       <wsdl:input message="impl:searchEquipmentParametersRequest" name="searchEquipmentParametersRequest"/>
+
+       <wsdl:output message="impl:searchEquipmentParametersResponse" name="searchEquipmentParametersResponse"/>
+
+       <wsdl:fault message="impl:WSFaultType" name="WSFaultType"/>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="getEquipmentNotes">
+       <wsdl:input message="impl:getEquipmentNotesRequest" name="getEquipmentNotesRequest"/>
+
+       <wsdl:output message="impl:getEquipmentNotesResponse" name="getEquipmentNotesResponse"/>
+
+       <wsdl:fault message="impl:WSFaultType" name="WSFaultType"/>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="searchEquipment">
+       <wsdl:input message="impl:searchEquipmentRequest" name="searchEquipmentRequest"/>
+
+       <wsdl:output message="impl:searchEquipmentResponse" name="searchEquipmentResponse"/>
+
+       <wsdl:fault message="impl:WSFaultType" name="WSFaultType"/>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="loadVendorNames">
+       <wsdl:input message="impl:loadVendorNamesRequest" name="loadVendorNamesRequest"/>
+
+       <wsdl:output message="impl:loadVendorNamesResponse" name="loadVendorNamesResponse"/>
+
+       <wsdl:fault message="impl:WSFaultType" name="WSFaultType"/>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="checkSerialNumber">
+       <wsdl:input message="impl:checkSerialNumberRequest" name="checkSerialNumberRequest"/>
+
+       <wsdl:output message="impl:checkSerialNumberResponse" name="checkSerialNumberResponse"/>
+
+       <wsdl:fault message="impl:WSFaultType" name="WSFaultType"/>
+
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+   <wsdl:binding name="EquipmentDetailsDAOImplSoapBinding" type="impl:EquipmentDetailsDAOImpl">
+ <wsaw:UsingAddressing wsdl:required="false" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+
+     <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+     <wsdl:operation name="getMaskCodes">
+       <wsdlsoap:operation soapAction="getMaskCodes"/>
+
+       <wsdl:input name="getMaskCodesRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="getMaskCodesResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+       <wsdl:fault name="WSFaultType">
+         <wsdlsoap:fault name="WSFaultType" use="literal"/>
+
+      </wsdl:fault>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="getEquipmentHistory">
+       <wsdlsoap:operation soapAction="getEquipmentHistory"/>
+
+       <wsdl:input name="getEquipmentHistoryRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="getEquipmentHistoryResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+       <wsdl:fault name="WSFaultType">
+         <wsdlsoap:fault name="WSFaultType" use="literal"/>
+
+      </wsdl:fault>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="searchEquipmentParameters">
+       <wsdlsoap:operation soapAction="searchEquipmentParameters"/>
+
+       <wsdl:input name="searchEquipmentParametersRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="searchEquipmentParametersResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+       <wsdl:fault name="WSFaultType">
+         <wsdlsoap:fault name="WSFaultType" use="literal"/>
+
+      </wsdl:fault>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="getEquipmentNotes">
+       <wsdlsoap:operation soapAction="getEquipmentNotes"/>
+
+       <wsdl:input name="getEquipmentNotesRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="getEquipmentNotesResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+       <wsdl:fault name="WSFaultType">
+         <wsdlsoap:fault name="WSFaultType" use="literal"/>
+
+      </wsdl:fault>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="searchEquipment">
+       <wsdlsoap:operation soapAction="searchEquipment"/>
+
+       <wsdl:input name="searchEquipmentRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="searchEquipmentResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+       <wsdl:fault name="WSFaultType">
+         <wsdlsoap:fault name="WSFaultType" use="literal"/>
+
+      </wsdl:fault>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="loadVendorNames">
+       <wsdlsoap:operation soapAction="loadVendorNames"/>
+
+       <wsdl:input name="loadVendorNamesRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="loadVendorNamesResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+       <wsdl:fault name="WSFaultType">
+         <wsdlsoap:fault name="WSFaultType" use="literal"/>
+
+      </wsdl:fault>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="checkSerialNumber">
+       <wsdlsoap:operation soapAction="checkSerialNumber"/>
+
+       <wsdl:input name="checkSerialNumberRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="checkSerialNumberResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+       <wsdl:fault name="WSFaultType">
+         <wsdlsoap:fault name="WSFaultType" use="literal"/>
+
+      </wsdl:fault>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+   <wsdl:service name="EquipmentDetailsDAOImplService">
+     <wsdl:port binding="impl:EquipmentDetailsDAOImplSoapBinding" name="EquipmentDetailsDAOImpl">
+       <wsdlsoap:address location="http://localhost:9081/EquipmentDetailsWebservice/services/EquipmentDetailsDAOImpl"/>
+
+    </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>
