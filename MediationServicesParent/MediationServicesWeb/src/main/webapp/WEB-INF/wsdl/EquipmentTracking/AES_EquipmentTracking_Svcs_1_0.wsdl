@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AES_EquipmentTracking_Intf_EquipmentTrackingIntfHttp_Service" targetNamespace="http://AES_EquipmentTracking_Svcs_1_0/com/apria/services/aes/equipmenttracking/EquipmentTrackingIntf/Binding" xmlns:Port_0="http://AES_EquipmentTracking_Svcs_1_0/com/apria/services/aes/equipmenttracking/EquipmentTrackingIntf" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:this="http://AES_EquipmentTracking_Svcs_1_0/com/apria/services/aes/equipmenttracking/EquipmentTrackingIntf/Binding" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import location="EquipmentTrackingIntf.wsdl" namespace="http://AES_EquipmentTracking_Svcs_1_0/com/apria/services/aes/equipmenttracking/EquipmentTrackingIntf">
+    </wsdl:import>
+  <wsdl:binding name="AES_EquipmentTracking_Intf_EquipmentTrackingIntfHttpBinding" type="Port_0:EquipmentTrackingIntf">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="updateEquimentStatus">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="updateEquimentStatusRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateEquimentStatusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AES_EquipmentTracking_Intf">
+    <wsdl:port binding="this:AES_EquipmentTracking_Intf_EquipmentTrackingIntfHttpBinding" name="AES_EquipmentTracking_Intf_EquipmentTrackingIntfHttpPort">
+      <soap:address location="http://aesb.apria.com:80/AES_EquipmentTracking_Svcs_1_0Web/sca/AES_EquipmentTracking_Intf"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

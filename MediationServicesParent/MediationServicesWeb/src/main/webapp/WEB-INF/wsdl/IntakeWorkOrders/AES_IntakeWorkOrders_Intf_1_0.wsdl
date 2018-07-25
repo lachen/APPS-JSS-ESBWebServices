@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AES_IntakeWorkOrders_IntfExport1_AES_IntakeWorkOrders_IntfHttp_Service" targetNamespace="http://AES_GetIntakeWorkOrders_Lib_1_0/com/apria/services/aes/intakeworkorders/AES_IntakeWorkOrders_Intf/Binding" xmlns:Port_0="http://AES_GetIntakeWorkOrders_Lib_1_0/com/apria/services/aes/intakeworkorders/AES_IntakeWorkOrders_Intf" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:this="http://AES_GetIntakeWorkOrders_Lib_1_0/com/apria/services/aes/intakeworkorders/AES_IntakeWorkOrders_Intf/Binding" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import location="AES_IntakeWorkOrders_Intf.wsdl" namespace="http://AES_GetIntakeWorkOrders_Lib_1_0/com/apria/services/aes/intakeworkorders/AES_IntakeWorkOrders_Intf">
+    </wsdl:import>
+  <wsdl:binding name="AES_IntakeWorkOrders_IntfExport1_AES_IntakeWorkOrders_IntfHttpBinding" type="Port_0:AES_IntakeWorkOrders_Intf">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getIntakeWorkOrders">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="getIntakeWorkOrdersRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getIntakeWorkOrdersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AES_IntakeWorkOrders_Intf_1_0">
+    <wsdl:port binding="this:AES_IntakeWorkOrders_IntfExport1_AES_IntakeWorkOrders_IntfHttpBinding" name="AES_IntakeWorkOrders_Intf_1_0_AES_IntakeWorkOrders_IntfHttpPort">
+      <soap:address location="http://aesb.apria.com:80/AES_GetIntakeWorkOrders_Svcs_1_0Web/sca/AES_IntakeWorkOrders_Intf_1_0"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

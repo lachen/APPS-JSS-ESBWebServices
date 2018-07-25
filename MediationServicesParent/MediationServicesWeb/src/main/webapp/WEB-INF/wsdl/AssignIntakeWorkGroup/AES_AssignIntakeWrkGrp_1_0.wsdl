@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+	name="AES_AssignIntakeWorkGroupExport1_AES_AssignIntakeWorkGroupHttp_Service"
+	targetNamespace="http://AES_AssignIntakeWrkGrp/com/apria/web/services/AES_AssignIntakeWorkGroup/Binding"
+	xmlns:Port_0="http://AES_AssignIntakeWrkGrp/com/apria/web/services/AES_AssignIntakeWorkGroup"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:this="http://AES_AssignIntakeWrkGrp/com/apria/web/services/AES_AssignIntakeWorkGroup/Binding"
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+	<wsdl:import
+		namespace="http://AES_AssignIntakeWrkGrp/com/apria/web/services/AES_AssignIntakeWorkGroup"
+		location="AES_AssignIntakeWorkGroup.wsdl">
+	</wsdl:import>
+	<wsdl:binding
+		name="AES_AssignIntakeWorkGroupExport1_AES_AssignIntakeWorkGroupHttpBinding"
+		type="Port_0:AES_AssignIntakeWorkGroup">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="assignIntakeWrkGroup">
+			<soap:operation soapAction="" />
+			<wsdl:input name="assignIntakeWrkGroupRequest">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="assignIntakeWrkGroupResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="assignIntakeWrkGroupFault1">
+				<soap:fault name="assignIntakeWrkGroupFault1" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service
+		name="AES_AssignIntakeWorkGroupExport1">
+		<wsdl:port
+			name="AES_AssignIntakeWorkGroupExport1_AES_AssignIntakeWorkGroupHttpPort"
+			binding="this:AES_AssignIntakeWorkGroupExport1_AES_AssignIntakeWorkGroupHttpBinding">
+			<soap:address
+				location="http://aesb.apria.com:80/AES_AssignIntakeWrkGrpWeb/sca/AES_AssignIntakeWorkGroupExport1" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://AES_EndTelnetSession_Lib_1_0/com/apria/services/aes/endtelnetsession/beans" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="EndTelnetSessionRequest">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="sessionId" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="userId" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="1" name="branchHost" type="xsd:string"/>
+			<xsd:element minOccurs="1" name="clientHost" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="userName" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="password" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="serviceVersion" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

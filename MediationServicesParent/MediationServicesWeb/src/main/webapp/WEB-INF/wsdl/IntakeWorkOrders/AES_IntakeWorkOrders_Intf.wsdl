@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AES_IntakeWorkOrders_Intf" targetNamespace="http://AES_GetIntakeWorkOrders_Lib_1_0/com/apria/services/aes/intakeworkorders/AES_IntakeWorkOrders_Intf" xmlns:bons1="http://AES_GetIntakeWorkOrders_Lib_1_0/com/apria/services/aes/intakeworkorders/beans" xmlns:tns="http://AES_GetIntakeWorkOrders_Lib_1_0/com/apria/services/aes/intakeworkorders/AES_IntakeWorkOrders_Intf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://AES_GetIntakeWorkOrders_Lib_1_0/com/apria/services/aes/intakeworkorders/AES_IntakeWorkOrders_Intf">
+      <xsd:import namespace="http://AES_GetIntakeWorkOrders_Lib_1_0/com/apria/services/aes/intakeworkorders/beans" schemaLocation="beans/AES_IntakeWorkOrders_Exception.xsd"/>
+      <xsd:import namespace="http://AES_GetIntakeWorkOrders_Lib_1_0/com/apria/services/aes/intakeworkorders/beans" schemaLocation="beans/AES_IntakeWorkOrders.xsd"/>
+      <xsd:import namespace="http://AES_GetIntakeWorkOrders_Lib_1_0/com/apria/services/aes/intakeworkorders/beans" schemaLocation="beans/AES_IntakeWorkOrders_Request.xsd"/>
+      <xsd:element name="getIntakeWorkOrders">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="input" nillable="true" type="bons1:AES_IntakeWorkOrders_Request"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getIntakeWorkOrdersResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="output" nillable="true" type="bons1:AES_IntakeWorkOrders"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getIntakeWorkOrdersFault1_fault" nillable="true" type="bons1:AES_IntakeWorkOrders_Exception"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getIntakeWorkOrdersRequestMsg">
+    <wsdl:part element="tns:getIntakeWorkOrders" name="getIntakeWorkOrdersParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getIntakeWorkOrders_faultMsg">
+    <wsdl:part element="tns:getIntakeWorkOrdersFault1_fault" name="fault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getIntakeWorkOrdersResponseMsg">
+    <wsdl:part element="tns:getIntakeWorkOrdersResponse" name="getIntakeWorkOrdersResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="AES_IntakeWorkOrders_Intf">
+    <wsdl:operation name="getIntakeWorkOrders">
+      <wsdl:input message="tns:getIntakeWorkOrdersRequestMsg" name="getIntakeWorkOrdersRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getIntakeWorkOrdersResponseMsg" name="getIntakeWorkOrdersResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:getIntakeWorkOrders_faultMsg" name="fault">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

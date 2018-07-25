@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://AES_AssignIntakeWrkGrp/com/apria/web/services"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="AES_IntakeException">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element minOccurs="0" name="workGroupName" type="xsd:string"
+					default="workgroupName">
+				</xsd:element>
+				<xsd:element minOccurs="0" name="intakeAssociate" type="xsd:string">
+				</xsd:element>
+				<xsd:element minOccurs="0" name="intakeNumber" type="xsd:string">
+				</xsd:element>
+				<xsd:element minOccurs="0" name="message" type="xsd:string"
+					default="message">
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

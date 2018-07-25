@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AES_CustomerDetails_Intf" targetNamespace="http://AES_GetCustomer_Lib_1_0/com/apria/services/aes/customerdetails/AES_CustomerDetails_Intf" xmlns:bons1="http://AES_GetCustomer_Lib_1_0/com/apria/services/aes/customerdetails/beans" xmlns:tns="http://AES_GetCustomer_Lib_1_0/com/apria/services/aes/customerdetails/AES_CustomerDetails_Intf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://AES_GetCustomer_Lib_1_0/com/apria/services/aes/customerdetails/AES_CustomerDetails_Intf">
+            <xsd:import namespace="http://AES_GetCustomer_Lib_1_0/com/apria/services/aes/customerdetails/beans" schemaLocation="beans/AES_CustomerDetails_Request.xsd"/>
+            <xsd:import namespace="http://AES_GetCustomer_Lib_1_0/com/apria/services/aes/customerdetails/beans" schemaLocation="beans/AES_CustomerDetails_Exception.xsd"/>
+      <xsd:import namespace="http://AES_GetCustomer_Lib_1_0/com/apria/services/aes/customerdetails/beans" schemaLocation="beans/AES_CustomerDetails.xsd"/>
+      <xsd:element name="getCustomerDetailsById">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="input" nillable="true" type="bons1:AES_CustomerDetails_Request"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCustomerDetailsByIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="output" nillable="true" type="bons1:AES_CustomerDetails"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCustomerDetailsByIdFault1_fault" nillable="true" type="bons1:AES_CustomerDetails_Exception"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getCustomerDetailsById_faultMsg">
+    <wsdl:part element="tns:getCustomerDetailsByIdFault1_fault" name="fault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCustomerDetailsByIdResponseMsg">
+    <wsdl:part element="tns:getCustomerDetailsByIdResponse" name="getCustomerDetailsByIdResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCustomerDetailsByIdRequestMsg">
+    <wsdl:part element="tns:getCustomerDetailsById" name="getCustomerDetailsByIdParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="AES_CustomerDetails_Intf">
+    <wsdl:operation name="getCustomerDetailsById">
+      <wsdl:input message="tns:getCustomerDetailsByIdRequestMsg" name="getCustomerDetailsByIdRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getCustomerDetailsByIdResponseMsg" name="getCustomerDetailsByIdResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:getCustomerDetailsById_faultMsg" name="fault">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

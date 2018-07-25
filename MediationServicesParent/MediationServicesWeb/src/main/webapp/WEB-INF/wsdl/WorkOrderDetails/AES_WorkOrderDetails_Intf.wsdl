@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AES_WorkOrderDetails_Intf" targetNamespace="http://AES_GetWorkOrderDetails_Lib_1_0/com/apria/services/aes/workorderdetails/AES_WorkOrderDetails_Intf" xmlns:bons1="http://AES_GetWorkOrderDetails_Lib_1_0/com/apria/services/aes/workorderdetails/beans" xmlns:tns="http://AES_GetWorkOrderDetails_Lib_1_0/com/apria/services/aes/workorderdetails/AES_WorkOrderDetails_Intf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://AES_GetWorkOrderDetails_Lib_1_0/com/apria/services/aes/workorderdetails/AES_WorkOrderDetails_Intf">
+      <xsd:import namespace="http://AES_GetWorkOrderDetails_Lib_1_0/com/apria/services/aes/workorderdetails/beans" schemaLocation="beans/AES_WorkOrderDetails_Exception.xsd"/>
+      <xsd:import namespace="http://AES_GetWorkOrderDetails_Lib_1_0/com/apria/services/aes/workorderdetails/beans" schemaLocation="beans/AES_WorkOrderDetails.xsd"/>
+      <xsd:import namespace="http://AES_GetWorkOrderDetails_Lib_1_0/com/apria/services/aes/workorderdetails/beans" schemaLocation="beans/AES_WorkOrderDetails_Request.xsd"/>
+      <xsd:element name="getWorkOrderDetails">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="input" nillable="true" type="bons1:AES_WorkOrderDetails_Request"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getWorkOrderDetailsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="output" nillable="true" type="bons1:AES_WorkOrderDetails"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getWorkOrderDetailsFault1_fault" nillable="true" type="bons1:AES_WorkOrderDetails_Exception"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getWorkOrderDetailsRequestMsg">
+    <wsdl:part element="tns:getWorkOrderDetails" name="getWorkOrderDetailsParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getWorkOrderDetailsResponseMsg">
+    <wsdl:part element="tns:getWorkOrderDetailsResponse" name="getWorkOrderDetailsResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getWorkOrderDetails_faultMsg">
+    <wsdl:part element="tns:getWorkOrderDetailsFault1_fault" name="fault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="AES_WorkOrderDetails_Intf">
+    <wsdl:operation name="getWorkOrderDetails">
+      <wsdl:input message="tns:getWorkOrderDetailsRequestMsg" name="getWorkOrderDetailsRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getWorkOrderDetailsResponseMsg" name="getWorkOrderDetailsResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:getWorkOrderDetails_faultMsg" name="fault">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

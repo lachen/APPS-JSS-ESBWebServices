@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="EquipmentTrackingIntf" targetNamespace="http://AES_EquipmentTracking_Svcs_1_0/com/apria/services/aes/equipmenttracking/EquipmentTrackingIntf" xmlns:bons1="http://AES_EquipmentTracking_Svcs_1_0/com/apria/services/aes/equipmenttracking/beans" xmlns:tns="http://AES_EquipmentTracking_Svcs_1_0/com/apria/services/aes/equipmenttracking/EquipmentTrackingIntf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://AES_EquipmentTracking_Svcs_1_0/com/apria/services/aes/equipmenttracking/EquipmentTrackingIntf">
+      <xsd:import namespace="http://AES_EquipmentTracking_Svcs_1_0/com/apria/services/aes/equipmenttracking/beans" schemaLocation="beans/EquipmentTrackingResponse.xsd"/>
+      <xsd:import namespace="http://AES_EquipmentTracking_Svcs_1_0/com/apria/services/aes/equipmenttracking/beans" schemaLocation="beans/EquipmentTrackingRequest.xsd"/>
+      <xsd:element name="updateEquimentStatus">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="input" nillable="true" type="bons1:EquipmentTrackingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateEquimentStatusResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="output" nillable="true" type="bons1:EquipmentTrackingResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="updateEquimentStatusFault1_fault" nillable="true" type="bons1:EquipmentTrackingResponse"/>
+        </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="updateEquimentStatus_faultMsg">
+    <wsdl:part element="tns:updateEquimentStatusFault1_fault" name="fault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateEquimentStatusRequestMsg">
+    <wsdl:part element="tns:updateEquimentStatus" name="updateEquimentStatusParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateEquimentStatusResponseMsg">
+    <wsdl:part element="tns:updateEquimentStatusResponse" name="updateEquimentStatusResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="EquipmentTrackingIntf">
+    <wsdl:operation name="updateEquimentStatus">
+      <wsdl:input message="tns:updateEquimentStatusRequestMsg" name="updateEquimentStatusRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updateEquimentStatusResponseMsg" name="updateEquimentStatusResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:updateEquimentStatus_faultMsg" name="fault">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

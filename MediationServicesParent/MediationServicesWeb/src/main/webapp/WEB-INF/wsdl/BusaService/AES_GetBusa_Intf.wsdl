@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AES_GetBusa_Intf" targetNamespace="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf" xmlns:bons1="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/beans" xmlns:tns="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf">
+      <xsd:import namespace="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/beans" schemaLocation="beans/AES_GetBusa_Exception.xsd"/>
+      <xsd:import namespace="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/beans" schemaLocation="beans/AES_GetBusa_Response.xsd"/>
+      <xsd:import namespace="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/beans" schemaLocation="beans/AES_GetBusa_Request.xsd"/>
+      <xsd:element name="getBusaByZipCode">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="input" nillable="true" type="bons1:AES_GetBusa_Request"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getBusaByZipCodeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="output" nillable="true" type="bons1:AES_GetBusa_Response"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCPUByBU">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="input" nillable="true" type="bons1:AES_GetBusa_Request"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCPUByBUResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="output" nillable="true" type="bons1:AES_GetBusa_Response"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getBusaByZipCodeFault1_fault" nillable="true" type="bons1:AES_GetBusa_Exception"/>
+      <xsd:element name="getBusaByBusinessUnitFault1_fault" nillable="true" type="bons1:AES_GetBusa_Exception"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getCPUByBURequestMsg">
+    <wsdl:part element="tns:getCPUByBU" name="getCPUByBUParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBusaByZipCodeResponseMsg">
+    <wsdl:part element="tns:getBusaByZipCodeResponse" name="getBusaByZipCodeResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCPUByBU_faultMsg">
+    <wsdl:part element="tns:getBusaByBusinessUnitFault1_fault" name="fault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCPUByBUResponseMsg">
+    <wsdl:part element="tns:getCPUByBUResponse" name="getCPUByBUResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBusaByZipCodeRequestMsg">
+    <wsdl:part element="tns:getBusaByZipCode" name="getBusaByZipCodeParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBusaByZipCode_faultMsg">
+    <wsdl:part element="tns:getBusaByZipCodeFault1_fault" name="fault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="AES_GetBusa_Intf">
+    <wsdl:operation name="getBusaByZipCode">
+      <wsdl:input message="tns:getBusaByZipCodeRequestMsg" name="getBusaByZipCodeRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getBusaByZipCodeResponseMsg" name="getBusaByZipCodeResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:getBusaByZipCode_faultMsg" name="fault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCPUByBU">
+      <wsdl:input message="tns:getCPUByBURequestMsg" name="getCPUByBURequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getCPUByBUResponseMsg" name="getCPUByBUResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:getCPUByBU_faultMsg" name="fault">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://AES_EquipmentTracking_Svcs_1_0/com/apria/services/aes/equipmenttracking/beans" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="EquipmentTrackingRequest">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="0" name="requestType" nillable="true" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="srcSystemId" nillable="true" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="bu" nillable="true" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="orderNo" nillable="true" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="orderLineNo" nillable="true" type="xsd:int">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="orderLineCmpntSeqNo" nillable="true" type="xsd:int">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="customerId" nillable="true" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="customerName" nillable="true" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="originalDeliveryDate" nillable="true" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="deliveryProductId" nillable="true" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="modelNo" nillable="true" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="serialNo" nillable="true" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="comments" nillable="true" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="trackingStatusCode" nillable="true" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="pickupWorkOrderId" nillable="true" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="pickupWorkOrderLineNo" nillable="true" type="xsd:int">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="deliveryWorkOrderId" nillable="true" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="deliveryWorkOrderLineNo" nillable="true" type="xsd:int">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="transactionTypeCode" nillable="true" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="equipmentActivityCode" nillable="true" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="requestedEquipmentStatusCode" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="equipmentTrackingSeqNo" type="xsd:int">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

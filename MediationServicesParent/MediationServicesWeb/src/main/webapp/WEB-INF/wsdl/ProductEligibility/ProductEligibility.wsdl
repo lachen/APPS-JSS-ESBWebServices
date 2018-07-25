@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="ProductEligibility" targetNamespace="http://AES_GetProductEligibility_Svcs_1_0/com/apria/services/aes/producteligibility/ProductEligibility" xmlns:bons1="http://AES_GetProductEligibility_Svcs_1_0/com/apria/services/aes/producteligibility/beans" xmlns:tns="http://AES_GetProductEligibility_Svcs_1_0/com/apria/services/aes/producteligibility/ProductEligibility" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://AES_GetProductEligibility_Svcs_1_0/com/apria/services/aes/producteligibility/ProductEligibility">
+      <xsd:import namespace="http://AES_GetProductEligibility_Svcs_1_0/com/apria/services/aes/producteligibility/beans" schemaLocation="beans/AES_ProductEligibility_Exception.xsd"/>
+      <xsd:import namespace="http://AES_GetProductEligibility_Svcs_1_0/com/apria/services/aes/producteligibility/beans" schemaLocation="beans/AES_ProductEligibility_Response.xsd"/>
+      <xsd:import namespace="http://AES_GetProductEligibility_Svcs_1_0/com/apria/services/aes/producteligibility/beans" schemaLocation="beans/request.xsd"/>
+      <xsd:element name="getProductEligibility">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="input" nillable="true" type="bons1:AES_ProductEligibility_Request"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProductEligibilityResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="output" nillable="true" type="bons1:AES_ProductEligibility_Response"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProductEligibilityFault1_fault" nillable="true" type="bons1:AES_ProductEligibility_Exception"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getProductEligibility_faultMsg">
+    <wsdl:part element="tns:getProductEligibilityFault1_fault" name="fault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProductEligibilityResponseMsg">
+    <wsdl:part element="tns:getProductEligibilityResponse" name="getProductEligibilityResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProductEligibilityRequestMsg">
+    <wsdl:part element="tns:getProductEligibility" name="getProductEligibilityParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ProductEligibility">
+    <wsdl:operation name="getProductEligibility">
+      <wsdl:input message="tns:getProductEligibilityRequestMsg" name="getProductEligibilityRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getProductEligibilityResponseMsg" name="getProductEligibilityResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:getProductEligibility_faultMsg" name="fault">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

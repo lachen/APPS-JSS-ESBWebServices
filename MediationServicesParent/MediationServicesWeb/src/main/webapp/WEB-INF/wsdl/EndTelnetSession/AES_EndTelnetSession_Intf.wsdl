@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AES_EndTelnetSession_Intf" targetNamespace="http://AES_EndTelnetSession_Lib_1_0/com/apria/services/aes/endtelnetsession/AES_EndTelnetSession_Intf" xmlns:bons1="http://AES_EndTelnetSession_Lib_1_0/com/apria/services/aes/endtelnetsession/beans" xmlns:tns="http://AES_EndTelnetSession_Lib_1_0/com/apria/services/aes/endtelnetsession/AES_EndTelnetSession_Intf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://AES_EndTelnetSession_Lib_1_0/com/apria/services/aes/endtelnetsession/AES_EndTelnetSession_Intf">
+      <xsd:import namespace="http://AES_EndTelnetSession_Lib_1_0/com/apria/services/aes/endtelnetsession/beans" schemaLocation="beans/EndTelnetSessionException.xsd"/>
+      <xsd:import namespace="http://AES_EndTelnetSession_Lib_1_0/com/apria/services/aes/endtelnetsession/beans" schemaLocation="beans/EndTelnetSessionResponse.xsd"/>
+      <xsd:import namespace="http://AES_EndTelnetSession_Lib_1_0/com/apria/services/aes/endtelnetsession/beans" schemaLocation="beans/EndTelnetSessionRequest.xsd"/>
+      <xsd:element name="endAcisSession">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="input" nillable="true" type="bons1:EndTelnetSessionRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="endAcisSessionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="output" nillable="true" type="bons1:EndTelnetSessionResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="operation1Fault1_fault" nillable="true" type="bons1:EndTelnetSessionException"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="endAcisSession_faultMsg">
+    <wsdl:part element="tns:operation1Fault1_fault" name="fault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="endAcisSessionResponseMsg">
+    <wsdl:part element="tns:endAcisSessionResponse" name="endAcisSessionResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="endAcisSessionRequestMsg">
+    <wsdl:part element="tns:endAcisSession" name="endAcisSessionParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="AES_EndTelnetSession_Intf">
+    <wsdl:operation name="endAcisSession">
+      <wsdl:input message="tns:endAcisSessionRequestMsg" name="endAcisSessionRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:endAcisSessionResponseMsg" name="endAcisSessionResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:endAcisSession_faultMsg" name="fault">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

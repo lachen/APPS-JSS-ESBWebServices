@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+	targetNamespace="http://AES_GetIntakeBySessionIDv1/com/apria/aes/services/web/getsession"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="AES_GetSessionResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element minOccurs="0" name="associateId"
+					type="xsd:string">
+				</xsd:element>
+				<xsd:element minOccurs="0" name="customerId"
+					type="xsd:string">
+				</xsd:element>
+				<xsd:element minOccurs="0" name="intakeNumber"
+					type="xsd:string">
+				</xsd:element>
+				<xsd:element minOccurs="0" name="message"
+					type="xsd:string">
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

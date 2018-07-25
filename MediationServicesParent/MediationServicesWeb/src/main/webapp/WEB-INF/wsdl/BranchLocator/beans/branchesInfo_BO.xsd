@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://AES_BranchLocator_Svcs_v1/com/apria/svcs/aes/branchlocator" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="branchesInfo_BO">
+    <xsd:sequence>
+      <xsd:element maxOccurs="1" minOccurs="0" name="addrLine1" nillable="true" type="xsd:string">
+        <xsd:annotation/>
+      </xsd:element>
+      <xsd:element maxOccurs="1" minOccurs="0" name="addrLine2" nillable="true" type="xsd:string">
+        <xsd:annotation/>
+      </xsd:element>
+      <xsd:element maxOccurs="1" minOccurs="0" name="city" nillable="true" type="xsd:string">
+        <xsd:annotation/>
+      </xsd:element>
+      <xsd:element maxOccurs="1" minOccurs="0" name="state" nillable="true" type="xsd:string">
+        <xsd:annotation/>
+      </xsd:element>
+      <xsd:element maxOccurs="1" minOccurs="0" name="zip" nillable="true" type="xsd:string">
+        <xsd:annotation/>
+      </xsd:element>
+      <xsd:element maxOccurs="1" minOccurs="0" name="zipExtn" nillable="true" type="xsd:string">
+        <xsd:annotation/>
+      </xsd:element>
+      <xsd:element maxOccurs="1" minOccurs="0" name="addrLatitude" nillable="true" type="xsd:double">
+        <xsd:annotation/>
+      </xsd:element>
+      <xsd:element maxOccurs="1" minOccurs="0" name="addrLongitude" nillable="true" type="xsd:double">
+        <xsd:annotation/>
+      </xsd:element>
+      <xsd:element maxOccurs="1" minOccurs="0" name="uniqueId" nillable="true" type="xsd:string">
+        <xsd:annotation/>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="locationId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="organizationType" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="division" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="serviceType1" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="serviceType2" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="serviceType3" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="serviceType4" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="serviceType5" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="mainPhoneNumber" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="customerPhoneNumber" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

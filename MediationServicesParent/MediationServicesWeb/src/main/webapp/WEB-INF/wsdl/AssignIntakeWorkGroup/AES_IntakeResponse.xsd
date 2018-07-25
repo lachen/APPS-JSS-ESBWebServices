@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://AES_AssignIntakeWrkGrp/com/apria/web/services"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="AES_IntakeResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element minOccurs="0" name="message" type="xsd:string">
+				</xsd:element>
+				<xsd:element minOccurs="0" name="result" type="xsd:string">
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AES_IntakeFollowUp_Interface"
+	targetNamespace="http://AES_IntakeFollowUp/com/apria/web/services/AES_IntakeFollowUp_Interface"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://AES_IntakeFollowUp/com/apria/web/services/AES_IntakeFollowUp_Interface"
+	xmlns:bons1="http://AES_IntakeFollowUp/com/apria/web/services">
+	<wsdl:types>
+		<xsd:schema
+			targetNamespace="http://AES_IntakeFollowUp/com/apria/web/services/AES_IntakeFollowUp_Interface">
+			<xsd:import namespace="http://AES_IntakeFollowUp/com/apria/web/services"
+				schemaLocation="AES_IntakeFollowUpException.xsd" />
+			<xsd:import namespace="http://AES_IntakeFollowUp/com/apria/web/services"
+				schemaLocation="AES_IntakeFollowUpResponse.xsd" />
+			<xsd:import namespace="http://AES_IntakeFollowUp/com/apria/web/services"
+				schemaLocation="AES_IntakeFollowUpRequest.xsd" />
+			<xsd:element name="intakeFollowUp">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="followUpRequest" nillable="true"
+							type="bons1:AES_IntakeFollowUpRequest" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="intakeFollowUpResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="followUpResponse" nillable="true"
+							type="bons1:AES_IntakeFollowUpResponse" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="intakeFollowUpFault1_intakefollowUpFault"
+				nillable="true" type="bons1:AES_IntakeFollowUpException" />
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="intakeFollowUp_intakefollowUpFaultMsg">
+		<wsdl:part name="intakefollowUpFault"
+			element="tns:intakeFollowUpFault1_intakefollowUpFault">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="intakeFollowUpResponseMsg">
+		<wsdl:part name="intakeFollowUpResult" element="tns:intakeFollowUpResponse">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="intakeFollowUpRequestMsg">
+		<wsdl:part name="intakeFollowUpParameters" element="tns:intakeFollowUp">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="AES_IntakeFollowUp_Interface">
+		<wsdl:operation name="intakeFollowUp">
+			<wsdl:input name="intakeFollowUpRequest" message="tns:intakeFollowUpRequestMsg">
+			</wsdl:input>
+			<wsdl:output name="intakeFollowUpResponse" message="tns:intakeFollowUpResponseMsg">
+			</wsdl:output>
+			<wsdl:fault name="intakefollowUpFault"
+				message="tns:intakeFollowUp_intakefollowUpFaultMsg">
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:portType>
+</wsdl:definitions>

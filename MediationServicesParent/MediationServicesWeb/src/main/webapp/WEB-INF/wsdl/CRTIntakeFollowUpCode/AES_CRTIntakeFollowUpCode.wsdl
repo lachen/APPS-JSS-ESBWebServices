@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AES_CRTIntakeFollowUpCode"
+	targetNamespace="http://AES_CRT_Intake_FollowUpCodeV1/com/apria/web/services/intake/followcode/AES_CRTIntakeFollowUpCode"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://AES_CRT_Intake_FollowUpCodeV1/com/apria/web/services/intake/followcode/AES_CRTIntakeFollowUpCode"
+	xmlns:bons1="http://AES_CRT_Intake_FollowUpCodeV1/com/apria/web/services/intake/followcode">
+	<wsdl:types>
+		<xsd:schema
+			targetNamespace="http://AES_CRT_Intake_FollowUpCodeV1/com/apria/web/services/intake/followcode/AES_CRTIntakeFollowUpCode">
+			<xsd:import
+				namespace="http://AES_CRT_Intake_FollowUpCodeV1/com/apria/web/services/intake/followcode"
+				schemaLocation="AES_CrtIntkFlwUpCdResponseFault.xsd" />
+			<xsd:import
+				namespace="http://AES_CRT_Intake_FollowUpCodeV1/com/apria/web/services/intake/followcode"
+				schemaLocation="AES_CrtIntkFlwUpCdRequest.xsd" />
+			<xsd:import
+				namespace="http://AES_CRT_Intake_FollowUpCodeV1/com/apria/web/services/intake/followcode"
+				schemaLocation="AES_CrtIntkFlwUpCdResponse.xsd" />
+			<xsd:element name="createIntakeFollowUpCode">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="input1" nillable="true"
+							type="bons1:AES_CrtIntkFlwUpCdRequest" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="createIntakeFollowUpCodeResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="output1" nillable="true"
+							type="bons1:AES_CrtIntkFlwUpCdResponse" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="getIntakeFollowUpCodeFault1" nillable="true"
+				type="bons1:AES_CrtIntkFlwUpCdResponseFault" />
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="createIntakeFollowUpCode_getIntakeFollowUpCodeFault1Msg">
+		<wsdl:part name="getIntakeFollowUpCodeFault1" element="tns:getIntakeFollowUpCodeFault1">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="createIntakeFollowUpCodeResponseMsg">
+		<wsdl:part name="createIntakeFollowUpCodeResult" element="tns:createIntakeFollowUpCodeResponse">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="createIntakeFollowUpCodeRequestMsg">
+		<wsdl:part name="createIntakeFollowUpCodeParameters"
+			element="tns:createIntakeFollowUpCode">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="AES_CRTIntakeFollowUpCode">
+		<wsdl:operation name="createIntakeFollowUpCode">
+			<wsdl:input name="createIntakeFollowUpCodeRequest"
+				message="tns:createIntakeFollowUpCodeRequestMsg">
+			</wsdl:input>
+			<wsdl:output name="createIntakeFollowUpCodeResponse"
+				message="tns:createIntakeFollowUpCodeResponseMsg">
+			</wsdl:output>
+			<wsdl:fault name="getIntakeFollowUpCodeFault1"
+				message="tns:createIntakeFollowUpCode_getIntakeFollowUpCodeFault1Msg">
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:portType>
+</wsdl:definitions>

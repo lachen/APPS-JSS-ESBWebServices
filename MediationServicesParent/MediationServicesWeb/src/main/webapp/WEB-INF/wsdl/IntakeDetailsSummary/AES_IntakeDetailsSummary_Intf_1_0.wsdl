@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+	name="AES_IntakeDetailsSummary_IntfExport1_AES_IntakeDetailsSummary_IntfHttp_Service"
+	targetNamespace="http://AES_IntakeStatus_Lib_1_0/com/apria/services/aes/intakestatus/AES_GetIntakeStatus_Intf/Binding"
+	xmlns:Port_0="http://AES_IntakeStatus_Lib_1_0/com/apria/services/aes/intakestatus/AES_GetIntakeStatus_Intf"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:this="http://AES_IntakeStatus_Lib_1_0/com/apria/services/aes/intakestatus/AES_GetIntakeStatus_Intf/Binding"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+	<wsdl:import location="AES_IntakeDetailsSummary_Intf.wsdl"
+		namespace="http://AES_IntakeStatus_Lib_1_0/com/apria/services/aes/intakestatus/AES_GetIntakeStatus_Intf">
+	</wsdl:import>
+	<wsdl:binding
+		name="AES_IntakeDetailsSummary_IntfExport1_AES_IntakeDetailsSummary_IntfHttpBinding"
+		type="Port_0:AES_IntakeDetailsSummary_Intf">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="getIntakeDetailsSummary">
+			<soap:operation soapAction="" />
+			<wsdl:input name="getIntakeDetailsSummaryRequest">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="getIntakeDetailsSummaryResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="fault">
+				<soap:fault name="fault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service
+		name="AES_IntakeDetailsSummary_Intf_1_0">
+		<wsdl:port
+			binding="this:AES_IntakeDetailsSummary_IntfExport1_AES_IntakeDetailsSummary_IntfHttpBinding"
+			name="AES_IntakeDetailsSummary_Intf_1_0_AES_IntakeDetailsSummary_IntfHttpPort">
+			<soap:address
+				location="http://aesbstg.apria.com:80/AES_GetIntakeDetailsSummary_Svcs_1_0Web/sca/AES_IntakeDetailsSummary_Intf_1_0" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

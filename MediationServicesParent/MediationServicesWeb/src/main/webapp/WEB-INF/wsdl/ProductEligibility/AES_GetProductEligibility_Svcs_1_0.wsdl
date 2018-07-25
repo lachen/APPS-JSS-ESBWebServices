@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AES_GetProductEligibility_Intf_1_0_ProductEligibilityHttp_Service" targetNamespace="http://AES_GetProductEligibility_Svcs_1_0/com/apria/services/aes/producteligibility/ProductEligibility/Binding" xmlns:Port_0="http://AES_GetProductEligibility_Svcs_1_0/com/apria/services/aes/producteligibility/ProductEligibility" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:this="http://AES_GetProductEligibility_Svcs_1_0/com/apria/services/aes/producteligibility/ProductEligibility/Binding" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import location="ProductEligibility.wsdl" namespace="http://AES_GetProductEligibility_Svcs_1_0/com/apria/services/aes/producteligibility/ProductEligibility">
+    </wsdl:import>
+  <wsdl:binding name="AES_GetProductEligibility_Intf_1_0_ProductEligibilityHttpBinding" type="Port_0:ProductEligibility">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getProductEligibility">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="getProductEligibilityRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProductEligibilityResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AES_GetProductEligibility_Intf_1_0">
+    <wsdl:port binding="this:AES_GetProductEligibility_Intf_1_0_ProductEligibilityHttpBinding" name="AES_GetProductEligibility_Intf_1_0_ProductEligibilityHttpPort">
+      <soap:address location="http://aesb.apria.com:80/AES_GetProductEligibility_Svcs_1_0Web/sca/AES_GetProductEligibility_Intf_1_0"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+	targetNamespace="http://AES_CRT_Intake_FollowUpCodeV1/com/apria/web/services/intake/followcode"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="AES_CrtIntkFlwUpCdRequest">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="intakeAssociate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="intakeNumber" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="followupCodeList" type="xsd:string"
+				maxOccurs="1">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BranchHost" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ClientHost" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="userName" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="password" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SerialVersion" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="intakeFollowupText"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="recStatus" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="workOrder" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

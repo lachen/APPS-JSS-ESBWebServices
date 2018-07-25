@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://AES_EquipmentTracking_Svcs_1_0/com/apria/services/aes/equipmenttracking/beans" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="EquipmentTrackingResponse">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="0" name="nextTestDate" nillable="true" type="xsd:string">
+				<xsd:annotation/>
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="statusCode" nillable="true" type="xsd:string">
+				<xsd:annotation/>
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="statusCodeDescription" nillable="true" type="xsd:string">
+				<xsd:annotation/>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

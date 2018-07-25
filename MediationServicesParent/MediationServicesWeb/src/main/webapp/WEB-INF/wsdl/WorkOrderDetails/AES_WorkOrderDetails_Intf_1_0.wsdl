@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AES_WorkOrderDetails_IntfExport1_AES_WorkOrderDetails_IntfHttp_Service" targetNamespace="http://AES_GetWorkOrderDetails_Lib_1_0/com/apria/services/aes/workorderdetails/AES_WorkOrderDetails_Intf/Binding" xmlns:Port_0="http://AES_GetWorkOrderDetails_Lib_1_0/com/apria/services/aes/workorderdetails/AES_WorkOrderDetails_Intf" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:this="http://AES_GetWorkOrderDetails_Lib_1_0/com/apria/services/aes/workorderdetails/AES_WorkOrderDetails_Intf/Binding" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import location="AES_WorkOrderDetails_Intf.wsdl" namespace="http://AES_GetWorkOrderDetails_Lib_1_0/com/apria/services/aes/workorderdetails/AES_WorkOrderDetails_Intf">
+    </wsdl:import>
+  <wsdl:binding name="AES_WorkOrderDetails_IntfExport1_AES_WorkOrderDetails_IntfHttpBinding" type="Port_0:AES_WorkOrderDetails_Intf">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getWorkOrderDetails">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="getWorkOrderDetailsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getWorkOrderDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AES_WorkOrderDetails_Intf_1_0">
+    <wsdl:port binding="this:AES_WorkOrderDetails_IntfExport1_AES_WorkOrderDetails_IntfHttpBinding" name="AES_WorkOrderDetails_Intf_1_0_AES_WorkOrderDetails_IntfHttpPort">
+      <soap:address location="http://aesb.apria.com:80/AES_GetWorkOrderDetails_Svcs_1_0Web/sca/AES_WorkOrderDetails_Intf_1_0"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://AES_GetIntakeWorkOrders_Lib_1_0/com/apria/services/aes/intakeworkorders/beans" xmlns:Q1="http://AES_GetIntakeWorkOrders_Lib_1_0/com/apria/services/aes/intakeworkorders/beans" xmlns:bons0="http://AES_GetIntakeWorkOrders_Lib_1_0/com/apria/services/aes/intakeworkorders/beans" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:include schemaLocation="AES_WorkOrderDetailsSummary.xsd"/>
+	<xsd:complexType name="AES_IntakeWorkOrders">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="IntakeStatus" nillable="true" type="xsd:string"/>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="IntakeWorkOrders" nillable="true" type="Q1:AES_WorkOrderDetailsSummary"/>
+			<xsd:element minOccurs="0" name="WorkOrderRecordCount" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="WorkOrderRecordOverflow" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="RecordCount" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="RecordStatus" nillable="true" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

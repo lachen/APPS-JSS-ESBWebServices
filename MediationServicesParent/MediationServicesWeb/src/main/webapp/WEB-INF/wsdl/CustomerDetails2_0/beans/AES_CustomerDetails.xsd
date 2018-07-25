@@ -1,0 +1,51 @@
+<xsd:schema targetNamespace="http://AES_GetCustomer_Lib_2_0/com/apria/services/aes/customerdetails/beans" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:ns="http://AES_GetCustomer_Lib_2_0/com/apria/services/aes/customerdetails/beans">
+	<xsd:complexType name="AES_CustomerDetails">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="BillingAddress" nillable="true" type="ns:BillingAddress" />
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="Customer" nillable="true" type="ns:Customer" />
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="DeliveryAddress" nillable="true" type="ns:DeliveryAddress" />
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="PermanentAddress" nillable="true" type="ns:PermanentAddress" />
+			<xsd:element minOccurs="0" name="RecordCount" nillable="true" type="xsd:decimal" />
+			<xsd:element minOccurs="0" name="RecordStatus" nillable="true" type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="BillingAddress">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="AddressLine1" nillable="true" type="xsd:string" />
+			<xsd:element minOccurs="0" name="AddressLine2" nillable="true" type="xsd:string" />
+			<xsd:element minOccurs="0" name="City" nillable="true" type="xsd:string" />
+			<xsd:element minOccurs="0" name="State" nillable="true" type="xsd:string" />
+			<xsd:element minOccurs="0" name="Zip" nillable="true" type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Customer">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="CustEmail" nillable="true" type="xsd:string" />
+			<xsd:element minOccurs="0" name="CustType" nillable="true" type="xsd:string" />
+			<xsd:element minOccurs="0" name="DOB" nillable="true" type="xsd:string" />
+			<xsd:element minOccurs="0" name="FirstName" nillable="true" type="xsd:string" />
+			<xsd:element minOccurs="0" name="Gender" nillable="true" type="xsd:string" />
+			<xsd:element minOccurs="0" name="LastName" nillable="true" type="xsd:string" />
+			<xsd:element minOccurs="0" name="MiddleInitial" nillable="true" type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="DeliveryAddress">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="AddressLine1" nillable="true" type="xsd:string" />
+			<xsd:element minOccurs="0" name="AddressLine2" nillable="true" type="xsd:string" />
+			<xsd:element minOccurs="0" name="City" nillable="true" type="xsd:string" />
+			<xsd:element minOccurs="0" name="State" nillable="true" type="xsd:string" />
+			<xsd:element minOccurs="0" name="Zip" nillable="true" type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PermanentAddress">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="AddressLine1" nillable="true" type="xsd:string" />
+			<xsd:element minOccurs="0" name="AddressLine2" nillable="true" type="xsd:string" />
+			<xsd:element minOccurs="0" name="City" nillable="true" type="xsd:string" />
+			<xsd:element minOccurs="0" name="State" nillable="true" type="xsd:string" />
+			<xsd:element minOccurs="0" name="Zip" nillable="true" type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

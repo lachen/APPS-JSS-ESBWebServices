@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://AES_EndTelnetSession_Lib_1_0/com/apria/services/aes/endtelnetsession/beans" xmlns:bons0="http://AES_EndTelnetSession_Lib_1_0/com/apria/services/aes/endtelnetsession/beans" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:include schemaLocation="EndTelnetSessionRequest.xsd"/>
+	<xsd:complexType name="EndTelnetSessionException">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="exceptionMessage" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="requestBO" type="bons0:EndTelnetSessionRequest">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

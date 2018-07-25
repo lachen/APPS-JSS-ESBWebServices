@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+	name="AES_GetIntakeBySessionExport1_AES_GetIntakeBySessionHttp_Service"
+	targetNamespace="http://AES_GetIntakeBySessionIDv1/com/apria/aes/services/web/getsession/AES_GetIntakeBySession/Binding"
+	xmlns:Port_0="http://AES_GetIntakeBySessionIDv1/com/apria/aes/services/web/getsession/AES_GetIntakeBySession"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:this="http://AES_GetIntakeBySessionIDv1/com/apria/aes/services/web/getsession/AES_GetIntakeBySession/Binding"
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+	<wsdl:import
+		namespace="http://AES_GetIntakeBySessionIDv1/com/apria/aes/services/web/getsession/AES_GetIntakeBySession"
+		location="AES_GetIntakeBySession.wsdl">
+	</wsdl:import>
+	<wsdl:binding
+		name="AES_GetIntakeBySessionExport1_AES_GetIntakeBySessionHttpBinding"
+		type="Port_0:AES_GetIntakeBySession">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="getSessionDetailsBySessionID">
+			<soap:operation soapAction="" />
+			<wsdl:input name="getSessionDetailsBySessionIDRequest">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="getSessionDetailsBySessionIDResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="getSessionDetailsBySessionIDFault1">
+				<soap:fault name="getSessionDetailsBySessionIDFault1"
+					use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service
+		name="AES_GetIntakeBySessionExport1">
+		<wsdl:port
+			name="AES_GetIntakeBySessionExport1_AES_GetIntakeBySessionHttpPort"
+			binding="this:AES_GetIntakeBySessionExport1_AES_GetIntakeBySessionHttpBinding">
+			<soap:address
+				location="http://aesb.apria.com:80/AES_GetIntakeBySessionIDv1Web/sca/AES_GetIntakeBySessionExport1" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

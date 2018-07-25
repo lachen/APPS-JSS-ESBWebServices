@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://AES_GetIntakeDetails_Lib_1_0/com/apria/services/aes/intakedetails" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="AES_LineItems">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="DeliveryDate" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DeliveryGMT" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DeliveryGMTDST" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DeliveryTimeZone" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DeliveryType" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DiagnosisCode1" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DiagnosisCode2" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DiagnosisCode3" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DiagnosisCode4" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="Hcpc" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="IntakeChargeable" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="LineType" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="OpsClass" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="PayorId" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="productId" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="DeliveryTime" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

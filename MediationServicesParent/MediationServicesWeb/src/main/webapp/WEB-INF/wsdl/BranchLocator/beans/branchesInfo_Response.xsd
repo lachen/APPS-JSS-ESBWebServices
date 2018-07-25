@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://AES_BranchLocator_Svcs_v1/com/apria/svcs/aes/branchlocator" xmlns:bons0="http://AES_BranchLocator_Svcs_v1/com/apria/svcs/aes/branchlocator" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:include schemaLocation="branchesInfo_BO.xsd"/>
+	<xsd:complexType name="branchesInfo_Response">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="branchesInfo" type="bons0:branchesInfo_BO">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

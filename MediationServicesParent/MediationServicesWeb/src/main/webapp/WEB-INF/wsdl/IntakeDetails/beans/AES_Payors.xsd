@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://AES_GetIntakeDetails_Lib_1_0/com/apria/services/aes/intakedetails" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="AES_Payors">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="AgreementID" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="ID" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Name" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="PlanType" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="ReportingID" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Tier" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

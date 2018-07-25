@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AES_SetAcisSessionIdForSfdc" 
+targetNamespace="http://AES_SetAcisSessionForSfdc/com/apria/aes/services/web/setSfdcAcissession/" 
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+xmlns:tns="http://AES_SetAcisSessionForSfdc/com/apria/aes/services/web/setSfdcAcissession/" 
+xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://AES_SetAcisSessionForSfdc/com/apria/aes/services/web/setSfdcAcissession/">
+      <xsd:element name="setAcisSessionIdForSfdcRequest" type="tns:AES_SetSfdcSessionToAcisRequest">
+      </xsd:element>
+     <xsd:element name="setAcisSessionIdForSfdcResponse" type="tns:AES_SetSfdcSessionToAcisResponse">
+      </xsd:element>
+    
+      <xsd:complexType name="AES_SetSfdcSessionToAcisRequest">
+      	<xsd:sequence>
+      		<xsd:element name="branchHost" type="xsd:string"></xsd:element>
+      		<xsd:element name="sessionId" type="xsd:string"></xsd:element>
+      		<xsd:element name="sfdcOrderId" type="xsd:string"></xsd:element>
+      		<xsd:element name="userName" type="xsd:string"></xsd:element>
+      		<xsd:element name="password" type="xsd:string"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+
+      <xsd:complexType name="AES_SetSfdcSessionToAcisResponse">
+      	<xsd:sequence>
+      		<xsd:element name="message" type="xsd:string"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="setAcisSessionIdForSfdcRequest">
+    <wsdl:part element="tns:setAcisSessionIdForSfdcRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="setAcisSessionIdForSfdcResponse">
+    <wsdl:part element="tns:setAcisSessionIdForSfdcResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="AES_SetAcisSessionIdForSfdc">
+    <wsdl:operation name="setAcisSessionIdForSfdc">
+      <wsdl:input message="tns:setAcisSessionIdForSfdcRequest"/>
+      <wsdl:output message="tns:setAcisSessionIdForSfdcResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AES_SetAcisSessionIdForSfdcSOAP" type="tns:AES_SetAcisSessionIdForSfdc">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="setAcisSessionIdForSfdc">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AES_SetAcisSessionIdForSfdc">
+    <wsdl:port binding="tns:AES_SetAcisSessionIdForSfdcSOAP" name="AES_SetAcisSessionIdForSfdcSOAP">
+      <soap:address location="http://aesb.apria.com:80/setAcisSessionForSfdcOrders"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

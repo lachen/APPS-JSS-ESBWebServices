@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AES_GetIntakeStatus_Intf"
+	targetNamespace="http://AES_IntakeStatus_Lib_1_0/com/apria/services/aes/intakestatus/AES_GetIntakeStatus_Intf"
+	xmlns:bons1="http://AES_IntakeStatus_Lib_1_0/com/apria/services/aes/intakestatus/beans"
+	xmlns:tns="http://AES_IntakeStatus_Lib_1_0/com/apria/services/aes/intakestatus/AES_GetIntakeStatus_Intf"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:types>
+		<xsd:schema
+			targetNamespace="http://AES_IntakeStatus_Lib_1_0/com/apria/services/aes/intakestatus/AES_GetIntakeStatus_Intf">
+			<xsd:import
+				namespace="http://AES_IntakeStatus_Lib_1_0/com/apria/services/aes/intakestatus/beans"
+				schemaLocation="beans/AES_IntakeDetailsSummary_Request.xsd" />
+			<xsd:import
+				namespace="http://AES_IntakeStatus_Lib_1_0/com/apria/services/aes/intakestatus/beans"
+				schemaLocation="beans/AES_IntakeDetailsSummary_Exception.xsd" />
+			<xsd:import
+				namespace="http://AES_IntakeStatus_Lib_1_0/com/apria/services/aes/intakestatus/beans"
+				schemaLocation="beans/AES_IntakeDetailsSummary.xsd" />
+			<xsd:element name="getIntakeDetailsSummary">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="input" nillable="true"
+							type="bons1:AES_IntakeDetailsSummary_Request" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="getIntakeDetailsSummaryResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="output" nillable="true"
+							type="bons1:AES_IntakeDetailsSummary" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="getIntakeDetailsSummaryFault1_fault"
+				nillable="true" type="bons1:AES_IntakeDetailsSummary_Exception" />
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="getIntakeDetailsSummaryResponseMsg">
+		<wsdl:part element="tns:getIntakeDetailsSummaryResponse"
+			name="getIntakeDetailsSummaryResult">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getIntakeDetailsSummary_faultMsg">
+		<wsdl:part element="tns:getIntakeDetailsSummaryFault1_fault"
+			name="fault">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getIntakeDetailsSummaryRequestMsg">
+		<wsdl:part element="tns:getIntakeDetailsSummary" name="getIntakeDetailsSummaryParameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="AES_IntakeDetailsSummary_Intf">
+		<wsdl:operation name="getIntakeDetailsSummary">
+			<wsdl:input message="tns:getIntakeDetailsSummaryRequestMsg"
+				name="getIntakeDetailsSummaryRequest">
+			</wsdl:input>
+			<wsdl:output message="tns:getIntakeDetailsSummaryResponseMsg"
+				name="getIntakeDetailsSummaryResponse">
+			</wsdl:output>
+			<wsdl:fault message="tns:getIntakeDetailsSummary_faultMsg"
+				name="fault">
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:portType>
+</wsdl:definitions>

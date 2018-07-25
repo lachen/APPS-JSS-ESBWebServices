@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://AES_GetWorkOrderDetails_Lib_1_0/com/apria/services/aes/workorderdetails/beans" xmlns:bons0="http://AES_GetWorkOrderDetails_Lib_1_0/com/apria/services/aes/workorderdetails/beans" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:include schemaLocation="AES_FollowupCode.xsd"/>
+	<xsd:complexType name="AES_WorkOrderDetails">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="CustomerId" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="CustomerFirstName" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="CustomerLastName" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="CustomerMiddleInitial" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="WorkOrderStatus" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DeliveryDate" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DeliveryGMT" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DeliveryGMTDST" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DeliveryTime" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DeliveryTimeZone" nillable="true" type="xsd:string"/>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="FollowupCode" nillable="true" type="bons0:AES_FollowupCode"/>
+			<xsd:element minOccurs="0" name="IntakeCodeRecordCount" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="IntakeCodeRecordOverflow" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="RecordCount" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="RecordStatus" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="intakeNumber" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="intakeAssociate" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+	targetNamespace="http://AES_CRT_Intake_FollowUpCodeV1/com/apria/web/services/intake/followcode"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons0="http://AES_CRT_Intake_FollowUpCodeV1/com/apria/web/services/intake/followcode">
+
+	<xsd:include schemaLocation="AES_CrtIntkFlwUpCdRequest.xsd"></xsd:include>
+	<xsd:complexType name="AES_CrtIntkFlwUpCdResponseFault">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="request"
+				type="bons0:AES_CrtIntkFlwUpCdRequest">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="exceptionMessage"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

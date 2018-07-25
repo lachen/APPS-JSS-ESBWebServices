@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="branchesInfo" targetNamespace="http://AES_BranchLocator_Svcs_v1/com/apria/services/aes/branchlocator/branchesInfo" xmlns:bons1="http://AES_BranchLocator_Svcs_v1/com/apria/svcs/aes/branchlocator" xmlns:tns="http://AES_BranchLocator_Svcs_v1/com/apria/services/aes/branchlocator/branchesInfo" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://AES_BranchLocator_Svcs_v1/com/apria/services/aes/branchlocator/branchesInfo">
+            <xsd:import namespace="http://AES_BranchLocator_Svcs_v1/com/apria/svcs/aes/branchlocator" schemaLocation="beans/branchesInfo_Response.xsd"/>
+            <xsd:import namespace="http://AES_BranchLocator_Svcs_v1/com/apria/svcs/aes/branchlocator" schemaLocation="beans/BranchesByState_Fault.xsd"/>
+      <xsd:element name="getBranchesInfo">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getBranchesInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="output" nillable="true" type="bons1:branchesInfo_Response"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getBranchesInfoFault1_fault" nillable="true" type="bons1:branchesInfo_Fault"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getBranchesInfoRequestMsg">
+    <wsdl:part element="tns:getBranchesInfo" name="getBranchesInfoParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBranchesInfo_faultMsg">
+    <wsdl:part element="tns:getBranchesInfoFault1_fault" name="fault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBranchesInfoResponseMsg">
+    <wsdl:part element="tns:getBranchesInfoResponse" name="getBranchesInfoResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="branchesInfo">
+    <wsdl:operation name="getBranchesInfo">
+      <wsdl:input message="tns:getBranchesInfoRequestMsg" name="getBranchesInfoRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getBranchesInfoResponseMsg" name="getBranchesInfoResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:getBranchesInfo_faultMsg" name="fault">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

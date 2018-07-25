@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://AES_BranchLocator_Svcs_v1/com/apria/svcs/aes/branchlocator" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="branchesInfo_Fault">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="errorCode" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="exceptionMessage" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

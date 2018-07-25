@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://AES_GetProductEligibility_Svcs_1_0/com/apria/services/aes/producteligibility/beans" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="AES_ProductEligibility_Response">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="coveredBenefit" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="procedureCode" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="recordCount" nillable="true" type="xsd:decimal"/>
+			<xsd:element minOccurs="0" name="recordStatus" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="tranTypeOut" nillable="true" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

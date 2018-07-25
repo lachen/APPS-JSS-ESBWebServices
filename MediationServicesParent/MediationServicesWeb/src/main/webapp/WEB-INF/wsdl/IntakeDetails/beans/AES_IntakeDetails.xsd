@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://AES_GetIntakeDetails_Lib_1_0/com/apria/services/aes/intakedetails" xmlns:bons1="http://AES_GetIntakeDetails_Lib_1_0/com/apria/services/aes/intakedetails" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:include schemaLocation="AES_Payors.xsd"/>
+	<xsd:include schemaLocation="AES_LineItems.xsd"/>
+	<xsd:complexType name="AES_IntakeDetails">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="CustomerId" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="CustomerFirstName" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="CustomerLastName" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="CustomerMiddleInitial" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="CustomerDOB" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="CustomerResidentState" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="IntakeStatus" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="IntakeBusinessUnit" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="IntakeDeliveryType" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="IntakeSourceCode" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DABCCFlag" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DeliveryAddressCity" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DeliveryAddressState" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DeliveryDate" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DeliveryTime" nillable="true" type="xsd:string"/>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="LineItems" nillable="true" type="bons1:AES_LineItems"/>
+			<xsd:element minOccurs="0" name="LineItemOverflow" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="LineItemsRecordCount" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="OrderType" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="PayorsRecordCount" nillable="true" type="xsd:int"/>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="Payors" nillable="true" type="bons1:AES_Payors"/>
+			<xsd:element minOccurs="0" name="PhysicianId" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="PhysicianName" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="ReferralId" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="ReferralName" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="ServiceDate" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="RecordCount" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="RecordStatus" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="GMTOffset" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="DeliveryTimeZone" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="DeliveryTimeDSFlag" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

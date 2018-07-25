@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AES_AgentDetails_Intf" targetNamespace="http://AES_GetAgentDetails_Lib_1_0/com/apria/services/aes/agentdetails/AES_AgentDetails_Intf" xmlns:bons1="http://AES_GetAgentDetails_Lib_1_0/com/apria/services/aes/agentdetails/beans" xmlns:tns="http://AES_GetAgentDetails_Lib_1_0/com/apria/services/aes/agentdetails/AES_AgentDetails_Intf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://AES_GetAgentDetails_Lib_1_0/com/apria/services/aes/agentdetails/AES_AgentDetails_Intf" >
+      <xsd:import namespace="http://AES_GetAgentDetails_Lib_1_0/com/apria/services/aes/agentdetails/beans" schemaLocation="beans/AES_AgentDetails_Exception.xsd"/>
+      <xsd:import namespace="http://AES_GetAgentDetails_Lib_1_0/com/apria/services/aes/agentdetails/beans" schemaLocation="beans/AES_AgentDetails.xsd"/>
+      <xsd:element name="getAgentDetailsById">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="input" nillable="true" type="tns:AES_AgentDetails_Request"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+		<xsd:complexType name="AES_AgentDetails_Request">
+			<xsd:sequence>
+				<xsd:element minOccurs="1" name="AgentId" nillable="true" type="xsd:string"/>
+				<xsd:element minOccurs="1" name="ClientHost" type="xsd:string">
+				</xsd:element>
+				<xsd:element minOccurs="0" name="UserName" type="xsd:string">
+				</xsd:element>
+				<xsd:element minOccurs="0" name="Password" type="xsd:string">
+				</xsd:element>
+				<xsd:element minOccurs="0" name="ServiceVersion" type="xsd:string">
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+      <xsd:element name="getAgentDetailsByIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="output" nillable="true" type="bons1:AES_AgentDetails"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAgentDetailsByIdFault1_fault" nillable="true" type="bons1:AES_AgentDetails_Exception"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getAgentDetailsById_faultMsg">
+    <wsdl:part element="tns:getAgentDetailsByIdFault1_fault" name="fault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAgentDetailsByIdRequestMsg">
+    <wsdl:part element="tns:getAgentDetailsById" name="getAgentDetailsByIdParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAgentDetailsByIdResponseMsg">
+    <wsdl:part element="tns:getAgentDetailsByIdResponse" name="getAgentDetailsByIdResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="AES_AgentDetails_Intf">
+    <wsdl:operation name="getAgentDetailsById">
+      <wsdl:input message="tns:getAgentDetailsByIdRequestMsg" name="getAgentDetailsByIdRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getAgentDetailsByIdResponseMsg" name="getAgentDetailsByIdResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:getAgentDetailsById_faultMsg" name="fault">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

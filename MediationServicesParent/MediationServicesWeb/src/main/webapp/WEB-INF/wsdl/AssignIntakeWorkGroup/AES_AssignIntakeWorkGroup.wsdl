@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AES_AssignIntakeWorkGroup"
+	targetNamespace="http://AES_AssignIntakeWrkGrp/com/apria/web/services/AES_AssignIntakeWorkGroup"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://AES_AssignIntakeWrkGrp/com/apria/web/services/AES_AssignIntakeWorkGroup"
+	xmlns:bons1="http://AES_AssignIntakeWrkGrp/com/apria/web/services">
+	<wsdl:types>
+		<xsd:schema
+			targetNamespace="http://AES_AssignIntakeWrkGrp/com/apria/web/services/AES_AssignIntakeWorkGroup">
+			<xsd:import namespace="http://AES_AssignIntakeWrkGrp/com/apria/web/services"
+				schemaLocation="AES_IntakeException.xsd" />
+			<xsd:import namespace="http://AES_AssignIntakeWrkGrp/com/apria/web/services"
+				schemaLocation="AES_IntakeResponse.xsd" />
+			<xsd:import namespace="http://AES_AssignIntakeWrkGrp/com/apria/web/services"
+				schemaLocation="AES_IntakeRequest.xsd" />
+			<xsd:element name="assignIntakeWrkGroup">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="bons1:AES_IntakeRequest" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="assignIntakeWrkGroupResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="bons1:AES_IntakeResponse" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="assignIntakeWrkGroup_assignIntakeWrkGroupFault1Msg">
+		<wsdl:part name="assignIntakeWrkGroupFault1" element="bons1:AES_IntakeException">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="assignIntakeWrkGroupResponseMsg">
+		<wsdl:part name="assignIntakeWrkGroupResult" element="tns:assignIntakeWrkGroupResponse">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="assignIntakeWrkGroupRequestMsg">
+		<wsdl:part name="assignIntakeWrkGroupParameters" element="tns:assignIntakeWrkGroup">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="AES_AssignIntakeWorkGroup">
+		<wsdl:operation name="assignIntakeWrkGroup">
+			<wsdl:input name="assignIntakeWrkGroupRequest" message="tns:assignIntakeWrkGroupRequestMsg">
+			</wsdl:input>
+			<wsdl:output name="assignIntakeWrkGroupResponse" message="tns:assignIntakeWrkGroupResponseMsg">
+			</wsdl:output>
+			<wsdl:fault name="assignIntakeWrkGroupFault1"
+				message="tns:assignIntakeWrkGroup_assignIntakeWrkGroupFault1Msg">
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:portType>
+</wsdl:definitions>

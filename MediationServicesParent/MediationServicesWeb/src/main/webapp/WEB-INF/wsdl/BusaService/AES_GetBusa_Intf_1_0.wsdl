@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AES_GetBusa_IntfExport1_AES_GetBusa_IntfHttp_Service" targetNamespace="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf/Binding" xmlns:Port_0="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:this="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf/Binding" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import location="AES_GetBusa_Intf.wsdl" namespace="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf"/>
+  <wsdl:binding name="AES_GetBusa_IntfExport1_AES_GetBusa_IntfHttpBinding" type="Port_0:AES_GetBusa_Intf">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getBusaByZipCode">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="getBusaByZipCodeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getBusaByZipCodeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCPUByBU">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="getCPUByBURequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCPUByBUResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AES_GetBusa_Intf_1_0">
+    <wsdl:port binding="this:AES_GetBusa_IntfExport1_AES_GetBusa_IntfHttpBinding" name="AES_GetBusa_Intf_1_0_AES_GetBusa_IntfHttpPort">
+      <soap:address location="http://aesb.apria.com:80/AES_GetBusa_Svcs_1_0Web/sca/AES_GetBusa_Intf_1_0"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

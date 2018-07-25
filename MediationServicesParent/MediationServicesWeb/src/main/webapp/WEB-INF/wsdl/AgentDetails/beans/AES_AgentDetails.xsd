@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://AES_GetAgentDetails_Lib_1_0/com/apria/services/aes/agentdetails/beans" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="AES_AgentDetails">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="AgentName" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="ContactName" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="FaxNumber" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="PhoneNumber" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="RecordCount" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="RecordStatus" nillable="true" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="deliveryCommitment" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="productPreference" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="contactInfoProfile" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

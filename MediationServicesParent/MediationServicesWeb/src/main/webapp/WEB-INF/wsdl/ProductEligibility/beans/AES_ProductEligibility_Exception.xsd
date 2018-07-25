@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://AES_GetProductEligibility_Svcs_1_0/com/apria/services/aes/producteligibility/beans" xmlns:bons0="http://AES_GetProductEligibility_Svcs_1_0/com/apria/services/aes/producteligibility/beans" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:include schemaLocation="request.xsd"/>
+	<xsd:complexType name="AES_ProductEligibility_Exception">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="requestBO" type="bons0:AES_ProductEligibility_Request">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="exceptionMessage" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

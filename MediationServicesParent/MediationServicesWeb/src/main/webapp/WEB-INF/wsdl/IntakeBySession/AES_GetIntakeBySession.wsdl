@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AES_GetIntakeBySession"
+	targetNamespace="http://AES_GetIntakeBySessionIDv1/com/apria/aes/services/web/getsession/AES_GetIntakeBySession"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://AES_GetIntakeBySessionIDv1/com/apria/aes/services/web/getsession/AES_GetIntakeBySession"
+	xmlns:bons1="http://AES_GetIntakeBySessionIDv1/com/apria/aes/services/web/getsession">
+	<wsdl:types>
+		<xsd:schema
+			targetNamespace="http://AES_GetIntakeBySessionIDv1/com/apria/aes/services/web/getsession/AES_GetIntakeBySession">
+			<xsd:import
+				namespace="http://AES_GetIntakeBySessionIDv1/com/apria/aes/services/web/getsession"
+				schemaLocation="AES_GetSessionResponse.xsd" />
+			<xsd:import
+				namespace="http://AES_GetIntakeBySessionIDv1/com/apria/aes/services/web/getsession"
+				schemaLocation="AES_GetSessionRequest.xsd" />
+			<xsd:element name="getSessionDetailsBySessionID">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="bons1:AES_GetSessionRequest" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="getSessionDetailsBySessionIDResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="bons1:AES_GetSessionResponse" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="getSessionDetailsBySessionIDFault1"
+				nillable="true" type="xsd:string" />
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="getSessionDetailsBySessionIDResponseMsg">
+		<wsdl:part name="getSessionDetailsBySessionIDResult"
+			element="tns:getSessionDetailsBySessionIDResponse">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getSessionDetailsBySessionIDRequestMsg">
+		<wsdl:part name="getSessionDetailsBySessionIDParameters"
+			element="tns:getSessionDetailsBySessionID">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message
+		name="getSessionDetailsBySessionID_getSessionDetailsBySessionIDFault1Msg">
+		<wsdl:part name="getSessionDetailsBySessionIDFault1"
+			element="tns:getSessionDetailsBySessionIDFault1">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="AES_GetIntakeBySession">
+		<wsdl:operation name="getSessionDetailsBySessionID">
+			<wsdl:input name="getSessionDetailsBySessionIDRequest"
+				message="tns:getSessionDetailsBySessionIDRequestMsg">
+			</wsdl:input>
+			<wsdl:output name="getSessionDetailsBySessionIDResponse"
+				message="tns:getSessionDetailsBySessionIDResponseMsg">
+			</wsdl:output>
+			<wsdl:fault name="getSessionDetailsBySessionIDFault1"
+				message="tns:getSessionDetailsBySessionID_getSessionDetailsBySessionIDFault1Msg">
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:portType>
+</wsdl:definitions>

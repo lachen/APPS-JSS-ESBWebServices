@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AES_EndTelnetSession_Intf_AES_EndTelnetSession_IntfHttp_Service" targetNamespace="http://AES_EndTelnetSession_Lib_1_0/com/apria/services/aes/endtelnetsession/AES_EndTelnetSession_Intf/Binding2" xmlns:Port_0="http://AES_EndTelnetSession_Lib_1_0/com/apria/services/aes/endtelnetsession/AES_EndTelnetSession_Intf" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:this="http://AES_EndTelnetSession_Lib_1_0/com/apria/services/aes/endtelnetsession/AES_EndTelnetSession_Intf/Binding2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import location="AES_EndTelnetSession_Intf.wsdl" namespace="http://AES_EndTelnetSession_Lib_1_0/com/apria/services/aes/endtelnetsession/AES_EndTelnetSession_Intf">
+    </wsdl:import>
+  <wsdl:binding name="AES_EndTelnetSession_Intf_AES_EndTelnetSession_IntfHttpBinding" type="Port_0:AES_EndTelnetSession_Intf">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="endAcisSession">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="endAcisSessionRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="endAcisSessionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AES_EndTelnetSession_Intf">
+    <wsdl:port binding="this:AES_EndTelnetSession_Intf_AES_EndTelnetSession_IntfHttpBinding" name="AES_EndTelnetSession_Intf_AES_EndTelnetSession_IntfHttpPort">
+      <soap:address location="http://aesb.apria.com:80/AES_EndTelnetSession_Svcs_1_0Web/sca/AES_EndTelnetSession_Intf"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
