@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.apria</groupId>
+		<artifactId>acisqueryservicewebparent</artifactId>
+		<version>0.0.0</version>
+	</parent>
+	<artifactId>acisqueryservicewebear</artifactId>
+	<packaging>ear</packaging>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<modules>
+						<webModule>
+							<groupId>com.apria</groupId>
+							<artifactId>acisqueryserviceweb</artifactId>
+							<bundleFileName>acisqueryserviceweb.war</bundleFileName>
+							<contextRoot>/AcisQueryServiceWeb</contextRoot>
+						</webModule>
+					</modules>
+					<displayName>AcisQueryServiceWeb</displayName>
+					<generateApplicationXml>true</generateApplicationXml>
+				</configuration>
+			</plugin>
+		</plugins>
+		<finalName>AcisQueryService</finalName>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.apria</groupId>
+			<artifactId>acisqueryserviceweb</artifactId>
+			<version>0.0.0</version>
+			<type>war</type>
+		</dependency>
+	</dependencies>
+</project>
