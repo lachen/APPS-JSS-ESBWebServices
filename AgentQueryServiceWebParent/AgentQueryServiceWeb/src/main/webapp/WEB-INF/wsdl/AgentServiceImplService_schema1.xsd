@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema targetNamespace="http://acis.services.web.apria.com/" version="1.0" xmlns:tns="http://acis.services.web.apria.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Exception" type="tns:Exception"/>
+
+  <xs:element name="agentResponse" type="tns:agentResponse"/>
+
+  <xs:element name="attributeResponse" type="tns:attributeResponse"/>
+
+  <xs:element name="contactPreferenceResponse" type="tns:contactPreferenceResponse"/>
+
+  <xs:element name="deliveryCommitmentResponse" type="tns:deliveryCommitmentResponse"/>
+
+  <xs:element name="getAgentDetailList" type="tns:getAgentDetailList"/>
+
+  <xs:element name="getAgentDetailListResponse" type="tns:getAgentDetailListResponse"/>
+
+  <xs:element name="getAgentList" type="tns:getAgentList"/>
+
+  <xs:element name="getAgentListResponse" type="tns:getAgentListResponse"/>
+
+  <xs:element name="getAttributeList" type="tns:getAttributeList"/>
+
+  <xs:element name="getAttributeListResponse" type="tns:getAttributeListResponse"/>
+
+  <xs:element name="getContactPreferenceList" type="tns:getContactPreferenceList"/>
+
+  <xs:element name="getContactPreferenceListResponse" type="tns:getContactPreferenceListResponse"/>
+
+  <xs:element name="getDeliveryCommitmentList" type="tns:getDeliveryCommitmentList"/>
+
+  <xs:element name="getDeliveryCommitmentListResponse" type="tns:getDeliveryCommitmentListResponse"/>
+
+  <xs:element name="getProductPreferenceList" type="tns:getProductPreferenceList"/>
+
+  <xs:element name="getProductPreferenceListResponse" type="tns:getProductPreferenceListResponse"/>
+
+  <xs:element name="productPreferenceResponse" type="tns:productPreferenceResponse"/>
+
+  <xs:complexType name="getContactPreferenceList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:agentRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="agentRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="acisId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getContactPreferenceListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:contactPreferenceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="contactPreferenceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contactPreferenceList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="contactPreference" type="tns:contactPreference"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="count" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="contactPreference">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="agentId" type="xs:string"/>
+      <xs:element minOccurs="0" name="contact" type="xs:string"/>
+      <xs:element minOccurs="0" name="contactReason" type="xs:string"/>
+      <xs:element minOccurs="0" name="department" type="xs:string"/>
+      <xs:element minOccurs="0" name="effectiveDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="endDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="fax" type="xs:string"/>
+      <xs:element minOccurs="0" name="notes" type="xs:string"/>
+      <xs:element minOccurs="0" name="phone" type="xs:string"/>
+      <xs:element minOccurs="0" name="phoneExt" type="xs:string"/>
+      <xs:element minOccurs="0" name="preferedContactMethod" type="xs:string"/>
+      <xs:element minOccurs="0" name="title" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getProductPreferenceList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:agentRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getProductPreferenceListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:productPreferenceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="productPreferenceResponse">
+    <xs:sequence>
+      <xs:element name="count" type="xs:int"/>
+      <xs:element minOccurs="0" name="productPreferenceList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="productPreference" type="tns:productPreference"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="productPreference">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="agentId" type="xs:string"/>
+      <xs:element minOccurs="0" name="effectiveDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="endDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="model" type="xs:string"/>
+      <xs:element minOccurs="0" name="notes" type="xs:string"/>
+      <xs:element minOccurs="0" name="opsClass" type="xs:string"/>
+      <xs:element minOccurs="0" name="product" type="xs:string"/>
+      <xs:element minOccurs="0" name="vendor" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAttributeList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:agentRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAttributeListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:attributeResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="attributeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="attributeList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="tns:attribute"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="count" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="attribute">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="agentId" type="xs:string"/>
+      <xs:element minOccurs="0" name="code" type="xs:string"/>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+      <xs:element minOccurs="0" name="effectiveDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="endDate" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDeliveryCommitmentList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:agentRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDeliveryCommitmentListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:deliveryCommitmentResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deliveryCommitmentResponse">
+    <xs:sequence>
+      <xs:element name="count" type="xs:int"/>
+      <xs:element minOccurs="0" name="deliveryCommitmentList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="deliveryCommitment" type="tns:deliveryCommitment"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deliveryCommitment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="agentId" type="xs:string"/>
+      <xs:element minOccurs="0" name="commitment" type="xs:string"/>
+      <xs:element minOccurs="0" name="effectiveDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="endDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="notes" type="xs:string"/>
+      <xs:element minOccurs="0" name="numberOfDays" type="xs:string"/>
+      <xs:element minOccurs="0" name="opsClass" type="xs:string"/>
+      <xs:element minOccurs="0" name="productCategory" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAgentList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:agentRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAgentListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:agentResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="agentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="agentList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="agent" type="tns:agent"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="count" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="agent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="acisId" type="xs:string"/>
+      <xs:element minOccurs="0" name="attributeFlag" type="xs:string"/>
+      <xs:element minOccurs="0" name="attributeList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="tns:attribute"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="contactPreferenceFlag" type="xs:string"/>
+      <xs:element minOccurs="0" name="contactPreferenceList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="contactPreference" type="tns:contactPreference"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="deliveryCommitmentFlag" type="xs:string"/>
+      <xs:element minOccurs="0" name="deliveryCommitmentList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="deliveryCommitment" type="tns:deliveryCommitment"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="productPreferenceFlag" type="xs:string"/>
+      <xs:element minOccurs="0" name="productPreferenceList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="productPreference" type="tns:productPreference"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAgentDetailList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:agentRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAgentDetailListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:agentResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
