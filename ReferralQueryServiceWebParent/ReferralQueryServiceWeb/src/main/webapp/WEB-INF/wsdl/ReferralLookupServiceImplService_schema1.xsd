@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema targetNamespace="http://referral.customer.services.web.apria.com/" version="1.0" xmlns:tns="http://referral.customer.services.web.apria.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Exception" type="tns:Exception"/>
+
+  <xs:element name="getReferrallList" type="tns:getReferrallList"/>
+
+  <xs:element name="getReferrallListResponse" type="tns:getReferrallListResponse"/>
+
+  <xs:element name="referralLookupResponse" type="tns:referralLookupResponse"/>
+
+  <xs:complexType name="getReferrallList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:referralLookupRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="referralLookupRequest">
+    <xs:sequence>
+      <xs:element name="activeOnly" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="city" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="state" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getReferrallListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:referralLookupResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="referralLookupResponse">
+    <xs:sequence>
+      <xs:element name="count" type="xs:int"/>
+      <xs:element minOccurs="0" name="referralList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="referral" type="tns:referral"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="referral">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accountValue" type="xs:string"/>
+      <xs:element name="active" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="city" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="id" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="state" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
