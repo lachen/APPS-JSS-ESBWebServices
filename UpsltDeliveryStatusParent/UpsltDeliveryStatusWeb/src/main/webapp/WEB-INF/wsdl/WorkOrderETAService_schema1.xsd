@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema targetNamespace="http://delivery.upslt.services.web.apria.com/" version="1.0" xmlns:tns="http://delivery.upslt.services.web.apria.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Exception" type="tns:Exception"/>
+
+  <xs:element name="getPatientWorkOrdersETA" type="tns:getPatientWorkOrdersETA"/>
+
+  <xs:element name="getPatientWorkOrdersETAResponse" type="tns:getPatientWorkOrdersETAResponse"/>
+
+  <xs:element name="getWorkOrderETA" type="tns:getWorkOrderETA"/>
+
+  <xs:element name="getWorkOrderETAResponse" type="tns:getWorkOrderETAResponse"/>
+
+  <xs:element name="patientWorkOrdersETAResponse" type="tns:patientWorkOrdersETAResponse"/>
+
+  <xs:element name="workOrderETAResponse" type="tns:workOrderETAResponse"/>
+
+  <xs:complexType name="getPatientWorkOrdersETA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:workOrderETARequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="workOrderETARequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="businessUnit" type="xs:string"/>
+      <xs:element minOccurs="0" name="cpu" type="xs:string"/>
+      <xs:element minOccurs="0" name="patientId" type="xs:string"/>
+      <xs:element minOccurs="0" name="workOrderNumber" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getPatientWorkOrdersETAResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:patientWorkOrdersETAResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="patientWorkOrdersETAResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="workOrderETAList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="workOrderETA" type="tns:workOrderETA"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="workOrderETA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="commitmentEndTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="commitmentStartTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="deliveryTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="timeZone" type="xs:string"/>
+      <xs:element minOccurs="0" name="workOrderNumber" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getWorkOrderETA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:workOrderETARequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getWorkOrderETAResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:workOrderETAResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="workOrderETAResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="commitmentEndTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="commitmentStartTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="deliveryTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="timeZone" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

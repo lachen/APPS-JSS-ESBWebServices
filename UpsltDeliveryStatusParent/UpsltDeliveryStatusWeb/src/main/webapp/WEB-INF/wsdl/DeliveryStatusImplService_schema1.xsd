@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema targetNamespace="http://delivery.upslt.services.web.apria.com/" version="1.0" xmlns:tns="http://delivery.upslt.services.web.apria.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Exception" type="tns:Exception"/>
+
+  <xs:element name="deliveryResponse" type="tns:deliveryResponse"/>
+
+  <xs:element name="getDeliveryStatus" type="tns:getDeliveryStatus"/>
+
+  <xs:element name="getDeliveryStatusResponse" type="tns:getDeliveryStatusResponse"/>
+
+  <xs:element name="getStatusMessage" type="tns:getStatusMessage"/>
+
+  <xs:element name="getStatusMessageResponse" type="tns:getStatusMessageResponse"/>
+
+  <xs:element name="isServiceActive" type="tns:isServiceActive"/>
+
+  <xs:element name="isServiceActiveResponse" type="tns:isServiceActiveResponse"/>
+
+  <xs:element name="setServiceStatus" type="tns:setServiceStatus"/>
+
+  <xs:element name="setServiceStatusResponse" type="tns:setServiceStatusResponse"/>
+
+  <xs:complexType name="isServiceActive">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="isServiceActiveResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="setServiceStatus">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="setServiceStatusResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDeliveryStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:deliveryRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deliveryRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="businessUnit" type="xs:string"/>
+      <xs:element minOccurs="0" name="patientId" type="xs:string"/>
+      <xs:element minOccurs="0" name="routeDateFrom" type="xs:string"/>
+      <xs:element minOccurs="0" name="routeDateTo" type="xs:string"/>
+      <xs:element minOccurs="0" name="workOrder" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDeliveryStatusResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:deliveryResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deliveryResponse">
+    <xs:sequence>
+      <xs:element name="deliveryCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="deliveryList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="delivery" type="tns:delivery"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="delivery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address1" type="xs:string"/>
+      <xs:element minOccurs="0" name="address2" type="xs:string"/>
+      <xs:element minOccurs="0" name="businessUnit" type="xs:string"/>
+      <xs:element minOccurs="0" name="city" type="xs:string"/>
+      <xs:element minOccurs="0" name="driverName" type="xs:string"/>
+      <xs:element minOccurs="0" name="latitude" type="xs:string"/>
+      <xs:element minOccurs="0" name="longitude" type="xs:string"/>
+      <xs:element minOccurs="0" name="patientId" type="xs:string"/>
+      <xs:element minOccurs="0" name="patientName" type="xs:string"/>
+      <xs:element minOccurs="0" name="phone" type="xs:string"/>
+      <xs:element minOccurs="0" name="routeList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="route" type="tns:route"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="state" type="xs:string"/>
+      <xs:element minOccurs="0" name="workOrder" type="xs:string"/>
+      <xs:element minOccurs="0" name="zipcode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="route">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="deliveredDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="deliveryStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="deliveryType" type="xs:string"/>
+      <xs:element minOccurs="0" name="deliveryWindow" type="xs:string"/>
+      <xs:element minOccurs="0" name="eta" type="xs:string"/>
+      <xs:element minOccurs="0" name="lineItemList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="lineItem" type="tns:lineItem"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="routeDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="routeId" type="xs:string"/>
+      <xs:element minOccurs="0" name="stopId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="lineItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comments" type="xs:string"/>
+      <xs:element minOccurs="0" name="itemNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="productCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="productDesc" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getStatusMessage">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getStatusMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
