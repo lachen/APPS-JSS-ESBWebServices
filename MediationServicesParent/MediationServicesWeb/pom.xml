@@ -60,6 +60,12 @@
 				<env>prod</env>
 			</properties>
 		</profile>
+		<profile>
+			<id>trn</id>
+			<properties>
+				<env>trn</env>
+			</properties>
+		</profile>
 	</profiles>
 	<build>
 		<filters>
