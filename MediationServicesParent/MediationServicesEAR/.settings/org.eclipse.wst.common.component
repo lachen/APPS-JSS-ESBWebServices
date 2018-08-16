@@ -2,7 +2,7 @@
     <wb-module deploy-name="MediationServicesWeb">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
-        <dependent-module archiveName="mediationservicesweb.war" deploy-path="/" handle="module:/resource/MediationServicesWeb/MediationServicesWeb">
+        <dependent-module archiveName="mediationservicesweb.war" deploy-path="/" handle="module:/classpath/var/M2_REPO/com/apria/mediationservicesweb/0.0.0/mediationservicesweb-0.0.0.war">
             <dependency-type>uses</dependency-type>
         </dependent-module>
     </wb-module>
