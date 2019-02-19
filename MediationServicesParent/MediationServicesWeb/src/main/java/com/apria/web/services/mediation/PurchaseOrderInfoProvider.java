@@ -38,48 +38,77 @@ public class PurchaseOrderInfoProvider extends BaseDaoProvider implements Provid
 
 	@Override
 	public SOAPMessage invoke(SOAPMessage request) {
-		return super.invoke("purchaseorderinfo", request);
+		if ("getPurchaseOrderInfo".equalsIgnoreCase(super.getOperationName(request))) {
+			return super.invoke("purchaseorderinfo", request);
+		} else {
+			return super.invoke("vendorinfo", request);
+		}
 	}
 
 	@Override
 	protected String getSQL(SOAPMessage request) {
-		return PropertyManager.getProperty("purchaseorderinfo.sql");
+		if ("getPurchaseOrderInfo".equalsIgnoreCase(super.getOperationName(request))) {
+			return PropertyManager.getProperty("purchaseorderinfo.sql");
+		} else {
+			return PropertyManager.getProperty("vendorinfo.sql");
+		}
 	}
 
 	@Override
 	protected void bindParams(Statement pst, SOAPMessage request) throws Exception {
-		NodeList nodes = request.getSOAPBody().getElementsByTagName("purchaseOrderNo");
+		NodeList nodes = null;
+
+		if ("getPurchaseOrderInfo".equalsIgnoreCase(super.getOperationName(request))) {
+			nodes = request.getSOAPBody().getElementsByTagName("purchaseOrderNo");
+		} else {
+			nodes = request.getSOAPBody().getElementsByTagName("vendorNo");
+		}
 
 		((PreparedStatement) pst).setString(1, nodes.item(0).getTextContent());
 	}
 
 	@Override
-	protected Source convertToXml(SOAPMessage reqeust, ResultSet rs) throws Exception {
+	protected Source convertToXml(SOAPMessage request, ResultSet rs) throws Exception {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
 		Document doc = builder.newDocument();
 		Element results = doc.createElement("out");
 		doc.appendChild(results);
-		Element list = doc.createElement("purchaserOrderInfoList");
-		results.appendChild(list);
-		while (rs.next()) {
-			Element row = doc.createElement("purchaseOrderInfo");
-			Element node = doc.createElement("purchaseOrderNo");
-			node.appendChild(doc.createTextNode(rs.getString("purchaseOrderNo")));
-			row.appendChild(node);
-			node = doc.createElement("poType");
-			node.appendChild(doc.createTextNode(rs.getString("poType")));
-			row.appendChild(node);
-			node = doc.createElement("costCenter");
-			node.appendChild(doc.createTextNode(rs.getString("costCenter")));
-			row.appendChild(node);
-			node = doc.createElement("vendorNumber");
-			node.appendChild(doc.createTextNode(rs.getString("vendorNumber")));
-			row.appendChild(node);
-			node = doc.createElement("vendorName");
-			node.appendChild(doc.createTextNode(rs.getString("vendorName")));
-			row.appendChild(node);
-			list.appendChild(row);
+		if ("getPurchaseOrderInfo".equalsIgnoreCase(super.getOperationName(request))) {
+			Element list = doc.createElement("purchaserOrderInfoList");
+			results.appendChild(list);
+			while (rs.next()) {
+				Element row = doc.createElement("purchaseOrderInfo");
+				Element node = doc.createElement("purchaseOrderNo");
+				node.appendChild(doc.createTextNode(rs.getString("purchaseOrderNo")));
+				row.appendChild(node);
+				node = doc.createElement("poType");
+				node.appendChild(doc.createTextNode(rs.getString("poType")));
+				row.appendChild(node);
+				node = doc.createElement("costCenter");
+				node.appendChild(doc.createTextNode(rs.getString("costCenter")));
+				row.appendChild(node);
+				node = doc.createElement("vendorNumber");
+				node.appendChild(doc.createTextNode(rs.getString("vendorNumber")));
+				row.appendChild(node);
+				node = doc.createElement("vendorName");
+				node.appendChild(doc.createTextNode(rs.getString("vendorName")));
+				row.appendChild(node);
+				list.appendChild(row);
+			}
+		} else {
+			Element list = doc.createElement("vendorInfoList");
+			results.appendChild(list);
+			while (rs.next()) {
+				Element row = doc.createElement("vendorInfo");
+				Element node = doc.createElement("vendorNo");
+				node.appendChild(doc.createTextNode(rs.getString("vendorNo")));
+				row.appendChild(node);
+				node = doc.createElement("vendorName");
+				node.appendChild(doc.createTextNode(rs.getString("vendorName")));
+				row.appendChild(node);
+				list.appendChild(row);
+			}
 		}
 		return new DOMSource(doc);
 	}

@@ -44,7 +44,7 @@ import com.apria.web.services.mediation.util.XslUtil;
 public class BaseDaoProvider {
 
 	private static ApriaLogger logger = ApriaLogger.getLogger(BaseDaoProvider.class);
-	
+
 	private static HashMap<String, DataSource> dataSources = new HashMap<String, DataSource>(20);
 
 	public SOAPMessage invoke(String service, SOAPMessage request) {
@@ -97,11 +97,11 @@ public class BaseDaoProvider {
 		return result;
 	}
 
-	protected String getSQL(SOAPMessage request) throws Exception  {
+	protected String getSQL(SOAPMessage request) throws Exception {
 		return null;
 	}
 
-	protected void bindParams(Statement pst, SOAPMessage request) throws Exception  {
+	protected void bindParams(Statement pst, SOAPMessage request) throws Exception {
 	}
 
 	protected Source convertToXml(SOAPMessage request, ResultSet rs) throws Exception {
@@ -191,7 +191,7 @@ public class BaseDaoProvider {
 		if (ds != null)
 			dataSources.put(dbName, ds);
 	}
-	
+
 	private static void printSoapXml(SOAPMessage newRequest) throws Exception {
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		newRequest.writeTo(out);
@@ -199,4 +199,18 @@ public class BaseDaoProvider {
 		logger.debug(strMsg);
 	}
 
+	protected String getOperationName(SOAPMessage request) {
+		String service = null;
+		try {
+			if (request.getSOAPPart().getEnvelope().getBody().getChildNodes().item(1) == null) {
+				service = request.getSOAPPart().getEnvelope().getBody().getChildNodes().item(0).getLocalName();
+			} else {
+				service = request.getSOAPPart().getEnvelope().getBody().getChildNodes().item(1).getLocalName();
+			}
+		} catch (Exception e) {
+			logger.error("Error Occurred", e);
+			throw new RuntimeException(e);
+		}
+		return service;
+	}
 }

@@ -40,6 +40,47 @@
 					<xsd:element name="purchaseOrderInfo" type="tns:PurchaserOrderInfo" maxOccurs="unbounded" minOccurs="0"></xsd:element>
 				</xsd:sequence>
 			</xsd:complexType>
+			<xsd:element name="getVendorInfo">
+				<xsd:complexType>
+					<xsd:sequence>
+
+						<xsd:element name="in" type="tns:VendorInfoRequest"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="getVendorInfoResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+
+						<xsd:element name="out" type="tns:VendorInfoResponse"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		
+			<xsd:complexType name="VendorInfoRequest">
+				<xsd:sequence>
+					<xsd:element name="vendorNo" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		
+			<xsd:complexType name="VendorInfoResponse">
+				<xsd:sequence>
+					<xsd:element name="vendorInfoList" type="tns:VendorInfoList"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		
+			<xsd:complexType name="VendorInfoList">
+				<xsd:sequence>
+					<xsd:element name="vendorInfo" type="tns:VendorInfo" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		
+			<xsd:complexType name="VendorInfo">
+				<xsd:sequence>
+					<xsd:element name="vendorNo" type="xsd:string"></xsd:element>
+					<xsd:element name="vendorName" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
 		</xsd:schema>
 	</wsdl:types>
 	<wsdl:message name="getPurchaseOrderInfoRequest">
@@ -48,16 +89,35 @@
 	<wsdl:message name="getPurchaseOrderInfoResponse">
 		<wsdl:part element="tns:getPurchaseOrderInfoResponse" name="getPurchaseOrderInfoResult" />
 	</wsdl:message>
+	<wsdl:message name="getVendorInfoRequest">
+		<wsdl:part name="getVendorInfoParameters" element="tns:getVendorInfo"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getVendorInfoResponse">
+		<wsdl:part name="getVendorInfoResult" element="tns:getVendorInfoResponse"></wsdl:part>
+	</wsdl:message>
 	<wsdl:portType name="purchaseorderlookup">
 		<wsdl:operation name="getPurchaseOrderInfo">
 			<wsdl:input message="tns:getPurchaseOrderInfoRequest" />
 			<wsdl:output message="tns:getPurchaseOrderInfoResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="getVendorInfo">
+			<wsdl:input message="tns:getVendorInfoRequest"></wsdl:input>
+			<wsdl:output message="tns:getVendorInfoResponse"></wsdl:output>
 		</wsdl:operation>
 	</wsdl:portType>
 	<wsdl:binding name="purchaseorderlookupSOAP" type="tns:purchaseorderlookup">
 		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
 		<wsdl:operation name="getPurchaseOrderInfo">
 			<soap:operation soapAction="http://com.apria.ap/purchaseorderlookup/getPurchaseOrderInfo" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getVendorInfo">
+			<soap:operation soapAction="http://ap.apria.com/purchaseorderlookup/getVendorInfo" />
 			<wsdl:input>
 				<soap:body use="literal" />
 			</wsdl:input>
