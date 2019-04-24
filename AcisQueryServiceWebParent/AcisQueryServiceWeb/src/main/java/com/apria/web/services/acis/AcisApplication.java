@@ -17,6 +17,8 @@ import java.util.Set;
 
 import javax.ws.rs.core.Application;
 
+import org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider;
+
 /**
  * Application Class that extends JAX-RS application.
  * 
@@ -35,4 +37,10 @@ public class AcisApplication extends Application {
 
 		return classes;
 	}
+
+	@Override
+	public Set<Object> getSingletons() {
+		Set<Object> singletons = new HashSet<Object>();
+	    singletons.add(new JacksonJaxbJsonProvider());
+	    return singletons;	}
 }
