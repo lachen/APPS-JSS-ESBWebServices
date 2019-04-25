@@ -41,6 +41,7 @@ public class AcisApplication extends Application {
 	@Override
 	public Set<Object> getSingletons() {
 		Set<Object> singletons = new HashSet<Object>();
-	    singletons.add(new JacksonJaxbJsonProvider());
-	    return singletons;	}
+		singletons.add(new JacksonJaxbJsonProvider());
+		return singletons;
+	}
 }
