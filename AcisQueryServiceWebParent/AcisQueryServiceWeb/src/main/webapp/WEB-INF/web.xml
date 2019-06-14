@@ -5,7 +5,7 @@
 	<display-name>AcisQueryServiceWeb</display-name>
 	<servlet>
 		<servlet-name>JAX-RS</servlet-name>
-		<servlet-class>com.ibm.websphere.jaxrs.server.IBMRestServlet</servlet-class>
+		<servlet-class>org.apache.wink.server.internal.servlet.RestServlet</servlet-class>
 		<init-param>
 			<param-name>javax.ws.rs.Application</param-name>
 			<param-value>com.apria.web.services.acis.AcisApplication</param-value>
@@ -18,10 +18,5 @@
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
-		<welcome-file>default.html</welcome-file>
-		<welcome-file>default.htm</welcome-file>
-		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>
