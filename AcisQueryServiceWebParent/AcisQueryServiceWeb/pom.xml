@@ -77,6 +77,12 @@
 				<env>prod</env>
 			</properties>
 		</profile>
+		<profile>
+			<id>stg</id>
+			<properties>
+				<env>stg</env>
+			</properties>
+		</profile>
 	</profiles>
 	<build>
 		<filters>
