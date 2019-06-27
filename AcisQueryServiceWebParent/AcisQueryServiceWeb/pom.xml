@@ -31,15 +31,20 @@
 			<artifactId>wink-server</artifactId>
 			<version>1.4</version>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-jaxrs</artifactId>
 			<version>1.9.13</version>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-json</artifactId>
 			<version>1.19.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20180813</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
