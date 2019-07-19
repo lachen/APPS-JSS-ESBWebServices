@@ -21,7 +21,7 @@ public class Constant {
 													"D.LAST_UPDT_USR, " +//for equipments
 													"D.EQPMT_NOTE_TX, " +
 													"D.BU_ID "+
-													"FROM SIMS.EQPMT_TRKNG_NOTE D " +
+													"FROM EQPMT_TRKNG_NOTE D " +
 													"WHERE D.REC_ACTV_IN = ? " +
 													"AND D.VNDR_SK = ? " +
 													"AND D.MODEL_NR = ? " +
@@ -55,21 +55,21 @@ public class Constant {
 											       "C.CUST_ID, " +                                                                           
 											       "C.DLVRY_WRK_ORD_ID, " +                                                                             
 											       "C.PCKUP_WRK_ORD_ID ORDER BY D.EQPMT_HIST_TS ASC) RNK " +                                                                          
-											       "FROM SIMS.EQPMT_TRKNG_HIST D  " +                                                                             
-											       "LEFT OUTER JOIN SIMS.SRC_ACIS_EQPMT_TRKNG C " +                                                    
+											       "FROM EQPMT_TRKNG_HIST D  " +                                                                             
+											       "LEFT OUTER JOIN SRC_ACIS_EQPMT_TRKNG C " +                                                    
 											       "ON D.EQPMT_SK = C.EQPMT_SK " +                                                                             
 											       "WHERE D.REC_ACTV_IN = ?  AND D.MODEL_NR = ?  AND D.SERIAL_NR = ?  AND D.VNDR_SK = ?) " +
 												   "WHERE RNK =1 ";
 	
 	public final static String GET_MASK_CODES = "SELECT MODEL_MASK_SK, " + //get list of mask codes
 											"MODEL_MASK_CD " +
-											"FROM SIMS.VNDR_MODEL_MASK " +
+											"FROM VNDR_MODEL_MASK " +
 											"WHERE VNDR_SK = ? " +
 											"AND MODEL_NR = ? " +
 											"AND REC_ACTV_IN = ?";
 	public final static String GET_VALUES_FOR_NEXT_T_DT = "SELECT MFG_DT_OFFSET_MTH_NR, " + //get offset month values to do the 
 													"NEXT_TEST_MTH_NR "+ //date calculation in the equipment 
-													"FROM SIMS.VNDR_MODEL "+ //details page while modifying the 
+													"FROM VNDR_MODEL "+ //details page while modifying the 
 													"WHERE VNDR_SK = ? " + // equipment Details
 													"AND MODEL_NR = ? " +
 													"AND SRC_PROD_ID = ? " +
@@ -85,10 +85,10 @@ public class Constant {
 														"C.NEXT_TEST_DT, " +
 														"C.EQPMT_STS_CD, "+
 														"C.BU_ID "+
-														"FROM SIMS.EQPMT_TRKNG C "+
-														"INNER JOIN SIMS.VNDR A " +
+														"FROM EQPMT_TRKNG C "+
+														"INNER JOIN VNDR A " +
 														"ON A.VNDR_SK = C.VNDR_SK  "+
-														"INNER JOIN SIMS.VNDR_MODEL B " +
+														"INNER JOIN VNDR_MODEL B " +
 														"ON B.VNDR_SK = A.VNDR_SK  "+
 														"WHERE A.VNDR_NM = ? " +
 														"AND C.MODEL_NR = ? " +
@@ -98,13 +98,13 @@ public class Constant {
 														"AND C.EQPMT_SK = ? ";
 	
 	public final static String SQL_CHECK_SERIALNUMBER = "SELECT EQPMT_SK " +//check serial number befor adding
-													"FROM SIMS.EQPMT_TRKNG " +
+													"FROM EQPMT_TRKNG " +
 													"WHERE VNDR_SK = ? " +
 													"AND MODEL_NR = ? " +
 													"AND SERIAL_NR = ?";
 	public final static String SQL_LOAD_VENDORNAMES = "SELECT VNDR_SK , " + //load all the vendor names in the 
 												"VNDR_NM " +// drop down
-												"FROM SIMS.VNDR " +
+												"FROM VNDR " +
 												//"WHERE REC_ACTV_IN = 'Y' WITH UR"; Commented for Data Base Migration fro DB2 to SQL
 												"WHERE REC_ACTV_IN = 'Y'";
 	public final static String SQL_LOAD_SEARCH_EQUIPMENT_PARAMETER = "SELECT A.VNDR_SK, " + //search equipment details
@@ -118,10 +118,10 @@ public class Constant {
 																"C.NEXT_TEST_DT, " +
 																"C.EQPMT_STS_CD, "+
 																"C.BU_ID "+
-																"FROM SIMS.VNDR A  "+
-																"INNER JOIN SIMS.VNDR_MODEL B " +
+																"FROM VNDR A  "+
+																"INNER JOIN VNDR_MODEL B " +
 																"ON  A.VNDR_SK = B.VNDR_SK "+
-																" LEFT OUTER JOIN SIMS.EQPMT_TRKNG C " +
+																" LEFT OUTER JOIN EQPMT_TRKNG C " +
 																"ON A.VNDR_SK = C.VNDR_SK " +
 																"AND B.MODEL_NR = C.MODEL_NR" +
 																" WHERE ";
