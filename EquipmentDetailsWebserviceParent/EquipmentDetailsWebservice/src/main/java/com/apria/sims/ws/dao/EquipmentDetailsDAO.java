@@ -88,7 +88,7 @@ public class EquipmentDetailsDAO {
 			if(!"".equals(function)){
 				statement.append(" FETCH FIRST 1 ROW ONLY ");
 			}
-			statement.append(" WITH UR ");
+			//statement.append(" WITH UR "); Commented for DB Migration from DB2 to SQL
 			ps = con.prepareStatement(statement.toString());
 			if(vendorName != null && vendorName.length()>0){
 				ps.setString( psparam1, vendorName.trim().toUpperCase());
@@ -147,7 +147,8 @@ public class EquipmentDetailsDAO {
 		StringBuffer statement = new StringBuffer();
 		statement.append(Constant.SQL_GET_EQUIPMENT_NOTES);
 		try {
-			statement.append("ORDER BY D.LAST_UPDT_TS ASC WITH UR ");
+			//statement.append("ORDER BY D.LAST_UPDT_TS ASC WITH UR "); Commented for Migrating DB2 to SQL
+			statement.append("ORDER BY D.LAST_UPDT_TS ASC");
 			ps = con.prepareStatement(statement.toString());
 			ps.setString(1, REC_ACTV_IN );
 			ps.setInt(2, vendorsk );
@@ -190,7 +191,8 @@ public class EquipmentDetailsDAO {
 		StringBuffer statement = new StringBuffer();
 		statement.append(Constant.SQL_GET_EQUIPMENT_HISTORY);
 		try {
-			statement.append("ORDER BY EQPMT_HIST_TS ASC WITH UR ");
+			//statement.append("ORDER BY EQPMT_HIST_TS ASC WITH UR "); Commented for Migrating DB2 to SQL
+			statement.append("ORDER BY EQPMT_HIST_TS ASC");
 			ps = con.prepareStatement(statement.toString());
 			ps.setString(1, REC_ACTV_IN );
 			ps.setString(2, modelNumber.trim().toUpperCase());
@@ -240,7 +242,7 @@ public class EquipmentDetailsDAO {
 		StringBuffer statementmaskcodes = new StringBuffer();
 		statementmaskcodes.append(Constant.GET_MASK_CODES);
 		try {
-			statementmaskcodes.append(" WITH UR ");
+			//statementmaskcodes.append(" WITH UR "); Commented for Migrating DB2 to SQL
 			ps = con.prepareStatement(statementmaskcodes.toString());
 			ps.setInt( 1, vendorsk);
 			ps.setString( 2, modelNumber.trim().toUpperCase());
@@ -288,7 +290,7 @@ public class EquipmentDetailsDAO {
 		StringBuffer statement = new StringBuffer();//String buffer to store the query.
 		statement.append(Constant.SQL_GET_SEARCH_EQUIPMENTS);
 		try {
-			statement.append(" WITH UR ");
+			//statement.append(" WITH UR "); Commented for Migrating DB2 to SQL
 			ps = con.prepareStatement(statement.toString());
 			ps.setString( 1, vendorName.trim().toUpperCase());
 			ps.setString( 2, modelNumber.trim().toUpperCase());
@@ -375,7 +377,7 @@ public class EquipmentDetailsDAO {
 		StringBuffer statement = new StringBuffer();
 		try {
 		statement.append(Constant.SQL_CHECK_SERIALNUMBER);		
-		statement.append(" WITH UR ");
+		//statement.append(" WITH UR "); Commented for Migrating DB2 to SQL
 		logger.info("\n Loading Vendor names with query " + statement.toString());
 		ps = con.prepareStatement(statement.toString());
 		ps.setInt(1, Vendorsk);
