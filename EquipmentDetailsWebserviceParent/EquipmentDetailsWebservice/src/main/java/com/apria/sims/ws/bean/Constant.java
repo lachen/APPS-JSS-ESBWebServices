@@ -105,7 +105,8 @@ public class Constant {
 	public final static String SQL_LOAD_VENDORNAMES = "SELECT VNDR_SK , " + //load all the vendor names in the 
 												"VNDR_NM " +// drop down
 												"FROM SIMS.VNDR " +
-												"WHERE REC_ACTV_IN = 'Y' WITH UR";
+												//"WHERE REC_ACTV_IN = 'Y' WITH UR"; Commented for Data Base Migration fro DB2 to SQL
+												"WHERE REC_ACTV_IN = 'Y'";
 	public final static String SQL_LOAD_SEARCH_EQUIPMENT_PARAMETER = "SELECT A.VNDR_SK, " + //search equipment details
 																"A.VNDR_NM, " +
 																"B.SRC_PROD_ID, " +
