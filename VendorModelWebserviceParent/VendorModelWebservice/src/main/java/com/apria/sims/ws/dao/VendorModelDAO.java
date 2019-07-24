@@ -72,7 +72,7 @@ public class VendorModelDAO {
 				param3 = ++incrementer;
 				statement.append(" AND A.VNDR_SK = ?");
 			}
-			statement.append(" WITH UR ");
+			//statement.append(" WITH UR ");
 			ps = con.prepareStatement(statement.toString());
 			if(vendorName != null){
 				ps.setString(param1, vendorName.toUpperCase().trim());
@@ -108,7 +108,7 @@ public class VendorModelDAO {
 				MaskCodeBean[] vndrmasklist;
 				StringBuffer statement1 = new StringBuffer();
 				statement1.append(Constant.SQL_GET_MASK_CODES);
-				statement1.append(" WITH UR");
+				//statement1.append(" WITH UR");
 				ps = con.prepareStatement(statement1.toString());
 				ps.setInt(1, vndr_sk );
 				ps.setString( 2, vendorModelNumber.trim().toUpperCase() );
@@ -221,7 +221,8 @@ public class VendorModelDAO {
 		String CHECK_VENDOR_PRODUCTID = Constant.CHECK_VENDOR_PRODUCTID;
 		if(operation.equalsIgnoreCase("insert")){
 			try{
-				CHECK_VENDOR_PRODUCTID = CHECK_VENDOR_PRODUCTID + " WITH UR";
+				//CHECK_VENDOR_PRODUCTID = CHECK_VENDOR_PRODUCTID + " WITH UR";
+				//CHECK_VENDOR_PRODUCTID = CHECK_VENDOR_PRODUCTID;
 				ps = con.prepareStatement(CHECK_VENDOR_PRODUCTID.toString());
 				ps.setString( 1, productID.trim().toUpperCase());
 			
@@ -240,7 +241,8 @@ public class VendorModelDAO {
 			}
 		}
 		if(operation.equalsIgnoreCase("update")){
-			CHECK_VENDOR_PRODUCTID = CHECK_VENDOR_PRODUCTID + " AND (A.VNDR_SK !=? OR A.MODEL_NR !=?) WITH UR";
+			//CHECK_VENDOR_PRODUCTID = CHECK_VENDOR_PRODUCTID + " AND (A.VNDR_SK !=? OR A.MODEL_NR !=?) WITH UR";
+			CHECK_VENDOR_PRODUCTID = CHECK_VENDOR_PRODUCTID + " AND (A.VNDR_SK !=? OR A.MODEL_NR !=?)";
 			try{
 				ps = con.prepareStatement(CHECK_VENDOR_PRODUCTID.toString());
 				ps.setString( 1, productID.trim().toUpperCase());
@@ -284,7 +286,8 @@ public class VendorModelDAO {
 			boolean flag = false;
 			flag = checkProductID( vendorName,  vendorModel,  productID,  vndorsk, operation);
 			
-			SQL_CHECK_VENDOR_MODEL = SQL_CHECK_VENDOR_MODEL + " AND A.MODEL_NR = ? WITH UR";
+			//SQL_CHECK_VENDOR_MODEL = SQL_CHECK_VENDOR_MODEL + " AND A.MODEL_NR = ? WITH UR";
+			SQL_CHECK_VENDOR_MODEL = SQL_CHECK_VENDOR_MODEL + " AND A.MODEL_NR = ? ";
 		
 		try {
 			ps = con.prepareStatement(SQL_CHECK_VENDOR_MODEL.toString());
