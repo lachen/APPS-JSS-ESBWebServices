@@ -46,7 +46,8 @@ public class Constant {
 											       "C.DLVRY_WRK_ORD_ID, " +                                                                             
 											       "C.PCKUP_WRK_ORD_ID, " +
 											       "RANK()OVER(PARTITION BY  " +
-											       "DATE(D.EQPMT_HIST_TS), " + 
+											       //"DATE(D.EQPMT_HIST_TS), " +
+											       "CONVERT(varchar, D.EQPMT_HIST_TS, 23) ,"+
 											       "D.EQPMT_STS_CD, " +
 											       "D.LAST_UPDT_USR,  " +
 											       "D.BU_ID, " +                                                        
@@ -54,11 +55,11 @@ public class Constant {
 											       "C.SRC_SYS_ID, " +
 											       "C.CUST_ID, " +                                                                           
 											       "C.DLVRY_WRK_ORD_ID, " +                                                                             
-											       "C.PCKUP_WRK_ORD_ID ORDER BY D.EQPMT_HIST_TS ASC) RNK " +                                                                          
+											       "C.PCKUP_WRK_ORD_ID ORDER BY D.EQPMT_HIST_TS ASC) AS RNK " +                                                                          
 											       "FROM EQPMT_TRKNG_HIST D  " +                                                                             
 											       "LEFT OUTER JOIN SRC_ACIS_EQPMT_TRKNG C " +                                                    
 											       "ON D.EQPMT_SK = C.EQPMT_SK " +                                                                             
-											       "WHERE D.REC_ACTV_IN = ?  AND D.MODEL_NR = ?  AND D.SERIAL_NR = ?  AND D.VNDR_SK = ?) " +
+											       "WHERE D.REC_ACTV_IN = ?  AND D.MODEL_NR = ?  AND D.SERIAL_NR = ?  AND D.VNDR_SK = ?) AS A" +
 												   "WHERE RNK =1 ";
 	
 	public final static String GET_MASK_CODES = "SELECT MODEL_MASK_SK, " + //get list of mask codes
