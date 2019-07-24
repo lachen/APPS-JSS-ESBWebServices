@@ -97,7 +97,7 @@ public class VendorDAO {
 				logger.error("Returning from Vendor DAO a Null object for Vendor Search");
 				return null;
 			}
-			statement.append(" WITH UR ");
+			//statement.append(" WITH UR ");
 			logger.info("In the searchVendor() of vendor Web Service with Query: "+statement.toString());
 			rs = ps.executeQuery();
 			ArrayList<VendorBean> tempvbarraylist = new ArrayList<VendorBean>();

@@ -19,17 +19,17 @@ public class Constant {
 	public static final String _JNDI_NAME = "java:comp/env/jdbc/SIMSODS";//jndi name to search
 	public static final String SQL_SEARCH_VENDOR = "SELECT A.VNDR_NM, " +//Query to Search Vendor Name
 												"A.VNDR_SK, B.SRC_VNDR_CD "+ 
-												"FROM SIMS.VNDR AS A , " +
-													"SIMS.SRC_VNDR_XREF AS B "+
+												"FROM VNDR AS A , " +
+													"SRC_VNDR_XREF AS B "+
 												"WHERE A.REC_ACTV_IN = 'Y' " +
 												"AND A.VNDR_SK = B.VNDR_SK ";
 	public static final String SQL_SEARCH_VENDOR_NAME = "SELECT A.VNDR_NM, " +
 												"A.VNDR_SK, " +
 												"B.SRC_VNDR_CD "+ 
-												"FROM SIMS.VNDR AS A , " +
-													"SIMS.SRC_VNDR_XREF AS B "+
+												"FROM VNDR AS A , " +
+													"SRC_VNDR_XREF AS B "+
 												"WHERE A.REC_ACTV_IN = 'Y' " +
 												"AND A.VNDR_SK = B.VNDR_SK " +
 												"AND A.VNDR_NM = ? " +
-												"OR B.SRC_VNDR_CD = ? WITH UR";
+												"OR B.SRC_VNDR_CD = ? ";
 }
