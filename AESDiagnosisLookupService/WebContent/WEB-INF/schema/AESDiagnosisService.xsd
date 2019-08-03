@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 	xmlns:xs="http://www.w3.org/2001/XMLSchema"			
+			targetNamespace="http://schema.dataobject.svcs.apria.com/"
+			elementFormDefault="qualified"  
+		    xmlns:diag="http://schema.dataobject.svcs.apria.com/"
+		    xmlns:fault="http://schema.dataobject.svcs.apria.com/">
+     
+      <xs:complexType name="DiagnosisDO">
+        <xs:sequence>
+           <xs:element name="diagnosis-code" type="xs:string"/>
+           <xs:element name="diagnosis-desc" type="xs:string"/>
+           <xs:element name="diagnosis-status" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+		    
+	<xs:element name="getDiagnosisRequest" >
+	  	<xs:annotation>
+    		<xs:documentation>
+    			Contains Diagnosis Request Information
+    		</xs:documentation>
+    	</xs:annotation>                                                               
+       	<xs:complexType>                                                                         
+         <xs:sequence>            
+         	<xs:element name="DiagnosisDO" type="diag:DiagnosisDO"
+                             minOccurs="0" maxOccurs="30"/>
+         </xs:sequence>                                                                        
+       </xs:complexType>                                                                         
+     </xs:element>       	    
+
+	<xs:element name="DiagnosisResponse">
+	  	<xs:annotation>
+    		<xs:documentation>
+    			Contains Diagnosis Response Information
+    		</xs:documentation>
+    	</xs:annotation>   
+    	<xs:complexType>                                                                         
+         <xs:sequence>       
+          	<xs:element name="DiagnosisDO" type="diag:DiagnosisDO"
+                             minOccurs="0" maxOccurs="30"/>
+         </xs:sequence>                                                                        
+       </xs:complexType>                                                         
+     </xs:element>       
+     
+     <xs:element name="ServiceFault" type="fault:ServiceFault"/>
+    	<xs:complexType name="ServiceFault">
+        	<xs:sequence>
+           		<xs:element name="error-code" type="xs:string" minOccurs="0" maxOccurs="1"/>
+           		<xs:element name="error-sev" type="fault:errorSeverity" minOccurs="0" maxOccurs="1"/>
+	    		<xs:element name="error-desc" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        	</xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="errorSeverity">
+	    <xs:restriction base="xs:string">
+	      <xs:enumeration value="INFO"/>
+	      <xs:enumeration value="WARN"/>
+	      <xs:enumeration value="ERROR"/>
+	      <xs:enumeration value="FATAL"/>	      
+	    </xs:restriction>
+	</xs:simpleType> 
+    
+     
+</xs:schema>

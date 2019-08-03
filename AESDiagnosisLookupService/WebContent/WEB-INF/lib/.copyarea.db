@@ -1,0 +1,23 @@
+ClearCase CopyAreaDB|4
+Apria_src\DB_Component\Sonata\EnterpriseWebService\AESDiagnosisLookupService\WebContent\WEB-INF\lib
+2
+13
+14:spring-oxm-1.5.6.jar|1|144930ca87a|10a43|a0a5efda|88327f84f7f94380a251eafcbd9b7592|0
+b:schemas.jar|1|144930aa6fd|1e417|c755c07c|40b7ce9b1776487ea021b1b5a5414cff|0
+1e:spring-ws-core-tiger-1.5.6.jar|1|144930d4204|580a|d72bfcf6|dd915e45a6c84fdb8f80840e3c215166|0
+10:log4j-1.2.15.jar|1|144930a900e|5fa9a|2cfe0747|9b0d77a731fa43b3a1b700e827ec06ff|0
+10:wsdl4j-1.6.1.jar|1|144930d5d9f|2442a|66cd61b5|232b058e889e42ababcd1cd7ddf2b70f|0
+14:spring-xml-1.5.6.jar|1|144930d499c|16419|acbbb28f|852ab557117245739fc57ff18c979542|0
+a:spring.jar|1|144930bf9f7|2d017c|872cd6fd|8ac1a1d495804b0e837108151912a8c6|0
+18:spring-ws-core-1.5.6.jar|1|144930d3fdb|67b32|12594fbd|5cba51221d4d4ecaafb567b5dce16576|0
+18:spring-context-2.5.6.jar|1|144930c769c|7470c|34c35a6d|0e12e801c34643fa920d9ad8e4670a87|0
+15:spring-core-2.5.6.jar|1|144930ca15f|45b33|9d6f2cf8|93f3f9730400496eabf5c167870b738a|0
+1b:ApriaDAOFramework-0.0.1.jar|1|144930a68f8|1b29|913b973d|d625aaaa974949c98374c9248389e6bc|0
+e:jsr173_api.jar|1|144930a69a5|5b32|cb94b29c|10627ff8728f47ee94f6cdbabac014d0|0
+14:spring-web-2.5.6.jar|1|144930cb863|2f811|ad6a4503|7090a72b0a6c46e08fbbee76562612f9|0
+19:commons-logging-1.1.1.jar|1|144930a6970|ed0e|943663f8|dac7a09b6e574fc994f94f6406c0deb4|0
+9:xbean.jar|1|144930f1763|291ba1|c4f52960|02f34356610a418282fbfda84037ff72|0
+21:ApriaExceptionFramework-0.0.1.jar|1|144930a692b|6f48|c57bfdf|e07cbc57335b44aba1c3a975ff93dc74|0
+16:spring-beans-2.5.6.jar|1|144930c2313|7735a|5e4fcec9|2f2925caf1d7417cbea272001b1e4455|0
+17:spring-webmvc-2.5.6.jar|1|144930cec1d|623dc|f82ae4dd|0602c93a7aa54b1da0cadb57623c109e|0
+1a:spring-oxm-tiger-1.5.6.jar|1|144930caab1|3b59|d53ec2e7|ee4894682b4b430c834c4ebb58e6a6a8|0

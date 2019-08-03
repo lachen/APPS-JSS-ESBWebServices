@@ -1,0 +1,6 @@
+ClearCase CopyAreaDB|4
+Apria_src\DB_Component\Sonata\EnterpriseWebService\AESDiagXrefLookupService\src\com\apria\svcs\aesservice\validator
+2
+2
+22:DiagnosisXrefServiceValidator.java|1|1449318ffb2|7cd|9fd26b28|cd924a75fd65424ea75c8129b234e6ee|0
+16:ValidatorConstant.java|1|1449318ffe6|1e2|b336964f|44aaf9fa70f94a5fa678c48f70e55d82|0

@@ -1,0 +1,9 @@
+ClearCase CopyAreaDB|4
+Apria_src\DB_Component\Sonata\EnterpriseWebService\AESDiagnosisLookupService\WebContent\WEB-INF\jsp
+2
+5
+12:serviceRequest.jsp|1|144930f19b3|1401|17576904|f8b5296a664941d588b0be3e991540a3|0
+a:footer.jsp|1|144930f17ed|3e9|6dfd172e|bf698b1d9d8d4161b37984d5d9c0a5a7|0
+13:serviceResponse.jsp|1|144930f1b19|6d0|e37fee22|e45417d170eb45bb858be6e35e314a6f|0
+b:nav_bar.jsp|1|144930f181e|4e4|5c7e76ff|2c6601f7b22e4ed7aca9eda016d66300|0
+b:service.jsp|1|144930f1908|555|63a1664b|81675993ee8743de8b4277b2316c4270|0

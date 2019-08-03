@@ -1,0 +1,7 @@
+ClearCase CopyAreaDB|4
+Apria_src\Web Services\MediationServices_ESB7\AESMobileWSAppWeb\WebContent\WEB-INF\wsdl\beans
+2
+3
+17:AES_GetBusa_Request.xsd|1|13df537e62c|3b0|c19331cc|ee1d0ff58de340118d51d2d499eb16e3|0
+18:AES_GetBusa_Response.xsd|1|13df537e6f4|27e|8ebdd46a|984084208b1143c088125c9b113635b6|0
+19:AES_GetBusa_Exception.xsd|1|13df537e56f|27b|e44ed2ea|ac9c027b588448e4baac6c9d1d10adbc|0

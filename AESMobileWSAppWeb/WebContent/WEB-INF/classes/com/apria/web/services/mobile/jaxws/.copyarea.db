@@ -1,0 +1,6 @@
+ClearCase CopyAreaDB|4
+Apria_src\Web Services\MediationServices_ESB7\AESMobileWSAppWeb\WebContent\WEB-INF\classes\com\apria\web\services\mobile\jaxws
+2
+2
+15:GetIntakeWOList.class|1|13df53799a8|441|775e10ed|fbf0f468a79e4ad39981e2198bdbd449|0
+1d:GetIntakeWOListResponse.class|1|13df5379aaa|471|3d812581|fbbe4c2c6156425795e0aef00d9840a4|0

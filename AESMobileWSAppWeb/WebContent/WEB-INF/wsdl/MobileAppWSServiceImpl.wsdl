@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://mobile.services.web.apria.com" xmlns:impl="http://mobile.services.web.apria.com" xmlns:intf="http://mobile.services.web.apria.com" xmlns:tns2="http://in.mobile.services.web.apria.com" xmlns:tns3="http://out.mobile.services.web.apria.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema targetNamespace="http://in.mobile.services.web.apria.com" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <complexType name="SearchRequest">
+    <sequence>
+     <element name="branch" nillable="true" type="xsd:string"/>
+     <element name="fromDate" nillable="true" type="xsd:string"/>
+     <element name="toDate" nillable="true" type="xsd:string"/>
+     <element name="zipCode" nillable="true" type="xsd:string"/>
+     <element name="branchHost" nillable="true" type="xsd:string"/>
+     <element name="intakeStartSeq" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema targetNamespace="http://mobile.services.web.apria.com" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns2="http://in.mobile.services.web.apria.com" xmlns:tns3="http://out.mobile.services.web.apria.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://out.mobile.services.web.apria.com"/>
+   <import namespace="http://in.mobile.services.web.apria.com"/>
+   <element name="getIntakeWOListResponse">
+    <complexType>
+     <sequence>
+      <element name="getIntakeWOListReturn" nillable="true" type="tns3:IntakeResult"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getIntakeWOList">
+    <complexType>
+     <sequence>
+      <element name="request" nillable="true" type="tns2:SearchRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema targetNamespace="http://out.mobile.services.web.apria.com" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <complexType name="IntakeResult">
+    <sequence>
+     <element name="intakeCount" nillable="true" type="xsd:string"/>
+     <element name="intakeOverFlow" nillable="true" type="xsd:string"/>
+     <element name="recCount" nillable="true" type="xsd:string"/>
+     <element name="recStatus" nillable="true" type="xsd:string"/>
+     <element name="WOCount" nillable="true" type="xsd:string"/>
+     <element name="intakeList" nillable="true" type="tns3:ArrayOfIntake"/>
+    </sequence>
+   </complexType>
+   <complexType name="Intake">
+    <sequence>
+     <element name="associate" nillable="true" type="xsd:string"/>
+     <element name="followpCode" nillable="true" type="xsd:string"/>
+     <element name="IIntakeCreateDate" nillable="true" type="xsd:string"/>
+     <element name="intakeCreateTime" nillable="true" type="xsd:string"/>
+     <element name="intakeStatus" nillable="true" type="xsd:string"/>
+     <element name="intakeStatusDate" nillable="true" type="xsd:string"/>
+     <element name="intakeStatusTime" nillable="true" type="xsd:string"/>
+     <element name="patientFirstName" nillable="true" type="xsd:string"/>
+     <element name="patientID" nillable="true" type="xsd:string"/>
+     <element name="patientLastName" nillable="true" type="xsd:string"/>
+     <element name="patientMI" nillable="true" type="xsd:string"/>
+     <element name="physicianID" nillable="true" type="xsd:string"/>
+     <element name="physicianName" nillable="true" type="xsd:string"/>
+     <element name="referralID" nillable="true" type="xsd:string"/>
+     <element name="referralName" nillable="true" type="xsd:string"/>
+     <element name="referralZipCode" nillable="true" type="xsd:string"/>
+     <element name="intakeNo" nillable="true" type="xsd:string"/>
+     <element name="workOrderList" nillable="true" type="tns3:ArrayOfWorkOrder"/>
+    </sequence>
+   </complexType>
+   <complexType name="WorkOrder">
+    <sequence>
+     <element name="associate" nillable="true" type="xsd:string"/>
+     <element name="completeDate" nillable="true" type="xsd:string"/>
+     <element name="completeTime" nillable="true" type="xsd:string"/>
+     <element name="deliveryDate" nillable="true" type="xsd:string"/>
+     <element name="deliveryTime" nillable="true" type="xsd:string"/>
+     <element name="EQDate" nillable="true" type="xsd:string"/>
+     <element name="EQTime" nillable="true" type="xsd:string"/>
+     <element name="product1" nillable="true" type="xsd:string"/>
+     <element name="product2" nillable="true" type="xsd:string"/>
+     <element name="product3" nillable="true" type="xsd:string"/>
+     <element name="product4" nillable="true" type="xsd:string"/>
+     <element name="readyDate" nillable="true" type="xsd:string"/>
+     <element name="readyTime" nillable="true" type="xsd:string"/>
+     <element name="WOCreateDate" nillable="true" type="xsd:string"/>
+     <element name="WOCreateTime" nillable="true" type="xsd:string"/>
+     <element name="deliveryAdressLine1" nillable="true" type="xsd:string"/>
+     <element name="deliveryAdressLine2" nillable="true" type="xsd:string"/>
+     <element name="deliveryCity" nillable="true" type="xsd:string"/>
+     <element name="deliveryState" nillable="true" type="xsd:string"/>
+     <element name="deliveryZipCode" nillable="true" type="xsd:string"/>
+     <element name="WOStatus" nillable="true" type="xsd:string"/>
+     <element name="WOStatusDesc" nillable="true" type="xsd:string"/>
+     <element name="workOrderNO" nillable="true" type="xsd:string"/>
+     <element name="intakeNo" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfWorkOrder">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="WorkOrder" nillable="true" type="tns3:WorkOrder"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfIntake">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="Intake" nillable="true" type="tns3:Intake"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getIntakeWOListResponse">
+     <wsdl:part element="impl:getIntakeWOListResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="getIntakeWOListRequest">
+     <wsdl:part element="impl:getIntakeWOList" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:portType name="MobileAppWSServiceImpl">
+     <wsdl:operation name="getIntakeWOList">
+       <wsdl:input message="impl:getIntakeWOListRequest" name="getIntakeWOListRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:getIntakeWOListResponse" name="getIntakeWOListResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+   <wsdl:binding name="MobileAppWSServiceImplSoapBinding" type="impl:MobileAppWSServiceImpl">
+ <wsaw:UsingAddressing wsdl:required="false" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+
+     <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+     <wsdl:operation name="getIntakeWOList">
+       <wsdlsoap:operation soapAction="getIntakeWOList"/>
+
+       <wsdl:input name="getIntakeWOListRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="getIntakeWOListResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+   <wsdl:service name="MobileAppWSServiceImplService">
+     <wsdl:port binding="impl:MobileAppWSServiceImplSoapBinding" name="MobileAppWSServiceImpl">
+       <wsdlsoap:address location="http://localhost:9082/AESMobileWSAppWeb/services/MobileAppWSServiceImpl"/>
+
+    </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="WSExport1_AES_MB_IntakeWOList_Intf_1_0Http_Service" targetNamespace="http://AES_MB_IntakeWOList_Lib_1_0/com/apria/services/aes/workorderdetails/beans/AES_MB_IntakeWOList_Intf_1_0/Binding" xmlns:Port_0="http://AES_MB_IntakeWOList_Lib_1_0/com/apria/services/aes/workorderdetails/beans/AES_MB_IntakeWOList_Intf_1_0" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:this="http://AES_MB_IntakeWOList_Lib_1_0/com/apria/services/aes/workorderdetails/beans/AES_MB_IntakeWOList_Intf_1_0/Binding" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import location="AES_MB_IntakeWOList_Intf_1_0.wsdl" namespace="http://AES_MB_IntakeWOList_Lib_1_0/com/apria/services/aes/workorderdetails/beans/AES_MB_IntakeWOList_Intf_1_0">
+    </wsdl:import>
+  <wsdl:binding name="WSExport1_AES_MB_IntakeWOList_Intf_1_0HttpBinding" type="Port_0:AES_MB_IntakeWOList_Intf_1_0">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getIntakeWOList">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="getIntakeWOListRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getIntakeWOListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="operation1Fault">
+        <soap:fault name="operation1Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSExport1_AES_MB_IntakeWOList_Intf_1_0HttpService">
+    <wsdl:port binding="this:WSExport1_AES_MB_IntakeWOList_Intf_1_0HttpBinding" name="WSExport1_AES_MB_IntakeWOList_Intf_1_0HttpPort">
+    
+<!--       <soap:address location="http://localhost:9082/AES_MB_IntakeWOList_Svcs_1_0Web/sca/AES_MB_IntakeWOList_Intf_1_0"/> -->
+<soap:address location="http://esbdev.apria.com:12016/AES_MB_IntakeWOList_Svcs_1_0Web/sca/AES_MB_IntakeWOList_Intf_1_0"/>
+
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,11 @@
+ClearCase CopyAreaDB|4
+Apria_src\Web Services\MediationServices_ESB7\AESMobileWSAppWeb\WebContent\WEB-INF\classes\com\apria\web\services\mobile
+2
+7
+3:out|2|0|0|0|bd84b09c50a44f51b24930e66c2ed3d6|0
+20:MobileAppWSServiceImpl_SEI.class|1|13df5379690|139|26f25fa4|afa8f7118c234f4b859a2fafc486deae|0
+1c:MobileAppWSServiceImpl.class|1|13df5379797|4034|54b9b812|f41d9ef1a1ab4df7bc060d700926ecf2|0
+7:utility|2|0|0|0|31225fcffcc5430aa2c2437e05e04cdf|0
+18:MobileAppWSService.class|1|13df5379587|129|819759f0|2a62c7b195514e4b840503e20d6c15f2|0
+2:in|2|0|0|0|2fdd1ce12e4a4f2893a24a877f5ba4a6|0
+5:jaxws|2|0|0|0|44d229d127dd4f5ebd7233d79e20a2b6|0

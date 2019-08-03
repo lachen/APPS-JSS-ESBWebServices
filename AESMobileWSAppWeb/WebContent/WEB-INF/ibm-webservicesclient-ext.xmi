@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.etools.webservice.wscext:WsClientExtension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.etools.webservice.wscext="http://www.ibm.com/websphere/appserver/schemas/5.0.2/wscext.xmi" xmi:id="WsClientExtension_1351412859110">
+  <serviceRefs xmi:id="ServiceRef_1351412859110" serviceRefLink="service/WSExport1_AES_MB_IntakeWOList_Intf_1_0HttpService">
+    <portQnameBindings xmi:id="PortQnameBinding_1351412859110" portQnameLocalNameLink="WSExport1_AES_MB_IntakeWOList_Intf_1_0HttpPort"/>
+  </serviceRefs>
+  <serviceRefs xmi:id="ServiceRef_1355190978496" serviceRefLink="service/AES_GetBusa_IntfExport1_AES_GetBusa_IntfHttpService">
+    <portQnameBindings xmi:id="PortQnameBinding_1355190978496" portQnameLocalNameLink="AES_GetBusa_Intf_1_0_AES_GetBusa_IntfHttpPort"/>
+  </serviceRefs>
+  <serviceRefs xmi:id="ServiceRef_1355360192264" serviceRefLink="service/ReferralIntakeWOSts_1_0">
+    <portQnameBindings xmi:id="PortQnameBinding_1355360192264" portQnameLocalNameLink="ReferralIntakeWOSts_1_0SOAP11port_http"/>
+  </serviceRefs>
+</com.ibm.etools.webservice.wscext:WsClientExtension>

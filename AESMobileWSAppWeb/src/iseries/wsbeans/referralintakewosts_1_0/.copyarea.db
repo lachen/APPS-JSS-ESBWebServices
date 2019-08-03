@@ -1,0 +1,10 @@
+ClearCase CopyAreaDB|4
+Apria_src\Web Services\MediationServices_ESB7\AESMobileWSAppWeb\src\iseries\wsbeans\referralintakewosts_1_0
+2
+6
+27:ReferralIntakeWOSts_1_0Information.java|1|13df53830b1|2cc7|a0595893|47181833939d48bdb5a163f13944e6e5|0
+2d:ReferralIntakeWOSts_1_0SOAP11BindingStub.java|1|13df538345b|4a47|d4083d00|f5516ccc9c3d446f93388d966b984398|0
+1c:ReferralIntakeWOSts_1_0.java|1|13df5382fe9|2e5|5dedfd08|1dcee914ac084d35967750fe7d4b9f5d|0
+24:ReferralIntakeWOSts_1_0PortType.java|1|13df53832a4|2bf|bb3ef480|467abe0509eb4f02b18a367a4136d9d9|0
+3:xsd|2|0|0|0|6f6d9d751e7c4515b4eb34e796576374|0
+23:ReferralIntakeWOSts_1_0Locator.java|1|13df5383148|1e2d|f67d8f0c|afabff74618a4a068943d431be2377e3|0

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 	xmlns:xs="http://www.w3.org/2001/XMLSchema"			
+			targetNamespace="http://schema.dataobject.svcs.apria.com/"
+			elementFormDefault="qualified"  
+		    xmlns:diag="http://schema.dataobject.svcs.apria.com/"
+		    xmlns:fault="http://schema.dataobject.svcs.apria.com/">
+     
+      <xs:complexType name="DiagnosisXrefDO">
+        <xs:sequence>
+           <xs:element name="diag-code" type="xs:string"/>
+           <xs:element name="diag-desc" type="xs:string"/>           
+           <xs:element name="diag-xrefcode" type="xs:string"/>
+           <xs:element name="diag-xrefdesc" type="xs:string"/>
+           <xs:element name="source_code" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+		    
+	<xs:element name="getDiagnosisXrefRequest" >
+	  	<xs:annotation>
+    		<xs:documentation>
+    			Contains Diagnosis XRef Information
+    		</xs:documentation>
+    	</xs:annotation>                                                               
+       	<xs:complexType>                                                                         
+         <xs:sequence>            
+         	<xs:element name="DiagnosisXrefDO" type="diag:DiagnosisXrefDO"
+                             minOccurs="0" maxOccurs="30"/>
+         </xs:sequence>                                                                        
+       </xs:complexType>                                                                         
+     </xs:element>       	    
+
+	<xs:element name="DiagnosisXrefResponse">
+	  	<xs:annotation>
+    		<xs:documentation>
+    			Contains Diagnosis XRef Response Information
+    		</xs:documentation>
+    	</xs:annotation>   
+    	<xs:complexType>                                                                         
+         <xs:sequence>       
+          	<xs:element name="DiagnosisXrefDO" type="diag:DiagnosisXrefDO"
+                             minOccurs="0" maxOccurs="30"/>
+         </xs:sequence>                                                                        
+       </xs:complexType>                                                         
+     </xs:element>       
+     
+</xs:schema>

@@ -1,0 +1,6 @@
+ClearCase CopyAreaDB|4
+Apria_src\DB_Component\Sonata\EnterpriseWebService\AESDiagnosisLookupService\src\com\apria\svcs\dataobject\schema
+2
+2
+19:DiagnosisSearchDOCmd.java|1|144930f3018|382|d1f71bb9|ea804885ef5b43789cadbe78bd35b8e4|0
+16:DiagnosisSearchDO.java|1|144930f2fd7|445|e41f64e5|9a04eafd403543f69d64eeb9f2e64796|0

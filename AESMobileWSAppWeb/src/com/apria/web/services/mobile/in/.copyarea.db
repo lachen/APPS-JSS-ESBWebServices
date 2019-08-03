@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+Apria_src\Web Services\MediationServices_ESB7\AESMobileWSAppWeb\src\com\apria\web\services\mobile\in
+2
+4
+16:SearchRequest_Ser.java|1|13df53821b5|14fa|85f2fdc9|b1417e252c314aca825ecce9aeb2492e|0
+18:SearchRequest_Deser.java|1|13df5381fc4|c83|320ab857|55fe1e258846476cbb4b6419ef9eddb2|0
+12:SearchRequest.java|1|13df538229d|d5a|1ecd15d5|f99c1acf93af4a53869211143101f0f3|0
+19:SearchRequest_Helper.java|1|13df53820bc|f17|59b1c483|e0e8bf1721c24d0da39978097b39a105|0

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions targetNamespace="http://ejb.odm.apria.com" xmlns:impl="http://ejb.odm.apria.com" xmlns:intf="http://ejb.odm.apria.com" xmlns:tns2="http://OdmBusinessObjectsTypesModel.bean.model.odm.apria.com" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <schema targetNamespace="http://OdmBusinessObjectsTypesModel.bean.model.odm.apria.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <complexType name="OdmRequest">
+    <sequence>
+     <element name="intake" nillable="true" type="tns2:Intake"/>
+     <element name="rsName" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="Intake">
+    <sequence>
+     <element name="intakeSrcCode" nillable="true" type="xsd:string"/>
+     <element name="lineItems" nillable="true" type="tns2:ArrayOfLineItem"/>
+     <element name="businessUnit" nillable="true" type="xsd:string"/>
+     <element name="patient" nillable="true" type="tns2:ArrayOfPatient"/>
+     <element name="referral" nillable="true" type="tns2:Referral"/>
+    </sequence>
+   </complexType>
+   <complexType name="LineItem">
+    <sequence>
+     <element name="product" nillable="true" type="tns2:Product"/>
+     <element name="dateOfService" nillable="true" type="xsd:dateTime"/>
+     <element name="deliveryType" nillable="true" type="xsd:string"/>
+     <element name="payers" nillable="true" type="tns2:ArrayOfPayer"/>
+     <element name="deliveryAddressState" nillable="true" type="xsd:string"/>
+     <element name="isNewOrder" type="xsd:boolean"/>
+     <element name="diagnoses" nillable="true" type="xsd:string"/>
+     <element name="lineType" nillable="true" type="xsd:string"/>
+     <element name="auth" nillable="true" type="xsd:anyType"/>
+     <element name="rx" nillable="true" type="tns2:Referral"/>
+     <element name="utilization" nillable="true" type="xsd:anyType"/>
+     <element name="competativeBidResultIdentifier" nillable="true" type="xsd:string"/>
+     <element name="chargeFlag" nillable="true" type="xsd:string"/>
+     <element name="noChargeReasonCode" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="Product">
+    <sequence>
+     <element name="hcpc" nillable="true" type="xsd:string"/>
+     <element name="procGroup" nillable="true" type="xsd:string"/>
+     <element name="opsClass" nillable="true" type="xsd:string"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="number" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="Payer">
+    <sequence>
+     <element name="id" nillable="true" type="xsd:string"/>
+     <element name="role" nillable="true" type="xsd:string"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="matn" nillable="true" type="xsd:string"/>
+     <element name="agrmtId" nillable="true" type="xsd:string"/>
+     <element name="capitatedFlag" nillable="true" type="xsd:string"/>
+     <element name="managedCareType" nillable="true" type="xsd:string"/>
+     <element name="planType" nillable="true" type="xsd:string"/>
+     <element name="carrierCode" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfPayer">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="Payer" nillable="true" type="tns2:Payer"/>
+    </sequence>
+   </complexType>
+   <complexType name="Referral">
+    <sequence>
+     <element name="accountValue" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfLineItem">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="LineItem" nillable="true" type="tns2:LineItem"/>
+    </sequence>
+   </complexType>
+   <complexType name="Patient">
+    <sequence>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="id" nillable="true" type="xsd:string"/>
+     <element name="resident_state" nillable="true" type="xsd:string"/>
+     <element name="dob" nillable="true" type="xsd:dateTime"/>
+     <element name="is_traveling" type="xsd:boolean"/>
+     <element name="on_cruise_ship" type="xsd:boolean"/>
+     <element name="address" nillable="true" type="xsd:anyType"/>
+     <element name="employer" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfPatient">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="Patient" nillable="true" type="tns2:Patient"/>
+    </sequence>
+   </complexType>
+   <complexType name="OdmResponse">
+    <sequence>
+     <element name="errorMsg" nillable="true" type="xsd:string"/>
+     <element name="deliveryAction" nillable="true" type="xsd:string"/>
+     <element name="paymentAction" nillable="true" type="xsd:string"/>
+     <element name="secureAssetAction" nillable="true" type="xsd:string"/>
+     <element name="notes" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+    <schema targetNamespace="http://ejb.odm.apria.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://OdmBusinessObjectsTypesModel.bean.model.odm.apria.com"/>
+   <element name="invokeODMRulesResponse">
+    <complexType>
+     <sequence>
+      <element name="invokeODMRulesReturn" nillable="true" type="tns2:OdmResponse"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="invokeODMRules">
+    <complexType>
+     <sequence>
+      <element name="inputRequest" nillable="true" type="tns2:OdmRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  </wsdl:types>
+  <wsdl:message name="invokeODMRulesResponse">
+    <wsdl:part element="impl:invokeODMRulesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="invokeODMRulesRequest">
+    <wsdl:part element="impl:invokeODMRules" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ODMRuleServiceDefinitionRemote_SEI">
+    <wsdl:operation name="invokeODMRules">
+      <wsdl:input message="impl:invokeODMRulesRequest" name="invokeODMRulesRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:invokeODMRulesResponse" name="invokeODMRulesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ODMRuleServiceDefinitionRemoteSoapBinding" type="impl:ODMRuleServiceDefinitionRemote_SEI">
+<wsaw:UsingAddressing wsdl:required="false"/>
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="invokeODMRules">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="invokeODMRulesRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="invokeODMRulesResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ODMRuleServiceDefinitionRemote_SEIService">
+    <wsdl:port binding="impl:ODMRuleServiceDefinitionRemoteSoapBinding" name="ODMRuleServiceDefinitionRemote">
+      <wsdlsoap:address location="http://esbdev.apria.com:9083/ODMEJBP2/services/ODMRuleServiceDefinitionRemote"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

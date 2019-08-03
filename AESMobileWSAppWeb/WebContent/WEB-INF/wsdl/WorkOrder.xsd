@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://AES_MB_IntakeWOList_Lib_1_0/com/apria/services/aes/workorderdetails/beans" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="WorkOrder">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="Associate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CompleteDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CompleteTime" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="DeliveryDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="DeliveryTime" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EQDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EQTime" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Intake" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Product1" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Product2" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Product3" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Product4" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ReadyDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ReadyTime" type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="WOCreateDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="WOCreateTime" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="DeliveryAdressLine1" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="DeliveryAdressLine2" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="DeliveryCity" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="DeliveryState" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="DeliveryZipCode" type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="WOStatus" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="WOStatusDesc" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="WorkOrderNO" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

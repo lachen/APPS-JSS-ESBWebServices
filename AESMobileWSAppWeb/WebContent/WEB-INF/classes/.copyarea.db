@@ -1,0 +1,10 @@
+ClearCase CopyAreaDB|4
+Apria_src\Web Services\MediationServices_ESB7\AESMobileWSAppWeb\WebContent\WEB-INF\classes
+2
+6
+3:com|2|0|0|0|5d66ab663d6149da9649abfb681b6264|0
+1b:AES_MB_IntakeWOList_Lib_1_0|2|0|0|0|91f89edd77b54954a4f502e70e76e955|0
+7:iseries|2|0|0|0|77f57b069ca94a168e3e10e3510b747f|0
+13:messages.properties|1|13df537623a|91a|4cf3fc15|99afb99cdb2a4b87be3649afaafd07ca|0
+10:log4j.properties|1|13df5376199|3fb|59e15d7f|765142c55b314f27ada2f596bd65ce39|0
+13:AES_GetBusa_Lib_1_0|2|0|0|0|48a1f98012e645b78c259c0dd0b12cd8|0

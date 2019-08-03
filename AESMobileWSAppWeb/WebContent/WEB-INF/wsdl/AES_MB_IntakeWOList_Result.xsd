@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://AES_MB_IntakeWOList_Lib_1_0/com/apria/services/aes/workorderdetails/beans" xmlns:bons0="http://AES_MB_IntakeWOList_Lib_1_0/com/apria/services/aes/workorderdetails/beans" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:include schemaLocation="WorkOrder.xsd"/>
+	<xsd:include schemaLocation="Intake.xsd"/>
+	<xsd:complexType name="AES_MB_IntakeWOList_Result">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="Intake" type="bons0:Intake">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="IntakeCount" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="IntakeOverFlow" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="RecCount" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="RecStatus" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="WOCount" type="xsd:string">
+			</xsd:element>
+
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="WorkOrder" type="bons0:WorkOrder">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

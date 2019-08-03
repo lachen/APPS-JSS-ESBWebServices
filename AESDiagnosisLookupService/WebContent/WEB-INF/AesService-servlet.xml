@@ -1,0 +1,113 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"		
+		xmlns:tx="http://www.springframework.org/schema/tx"		
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd			
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">	
+
+	<!--  Web Service Message handler  -->
+	<bean id="messageFactory" class="org.springframework.ws.soap.saaj.SaajSoapMessageFactory"/>	
+	<bean class="org.springframework.ws.transport.http.WebServiceMessageReceiverHandlerAdapter">
+		<property name="messageFactory" ref="messageFactory"/>
+	</bean>	
+	
+	<!--  Url Mapper default  is Message Dispatcher -->
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+	   <property name="defaultHandler" ref="messageDispatcher"/>	
+	   <property name="mappings">
+            <props>
+                <prop key="/test.service">AESDiagnosisServiceController</prop>                                
+                <prop key="/diagnosis.wsdl">diagnosis</prop>
+            </props>
+        </property>       
+    </bean>
+  
+  	<bean class="org.springframework.ws.transport.http.WsdlDefinitionHandlerAdapter">
+  		<property name="transformLocations" value="true"/>
+  	</bean>
+  	
+	<bean id="messageDispatcher" class="org.springframework.ws.server.MessageDispatcher">
+		<description>
+			The MessageDispatcher is responsible for routing messages to service end points.
+		</description>
+	</bean>
+	    
+    <!--  Service End Point Mapping -->    
+    <bean class="org.springframework.ws.server.endpoint.mapping.PayloadRootAnnotationMethodEndpointMapping">
+        <description>An endpoint mapping strategy that looks for @Endpoint and @PayloadRoot annotations.</description>
+    </bean>
+    
+     <!--  MARSHALL the objects -->
+    <bean id="marshaller" class="org.springframework.oxm.xmlbeans.XmlBeansMarshaller"/>
+    
+    <bean class="org.springframework.ws.server.endpoint.adapter.MarshallingMethodEndpointAdapter">
+        <description>Enables the MessageDispatchServlet to invoke methods requiring OXM marshalling.</description>
+        <property name="marshaller">  <ref bean="marshaller"/> </property>
+    	<property name="unmarshaller"> <ref bean="marshaller"/> </property>
+    </bean>
+    
+    <!-- Service End Point -->
+    <bean id="diagnosisServiceEndPoint" class="com.apria.svcs.aesservice.DiagnosisServiceEndpoint">
+        <constructor-arg ref="diagnosisService"/>
+    </bean>
+
+    <bean id="diagnosisService" class="com.apria.svcs.aesservice.impl.DiagnosisServiceImpl" scope="prototype">
+    	<property name="validator" ref="diagnosisValidator"/>   
+    </bean>
+    
+    <!--  Diagnosis VALIDATOR -->
+    <bean id="diagnosisValidator" class="com.apria.svcs.aesservice.validator.DiagnosisServiceValidator"/>
+        
+    <!--  Default WSDL Creation using schema -->
+    <bean id="diagnosis" class="org.springframework.ws.wsdl.wsdl11.DynamicWsdl11Definition">
+		<property name="builder">
+			<bean class="org.springframework.ws.wsdl.wsdl11.builder.XsdBasedSoap11Wsdl4jDefinitionBuilder">
+				<property name="schema" value="/WEB-INF/schema/AESDiagnosisService.xsd" />
+				<property name="portTypeName" value="Diagnosis" />
+				<property name="locationUri" value="/services/diagnosisService/" />
+				<property name="targetNamespace" value="http://svcs.apria.com/aesService/diagnosis" />
+			</bean>
+		</property>
+	</bean>
+	
+	<!--  Message Source -->
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+	    <property name="basename" value="/WEB-INF/messages"/>
+	    <property name="cacheSeconds" value="1"/>
+	</bean>
+
+	<!--  Exception Resolver -->
+	<bean id="exceptionResolver"
+	        class="com.apria.svcs.aesservice.exception.ServiceFaultExceptionResolver">
+        <property name="defaultFault" value="SERVER"/>        
+        <property name="exceptionMappings">
+            <value>
+	   				com.apria.svcs.aesservice.exception.ServiceFaultException=SERVER,Service Exception					
+					com.apria.svcs.aesservice.exception.ValidationException=CLIENT, Invalid Request Exception	   				
+            </value>
+	</property>
+    </bean>
+
+	
+	<!--  Web MVC Controller -->
+	<bean id="AESDiagnosisServiceController" class="com.apria.svcs.aesservice.test.AESDiagnosisServiceController">        
+       	<property name="operations">
+                <ref bean="operations"/>
+        </property>           
+        <property name="fieldAttrs">
+                <ref bean="formIdfieldAttrs"/>
+        </property>   
+        <property name="formView" value="service"/>
+        <property name="successView" value="service"/> 	
+    </bean>	
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass"><value>org.springframework.web.servlet.view.JstlView</value></property>
+        <property name="prefix"><value>/WEB-INF/jsp/</value></property> 
+        <property name="suffix"><value>.jsp</value></property>
+    </bean>
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+    
+         
+    <!--  End of MVC -->
+    
+</beans>

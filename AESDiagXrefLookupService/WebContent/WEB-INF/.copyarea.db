@@ -1,0 +1,17 @@
+ClearCase CopyAreaDB|4
+Apria_src\DB_Component\Sonata\EnterpriseWebService\AESDiagXrefLookupService\WebContent\WEB-INF
+2
+d
+15:dataSourceContext.xml|1|14493190709|6fb|fb873512|4e64ff64a8304346995e0953c639ae90|0
+e:daoContext.xml|1|144931906be|2c4|31ccec87|3d69e6c3b9a744d2a59e96fa4c7cba84|0
+3:jsp|2|0|0|0|9b67f6d847294321b1a135d43a522e0e|0
+f:ibm-web-ext.xmi|1|14493190792|1b1|6958955a|92da9d94cb364c16ab4fbd9d9ebbebb3|0
+10:log4j.properties|1|144931907c3|1af|c57b9b36|634abe1e74054985901d4e29460149f4|0
+6:schema|2|0|0|0|4c5dd949b09a45d689e4ec1dd79c2679|0
+3:lib|2|0|0|0|aa7f8fb45c0d45b69f244ac47a167a77|0
+16:AesService-servlet.xml|1|14493190622|15a7|2ba9ff8d|b4677c0873954a63abd00bad7da0337b|0
+f:ibm-web-bnd.xmi|1|14493190762|126|8d5e6165|5561b9ae5e7d4baab36375c80a82dc6d|0
+13:aestheme.properties|1|14493190665|39|71621489|0b294ecf230441db8938e6bd36ef5007|0
+7:classes|2|0|0|0|e58054563f8f4ae181494b074baf9e36|0
+13:messages.properties|1|144931907f2|b1|b1c13e11|b95bed2e3e414c5f961a111846d3a05f|0
+7:web.xml|1|14493190823|73b|92b366a9|c747885dba504b3d8a7e493ea7845eb5|0

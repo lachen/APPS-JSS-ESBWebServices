@@ -1,0 +1,16 @@
+ClearCase CopyAreaDB|4
+Apria_src\Web Services\MediationServices_ESB7\AESMobileWSAppWeb\src\com\apria\web\services\mobile\out
+2
+c
+12:Intake_Helper.java|1|13df53824b3|2221|b1b8fde7|2edb12a42bdc466fbdd9a94975124b3e|0
+11:Intake_Deser.java|1|13df53823db|1ccd|75e361e6|02cc53f56ce04b51931e256e6f433a82|0
+12:WorkOrder_Ser.java|1|13df5382b90|3e61|a8aa5aaa|51589a4b93c94a8a94e76d05d048e7ef|0
+18:IntakeResult_Helper.java|1|13df538281d|f32|b197d0f5|993c98fb4fb346cdb8544ed970f0f6cb|0
+15:IntakeResult_Ser.java|1|13df53828ce|154e|b8f81a8c|46c56347e7d94f7a899970442c5cfa62|0
+15:WorkOrder_Helper.java|1|13df5382aec|2b3a|a5e7ec07|586b173eeb3f4ecc9376c97bd5941266|0
+11:IntakeResult.java|1|13df538298b|7b6|4b035310|0b4f9571accc467e91b0a0c7721611d7|0
+b:Intake.java|1|13df538268f|18b6|9a69e5d2|a878660f5c144439838b526a03c5be61|0
+e:WorkOrder.java|1|13df5382c36|1dfa|6f9168bc|69388adb98b745dd84bbfcf9fff95d01|0
+14:WorkOrder_Deser.java|1|13df5382a36|22b7|fa6025e|169cb1c590f64c71b5bb5e1a5a66f246|0
+17:IntakeResult_Deser.java|1|13df5382759|e0d|980235a7|9bb81b2c441d4bdcbf563952fd220e5b|0
+f:Intake_Ser.java|1|13df5382596|310d|7215bdf5|7794785722834412b4f524ba81f43e38|0

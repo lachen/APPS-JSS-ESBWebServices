@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="AES_MB_IntakeWOList_Intf_1_0" targetNamespace="http://AES_MB_IntakeWOList_Lib_1_0/com/apria/services/aes/workorderdetails/beans/AES_MB_IntakeWOList_Intf_1_0" xmlns:bons1="http://AES_MB_IntakeWOList_Lib_1_0/com/apria/services/aes/workorderdetails/beans" xmlns:tns="http://AES_MB_IntakeWOList_Lib_1_0/com/apria/services/aes/workorderdetails/beans/AES_MB_IntakeWOList_Intf_1_0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://AES_MB_IntakeWOList_Lib_1_0/com/apria/services/aes/workorderdetails/beans/AES_MB_IntakeWOList_Intf_1_0">
+            <xsd:import namespace="http://AES_MB_IntakeWOList_Lib_1_0/com/apria/services/aes/workorderdetails/beans" schemaLocation="AES_MB_IntakeWOList_Exception.xsd"/>
+            <xsd:import namespace="http://AES_MB_IntakeWOList_Lib_1_0/com/apria/services/aes/workorderdetails/beans" schemaLocation="AES_MB_IntakeWOList_Result.xsd"/>
+            <xsd:import namespace="http://AES_MB_IntakeWOList_Lib_1_0/com/apria/services/aes/workorderdetails/beans" schemaLocation="AES_MB_IntakeWOList_Request.xsd"/>
+      <xsd:element name="getIntakeWOList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="input" nillable="true" type="bons1:AES_MB_IntakeWOList_Request"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getIntakeWOListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="output" nillable="true" type="bons1:AES_MB_IntakeWOList_Result"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="operation1Fault1_operation1Fault" nillable="true" type="bons1:AES_MB_IntakeWOList_Exception"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getIntakeWOList_operation1FaultMsg">
+    <wsdl:part element="tns:operation1Fault1_operation1Fault" name="operation1Fault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getIntakeWOListResponseMsg">
+    <wsdl:part element="tns:getIntakeWOListResponse" name="getIntakeWOListResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getIntakeWOListRequestMsg">
+    <wsdl:part element="tns:getIntakeWOList" name="getIntakeWOListParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="AES_MB_IntakeWOList_Intf_1_0">
+    <wsdl:operation name="getIntakeWOList">
+      <wsdl:input message="tns:getIntakeWOListRequestMsg" name="getIntakeWOListRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getIntakeWOListResponseMsg" name="getIntakeWOListResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:getIntakeWOList_operation1FaultMsg" name="operation1Fault">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,7 @@
+ClearCase CopyAreaDB|4
+Apria_src\DB_Component\Sonata\EnterpriseWebService\AESDiagXrefLookupService\src\com\apria\svcs\aesservice\exception
+2
+3
+1a:ServiceFaultException.java|1|14493190058|66a|a49ef710|a3c23e570e374b8a9fce996e4a94dd24|0
+22:ServiceFaultExceptionResolver.java|1|1449319008c|ac5|f1f0913e|89cb8cf21d5446fba451287ff7b0e16b|0
+18:ValidationException.java|1|144931900c4|3f5|356c477d|a50c5eb12b1b42f49c20311147f02b61|0

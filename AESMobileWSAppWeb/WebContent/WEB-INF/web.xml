@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><web-app id="WebApp_ID" version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name>
+	AESMobileWSAppWeb</display-name>
+	<servlet>
+		<servlet-name>com_apria_web_services_mobile_MobileAppWSServiceImpl</servlet-name>
+		<servlet-class>
+		com.apria.web.services.mobile.MobileAppWSServiceImpl</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>com_apria_web_services_mobile_MobileAppWSServiceImpl</servlet-name>
+		<url-pattern>services/MobileAppWSServiceImpl</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+    <service-ref>
+        <description>WSDL Service WSExport1_AES_MB_IntakeWOList_Intf_1_0HttpService</description>
+        <service-ref-name>service/WSExport1_AES_MB_IntakeWOList_Intf_1_0HttpService</service-ref-name>
+        <service-interface>AES_MB_IntakeWOList_Lib_1_0.WSExport1_AES_MB_IntakeWOList_Intf_1_0HttpService</service-interface>
+        <wsdl-file>WEB-INF/wsdl/AES_MB_IntakeWOList_Svcs_1_0_WSExport1.wsdl</wsdl-file>
+        <jaxrpc-mapping-file>WEB-INF/AES_MB_IntakeWOList_Svcs_1_0_WSExport1_mapping.xml</jaxrpc-mapping-file>
+        <service-qname xmlns:pfx="http://AES_MB_IntakeWOList_Lib_1_0/com/apria/services/aes/workorderdetails/beans/AES_MB_IntakeWOList_Intf_1_0/Binding">pfx:WSExport1_AES_MB_IntakeWOList_Intf_1_0HttpService</service-qname>
+        <port-component-ref>
+            <service-endpoint-interface>AES_MB_IntakeWOList_Lib_1_0.AES_MB_IntakeWOList_Intf_1_0</service-endpoint-interface>
+        </port-component-ref>
+    </service-ref>
+    <service-ref>
+        <description>WSDL Service AES_GetBusa_IntfExport1_AES_GetBusa_IntfHttpService</description>
+        <service-ref-name>service/AES_GetBusa_IntfExport1_AES_GetBusa_IntfHttpService</service-ref-name>
+        <service-interface>AES_GetBusa_Lib_1_0.AES_GetBusa_IntfExport1_AES_GetBusa_IntfHttpService</service-interface>
+        <wsdl-file>WEB-INF/wsdl/AES_GetBusa_Intf_1_0_AES_GetBusa_IntfHttp_Service.wsdl</wsdl-file>
+        <jaxrpc-mapping-file>WEB-INF/AES_GetBusa_Intf_1_0_AES_GetBusa_IntfHttp_Service_mapping.xml</jaxrpc-mapping-file>
+        <service-qname xmlns:pfx="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf/Binding">pfx:AES_GetBusa_IntfExport1_AES_GetBusa_IntfHttpService</service-qname>
+        <port-component-ref>
+            <service-endpoint-interface>AES_GetBusa_Lib_1_0.AES_GetBusa_Intf</service-endpoint-interface>
+        </port-component-ref>
+    </service-ref>
+    <service-ref>
+        <description>WSDL Service ReferralIntakeWOSts_1_0</description>
+        <service-ref-name>service/ReferralIntakeWOSts_1_0</service-ref-name>
+        <service-interface>iseries.wsbeans.referralintakewosts_1_0.ReferralIntakeWOSts_1_0</service-interface>
+        <wsdl-file>WEB-INF/wsdl/ReferralIntakeWOSts_1_0.wsdl</wsdl-file>
+        <jaxrpc-mapping-file>WEB-INF/ReferralIntakeWOSts_1_0_mapping.xml</jaxrpc-mapping-file>
+        <service-qname xmlns:pfx="http://referralintakewosts_1_0.wsbeans.iseries">pfx:ReferralIntakeWOSts_1_0</service-qname>
+        <port-component-ref>
+            <service-endpoint-interface>iseries.wsbeans.referralintakewosts_1_0.ReferralIntakeWOSts_1_0PortType</service-endpoint-interface>
+        </port-component-ref>
+    </service-ref>
+</web-app>

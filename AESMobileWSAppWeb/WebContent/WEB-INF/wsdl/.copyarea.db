@@ -1,0 +1,16 @@
+ClearCase CopyAreaDB|4
+Apria_src\Web Services\MediationServices_ESB7\AESMobileWSAppWeb\WebContent\WEB-INF\wsdl
+2
+c
+15:AES_GetBusa_Intf.wsdl|1|13df537dcef|1017|63033c99|c1299fe7031541b98c9048273a40c180|0
+d:WorkOrder.xsd|1|13df537e44e|96e|52010486|894fea7471df475d905e708ae30ba291|0
+1e:AES_MB_IntakeWOList_Result.xsd|1|13df537e05d|48f|f2d180d7|6ff1c54eac324d829019676f64e71b55|0
+2b:AES_MB_IntakeWOList_Svcs_1_0_WSExport1.wsdl|1|13df537e11d|813|6d6bba67|bd8f55b7d60e4ca582fb8bd8b43bcf51|0
+21:AES_MB_IntakeWOList_Intf_1_0.wsdl|1|13df537deae|b71|df13d2cf|9f1bbf03e0c64dafa6341a72bc8c6ce1|0
+1f:AES_MB_IntakeWOList_Request.xsd|1|13df537df8f|343|bfdd0ffc|370cbc5bbd1f42c8987e429b56a7d061|0
+36:AES_GetBusa_Intf_1_0_AES_GetBusa_IntfHttp_Service.wsdl|1|13df537dc09|86c|e49ec7b9|b5cb0a0d37de4ff6bfe601be409a5942|0
+5:beans|2|0|0|0|f4525ab99351416db61b1e558e4993fb|0
+1b:MobileAppWSServiceImpl.wsdl|1|13df537e2b9|1f0c|87ba6607|ffd36083e037492dafe0ea5160aac03e|0
+a:Intake.xsd|1|13df537e1da|723|44714e6e|3c5e829c76c5450c87cc778fb57530f6|0
+1c:ReferralIntakeWOSts_1_0.wsdl|1|13df537e382|2bae|f8f54431|b90bba22d98a44f492d4a9c3bcb9f96c|0
+21:AES_MB_IntakeWOList_Exception.xsd|1|13df537ddc7|2af|feaae8fe|7916f43514b94bdebbfbeb4c6c7c10c9|0

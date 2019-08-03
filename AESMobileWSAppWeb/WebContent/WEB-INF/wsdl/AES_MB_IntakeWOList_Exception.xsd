@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://AES_MB_IntakeWOList_Lib_1_0/com/apria/services/aes/workorderdetails/beans" xmlns:bons0="http://AES_MB_IntakeWOList_Lib_1_0/com/apria/services/aes/workorderdetails/beans" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:include schemaLocation="AES_MB_IntakeWOList_Request.xsd"/>
+	<xsd:complexType name="AES_MB_IntakeWOList_Exception">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="requestBO" type="bons0:AES_MB_IntakeWOList_Request">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="exceptionMessage" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

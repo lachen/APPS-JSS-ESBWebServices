@@ -1,0 +1,6 @@
+ClearCase CopyAreaDB|4
+Apria_src\DB_Component\Sonata\EnterpriseWebService\AESDiagXrefLookupService\src\com\apria\svcs\aesservice\dao\impl
+2
+2
+1e:DiagnosisXrefMappingQuery.java|1|1449318fdc9|549|e5b3b309|9eeffc33b3ba4ed9822c3702e58684dc|0
+20:DiagnosisXrefServiceDAOImpl.java|1|1449318fe81|a06|8f782c4c|f26b0a0b990b4aa0a1e406004c59ae80|0

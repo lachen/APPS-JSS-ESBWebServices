@@ -1,0 +1,23 @@
+ClearCase CopyAreaDB|4
+Apria_src\Web Services\MediationServices_ESB7\AESMobileWSAppWeb\src\AES_GetBusa_Lib_1_0
+2
+13
+20:AES_GetBusa_Response_Helper.java|1|13df537f637|cbe|498efce1|18b48f45579c45049eb33bbe8b6f8072|0
+19:AES_GetBusa_Response.java|1|13df537f76a|4e7|73638191|f5729e1a945f490dab164220f4a28442|0
+15:AES_GetBusa_Intf.java|1|13df537eef7|27e|7ecdd185|77349f3f3d3746d18c67cdbe1e97d6d7|0
+18:AES_GetBusa_Request.java|1|13df537f4ff|7a8|a5e46268|98e5e20809c94ead835378fe47079d4a|0
+20:AES_GetBusa_Exception_Deser.java|1|13df537eb4b|26c|f6babdfc|72ce02f1ab114614a22f2e01284621ff|0
+1e:AES_GetBusa_Exception_Ser.java|1|13df537ed68|c70|e34aafa3|ae35f5295a9847fcbebd36bcbd58e23e|0
+1d:AES_GetBusa_Response_Ser.java|1|13df537f6d0|10c8|921da59|9b1094127d5a478db1f824fe5312c8ce|0
+3f:AES_GetBusa_IntfExport1_AES_GetBusa_IntfHttpServiceLocator.java|1|13df537f1b5|1f1b|970bcd2c|d50426bd799c4da888d4bc67bc6bac77|0
+1f:AES_GetBusa_Response_Deser.java|1|13df537f59e|a91|a29a3262|6e0ae53b851c43398e3ad9489c44a5fb|0
+25:AES_GetBusa_Exception_DeserProxy.java|1|13df537ec07|48c|d4f96a5d|bb64c4a6b3884e11a92b365e14c739f6|0
+38:AES_GetBusa_IntfExport1_AES_GetBusa_IntfHttpService.java|1|13df537f040|2d8|8a98f2d5|4cb727b778c5489bb458a13e2834c36c|0
+21:AES_GetBusa_Exception_Helper.java|1|13df537ecb8|a13|d7e3248b|bc16954332ff4e52b0ecca9ad81b8ebd|0
+3c:AES_GetBusa_IntfExport1_AES_GetBusa_IntfHttpBindingStub.java|1|13df537ef9b|4c6f|e10d6b26|e1a42c5a888d4d80b125a73a444722ba|0
+1a:AES_GetBusa_IntfProxy.java|1|13df537f25f|df1|abf37056|ee6bbdbd0afc43ee95ebdba53a1e7988|0
+1c:AES_GetBusa_Request_Ser.java|1|13df537f447|1799|c4cba36|abcfffdc2ae94e0bb918289d4fdb341f|0
+43:AES_GetBusa_IntfExport1_AES_GetBusa_IntfHttpServiceInformation.java|1|13df537f111|3047|70f7468c|311471771efb4d27a32f5fcfad835bd3|0
+1a:AES_GetBusa_Exception.java|1|13df537ee3e|33d|670effc8|ead957227e474dc193c0ddbadaf43deb|0
+1e:AES_GetBusa_Request_Deser.java|1|13df537f303|e4b|ae3c43de|d14a0f4997c7454395f4791bd788b519|0
+1f:AES_GetBusa_Request_Helper.java|1|13df537f3a4|11af|35d39769|c86682fbcd434eb0ab5c9cd060015c11|0

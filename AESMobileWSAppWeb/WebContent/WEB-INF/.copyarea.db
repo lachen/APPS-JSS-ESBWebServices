@@ -1,0 +1,19 @@
+ClearCase CopyAreaDB|4
+Apria_src\Web Services\MediationServices_ESB7\AESMobileWSAppWeb\WebContent\WEB-INF
+2
+f
+1d:ibm-webservicesclient-ext.xmi|1|13df5375b7c|489|86658a72|0a7baeaf011f4bf0a6ba9587dbeeea7c|0
+f:webservices.xml|1|13df5375f18|459|e10820e|efacf6ddc9fb4e2abd5e71186010809b|0
+3d:AES_GetBusa_Intf_1_0_AES_GetBusa_IntfHttp_Service_mapping.xml|1|13df5375755|279b|99d9ad19|d544e36b6ac548b896e96ed43979c2c5|0
+f:ibm-web-ext.xml|1|13df537595e|1f4|d8d4a99c|60e656b5658b4c88b917196dd7087b3b|0
+1d:ibm-webservicesclient-bnd.xmi|1|13df5375ad5|47d|649b8497|e7c440e8667c4778b53f09555b9ef134|0
+22:MobileAppWSServiceImpl_mapping.xml|1|13df5375d31|4127|582e8e6a|2a21a644068e446494753f639c44428d|0
+3:lib|2|0|0|0|670cdd96b4734fb9b0bf9c002217f612|0
+f:ibm-web-bnd.xml|1|13df53758b3|153|a6a571c0|5e2b2c4656b34ebd897173cfb665f453|0
+17:ibm-webservices-ext.xmi|1|13df5375c16|20c|fdfbb07a|1903144c5bbc41ed9064c74c1c74c913|0
+17:ibm-webservices-bnd.xmi|1|13df53759fc|215|f984b292|8f013979b0474ef9ac7f0882afe937e2|0
+32:AES_MB_IntakeWOList_Svcs_1_0_WSExport1_mapping.xml|1|13df5375810|47e7|c709d30b|b1a10f0477fd4cbcb4f14e75c7c17085|0
+7:classes|2|0|0|0|27c3965f65bc4b30a720c20e221e1c85|0
+4:wsdl|2|0|0|0|f1abd0fce86346c086075d716f922ab0|0
+23:ReferralIntakeWOSts_1_0_mapping.xml|1|13df5375dd7|4451|1389acdf|5d4c5014e93f4240b5b0ab49364d3f45|0
+7:web.xml|1|13df5375e79|edc|1f360c4e|93c37363988f4369b641581ad070a986|0

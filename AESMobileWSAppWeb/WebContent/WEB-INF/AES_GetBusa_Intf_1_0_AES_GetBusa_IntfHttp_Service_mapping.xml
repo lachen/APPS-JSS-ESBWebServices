@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><java-wsdl-mapping version="1.1" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://www.ibm.com/webservices/xsd/j2ee_jaxrpc_mapping_1_1.xsd">
+    <package-mapping>
+        <package-type>AES_GetBusa_Lib_1_0</package-type>
+        <namespaceURI>http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf</namespaceURI>
+    </package-mapping>
+    <package-mapping>
+        <package-type>AES_GetBusa_Lib_1_0</package-type>
+        <namespaceURI>http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf/Binding</namespaceURI>
+    </package-mapping>
+    <package-mapping>
+        <package-type>AES_GetBusa_Lib_1_0</package-type>
+        <namespaceURI>http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/beans</namespaceURI>
+    </package-mapping>
+    <java-xml-type-mapping>
+        <java-type>AES_GetBusa_Lib_1_0.AES_GetBusa_Exception</java-type>
+        <root-type-qname xmlns:rtq="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf">rtq:getBusaByBusinessUnitFault1_fault</root-type-qname>
+        <qname-scope>element</qname-scope>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>java.lang.String</java-type>
+        <root-type-qname xmlns:rtq="http://www.w3.org/2001/XMLSchema">rtq:string</root-type-qname>
+        <qname-scope>simpleType</qname-scope>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>AES_GetBusa_Lib_1_0.AES_GetBusa_Response</java-type>
+        <root-type-qname xmlns:rtq="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/beans">rtq:AES_GetBusa_Response</root-type-qname>
+        <qname-scope>complexType</qname-scope>
+        <variable-mapping>
+            <java-variable-name>businessUnit</java-variable-name>
+            <xml-element-name>BusinessUnit</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>businessUnitName</java-variable-name>
+            <xml-element-name>BusinessUnitName</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>CPUName</java-variable-name>
+            <xml-element-name>CPUName</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>recCount</java-variable-name>
+            <xml-element-name>RecCount</xml-element-name>
+        </variable-mapping>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>int</java-type>
+        <root-type-qname xmlns:rtq="http://www.w3.org/2001/XMLSchema">rtq:int</root-type-qname>
+        <qname-scope>simpleType</qname-scope>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>AES_GetBusa_Lib_1_0.AES_GetBusa_Exception</java-type>
+        <root-type-qname xmlns:rtq="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf">rtq:getBusaByZipCodeFault1_fault</root-type-qname>
+        <qname-scope>element</qname-scope>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>AES_GetBusa_Lib_1_0.AES_GetBusa_Request</java-type>
+        <root-type-qname xmlns:rtq="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/beans">rtq:AES_GetBusa_Request</root-type-qname>
+        <qname-scope>complexType</qname-scope>
+        <variable-mapping>
+            <java-variable-name>zipCode</java-variable-name>
+            <xml-element-name>ZipCode</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>businessUnit</java-variable-name>
+            <xml-element-name>BusinessUnit</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>tradingPartner</java-variable-name>
+            <xml-element-name>TradingPartner</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>clientHost</java-variable-name>
+            <xml-element-name>ClientHost</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>userName</java-variable-name>
+            <xml-element-name>UserName</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>password</java-variable-name>
+            <xml-element-name>Password</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>serviceVersion</java-variable-name>
+            <xml-element-name>ServiceVersion</xml-element-name>
+        </variable-mapping>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>AES_GetBusa_Lib_1_0.AES_GetBusa_Exception</java-type>
+        <root-type-qname xmlns:rtq="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/beans">rtq:AES_GetBusa_Exception</root-type-qname>
+        <qname-scope>complexType</qname-scope>
+        <variable-mapping>
+            <java-variable-name>requestBO</java-variable-name>
+            <xml-element-name>RequestBO</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>exceptionMessage</java-variable-name>
+            <xml-element-name>ExceptionMessage</xml-element-name>
+        </variable-mapping>
+    </java-xml-type-mapping>
+    <exception-mapping>
+        <exception-type>AES_GetBusa_Lib_1_0.AES_GetBusa_Exception</exception-type>
+        <wsdl-message xmlns:em="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf">em:getCPUByBU_faultMsg</wsdl-message>
+        <constructor-parameter-order>
+            <element-name>RequestBO</element-name>
+            <element-name>ExceptionMessage</element-name>
+        </constructor-parameter-order>
+    </exception-mapping>
+    <exception-mapping>
+        <exception-type>AES_GetBusa_Lib_1_0.AES_GetBusa_Exception</exception-type>
+        <wsdl-message xmlns:em="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf">em:getBusaByZipCode_faultMsg</wsdl-message>
+        <constructor-parameter-order>
+            <element-name>RequestBO</element-name>
+            <element-name>ExceptionMessage</element-name>
+        </constructor-parameter-order>
+    </exception-mapping>
+    <service-interface-mapping>
+        <service-interface>AES_GetBusa_Lib_1_0.AES_GetBusa_IntfExport1_AES_GetBusa_IntfHttpService</service-interface>
+        <wsdl-service-name xmlns:sim="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf/Binding">sim:AES_GetBusa_IntfExport1_AES_GetBusa_IntfHttpService</wsdl-service-name>
+        <port-mapping>
+            <port-name>AES_GetBusa_Intf_1_0_AES_GetBusa_IntfHttpPort</port-name>
+            <java-port-name>AES_GetBusa_Intf_1_0_AES_GetBusa_IntfHttpPort</java-port-name>
+        </port-mapping>
+    </service-interface-mapping>
+    <service-endpoint-interface-mapping>
+        <service-endpoint-interface>AES_GetBusa_Lib_1_0.AES_GetBusa_Intf</service-endpoint-interface>
+        <wsdl-port-type xmlns:seimwpt="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf">seimwpt:AES_GetBusa_Intf</wsdl-port-type>
+        <wsdl-binding xmlns:seimwb="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf/Binding">seimwb:AES_GetBusa_IntfExport1_AES_GetBusa_IntfHttpBinding</wsdl-binding>
+        <service-endpoint-method-mapping>
+            <java-method-name>getCPUByBU</java-method-name>
+            <wsdl-operation>getCPUByBU</wsdl-operation>
+            <wrapped-element/>
+            <method-param-parts-mapping>
+                <param-position>0</param-position>
+                <param-type>AES_GetBusa_Lib_1_0.AES_GetBusa_Request</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf">mppm:getCPUByBURequestMsg</wsdl-message>
+                    <wsdl-message-part-name>input</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <wsdl-return-value-mapping>
+                <method-return-value>AES_GetBusa_Lib_1_0.AES_GetBusa_Response</method-return-value>
+                <wsdl-message xmlns:wrvm="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf">wrvm:getCPUByBUResponseMsg</wsdl-message>
+                <wsdl-message-part-name>output</wsdl-message-part-name>
+            </wsdl-return-value-mapping>
+        </service-endpoint-method-mapping>
+        <service-endpoint-method-mapping>
+            <java-method-name>getBusaByZipCode</java-method-name>
+            <wsdl-operation>getBusaByZipCode</wsdl-operation>
+            <wrapped-element/>
+            <method-param-parts-mapping>
+                <param-position>0</param-position>
+                <param-type>AES_GetBusa_Lib_1_0.AES_GetBusa_Request</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf">mppm:getBusaByZipCodeRequestMsg</wsdl-message>
+                    <wsdl-message-part-name>input</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <wsdl-return-value-mapping>
+                <method-return-value>AES_GetBusa_Lib_1_0.AES_GetBusa_Response</method-return-value>
+                <wsdl-message xmlns:wrvm="http://AES_GetBusa_Lib_1_0/com/apria/services/aes/getbusa/AES_GetBusa_Intf">wrvm:getBusaByZipCodeResponseMsg</wsdl-message>
+                <wsdl-message-part-name>output</wsdl-message-part-name>
+            </wsdl-return-value-mapping>
+        </service-endpoint-method-mapping>
+    </service-endpoint-interface-mapping>
+</java-wsdl-mapping>

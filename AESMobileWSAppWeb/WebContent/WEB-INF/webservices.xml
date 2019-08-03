@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webservices xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/javaee_web_services_1_2.xsd" version="1.2">
+	<webservice-description>
+		<webservice-description-name>MobileAppWSServiceImplService</webservice-description-name>
+		<wsdl-file>WEB-INF/wsdl/MobileAppWSServiceImpl.wsdl</wsdl-file>
+		<jaxrpc-mapping-file>WEB-INF/MobileAppWSServiceImpl_mapping.xml</jaxrpc-mapping-file>
+		<port-component>
+			<port-component-name>MobileAppWSServiceImpl</port-component-name>
+			<wsdl-port xmlns:pfx="http://mobile.services.web.apria.com">
+			pfx:MobileAppWSServiceImpl</wsdl-port>
+			<enable-mtom>false</enable-mtom>
+			<service-endpoint-interface>com.apria.web.services.mobile.MobileAppWSServiceImpl</service-endpoint-interface>
+			<service-impl-bean>
+				<servlet-link>
+				com_apria_web_services_mobile_MobileAppWSServiceImpl</servlet-link>
+			</service-impl-bean>
+		</port-component>
+	</webservice-description>
+</webservices>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://AES_MB_IntakeWOList_Lib_1_0/com/apria/services/aes/workorderdetails/beans" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:complexType name="Intake">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="associate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="followpCode" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="iIntakeCreateDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="intakeCreateTime" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="intakeStatus" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="intakeStatusDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="intakeStatusTime" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="intake" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="patientFirstName" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="patientID" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="patientLastName" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="patientMI" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="physicianID" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="physicianName" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="referralID" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="referralName" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="referralZipCode" type="xsd:string">
+			</xsd:element>
+
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

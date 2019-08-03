@@ -1,0 +1,20 @@
+ClearCase CopyAreaDB|4
+Apria_src\Web Services\MediationServices_ESB7\AESMobileWSAppWeb\src\iseries\wsbeans\referralintakewosts_1_0\xsd
+2
+10
+25:ReferralIntakeWOSts_1_0Input_Ser.java|1|13df5383e51|163e|e0a28153|f5f73c578e9a4d3bb9d08d2486b6945c|0
+22:ReferralIntakeWOSts_1_0Result.java|1|13df5384440|afe|d122843e|27df24a9a0f54750adde0079290154ab|0
+11:Intake_Deser.java|1|13df5383623|1de7|bd6e0650|2799cb0987de43f8a289520a38830712|0
+28:ReferralIntakeWOSts_1_0Result_Deser.java|1|13df53840bc|12aa|ca89e1a4|04237e685e554c7d8fd61d42525708e9|0
+28:ReferralIntakeWOSts_1_0Input_Helper.java|1|13df5383ce6|fbe|656b0a51|da3b815c5e834b468ef2ef81f77be8a7|0
+f:Intake_Ser.java|1|13df538389f|3824|20f21268|115d338276354153aa1dc9cae5364dd5|0
+27:ReferralIntakeWOSts_1_0Input_Deser.java|1|13df5383b4c|d5d|b91e276d|e66f22fd8b33421a93f43bcb26412abe|0
+12:Intake_Helper.java|1|13df5383743|267c|59ef868c|1864d977fe68431f8a78281fa2e06111|0
+12:WorkOrder_Ser.java|1|13df5384785|4bf9|de34aabd|953a405249704ad98d053ce309ba6ae9|0
+26:ReferralIntakeWOSts_1_0Result_Ser.java|1|13df538432e|1c1e|8db41ce3|0b7712792657415084d6d54ae16f8f24|0
+15:WorkOrder_Helper.java|1|13df5384665|33cf|2ec9e774|ee41c25b759045c5940fb5c91ce50ac2|0
+b:Intake.java|1|13df5383a0b|1269|2741c9d9|4c35eb89932a41888ce364bbaa45a88f|0
+21:ReferralIntakeWOSts_1_0Input.java|1|13df5383fb2|63d|ece5f22f|ba774c2703dc46bc88a3218525c46f53|0
+e:WorkOrder.java|1|13df53848b5|18d1|1224ba60|283201ceceaa40fab7384f2506e06bed|0
+29:ReferralIntakeWOSts_1_0Result_Helper.java|1|13df5384221|13ed|3a676dc6|18f548c0d6e3409f98649a5f3479359d|0
+14:WorkOrder_Deser.java|1|13df5384554|2814|9af8117e|4e351631a0a8444abc2de36c4c787058|0

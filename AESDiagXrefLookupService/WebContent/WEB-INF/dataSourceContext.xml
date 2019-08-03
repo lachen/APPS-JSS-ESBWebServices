@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:tx="http://www.springframework.org/schema/tx"		 
+		xmlns:util="http://www.springframework.org/schema/util"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd   
+			http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+
+	
+		<bean id="commonDB" class="org.springframework.jdbc.datasource.WebSphereDataSourceAdapter">
+			  <property name="targetDataSource" ref="aesds"/>
+   		</bean>
+   		<bean id="aesds" class="org.springframework.jndi.JndiObjectFactoryBean">
+			<property name="jndiName" value="java:comp/env/jdbc/acedb"/>
+			<property name="lookupOnStartup" value="false"/>
+			<property name="cache" value="true"/>
+			<property name="proxyInterfaces">
+			 	<list>
+			 		<value>javax.sql.DataSource</value>
+			 		<value>com.ibm.websphere.rsadapter.WSDataSource</value>
+			 	</list>
+			</property>
+		</bean>
+	 <!-- The following are testing specific stars here -->
+       
+		<util:map id="operations">
+        	<entry key="Home" value="Home"/>
+		    <entry key="System Code" value="Origin System"/>
+		    <entry key="Diag-Code-Xref" value="Diag Code"/>		    	    
+		</util:map>
+		
+		<util:map id="formIdfieldAttrs">
+        	<entry key="*System Code" value="systemCode"/>
+        	<entry key="*Diagnosis Src Code" value="diagnosisSrcCode"/>
+		</util:map>
+		
+	<!--  Testing specific ends here -->
+	                         
+     	   
+ </beans>

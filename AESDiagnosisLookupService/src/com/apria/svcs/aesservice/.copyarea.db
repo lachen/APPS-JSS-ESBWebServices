@@ -1,0 +1,11 @@
+ClearCase CopyAreaDB|4
+Apria_src\DB_Component\Sonata\EnterpriseWebService\AESDiagnosisLookupService\src\com\apria\svcs\aesservice
+2
+7
+4:impl|2|0|0|0|70376c3bb9414c3ebfe5898e885d25f2|0
+9:validator|2|0|0|0|51378012d37449deb008d2df8956ab6d|0
+9:exception|2|0|0|0|8f3a6156ddb44a54b81d3e297fcfca79|0
+1d:DiagnosisServiceEndpoint.java|1|144930f2a4f|466|dd77cb0|eb7a98efc4f24289b3085ee96bd14609|0
+15:DiagnosisService.java|1|144930f2a0b|367|611c1705|055f83270b5d4b378a1725b52f053e62|0
+3:dao|2|0|0|0|6966541345464d94969773ad8f2a1c43|0
+4:test|2|0|0|0|d1c3e7dce3e2420b97882399ea26ce8f|0
