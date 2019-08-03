@@ -1,0 +1,10 @@
+ClearCase CopyAreaDB|4
+Apria_src\Web Services\AES-Services\AESPayorService\WebContent\WEB-INF\lib
+2
+6
+8:axis.jar|1|13df52ce762|188803|3d51632|a5ccae0505b943858dd2e5d1abf219d5|0
+19:commons-logging-1.0.4.jar|1|13df52ce9aa|93e4|48e2ec8e|ec855c0248244927a78a588d20799e9a|0
+19:commons-discovery-0.2.jar|1|13df52ce8a4|115c2|6149e19b|153fc6d5d1524705a7540c876c79627e|0
+a:jaxrpc.jar|1|13df52cead1|7d8d|7f401021|67e2f72280424b9c8b93f73e80909b72|0
+10:wsdl4j-1.5.1.jar|1|13df52cecff|1ef38|724168b0|70d4c0f48a3d4c63b6fbe3818e026369|0
+8:saaj.jar|1|13df52cebec|4c33|3bb3e07|7c6f5c300251415d9f0691df511f1c2d|0

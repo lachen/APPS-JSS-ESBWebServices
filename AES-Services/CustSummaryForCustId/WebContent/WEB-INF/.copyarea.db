@@ -1,0 +1,14 @@
+ClearCase CopyAreaDB|4
+Apria_src\Web Services\AES-Services\CustSummaryForCustId\WebContent\WEB-INF
+2
+a
+17:ibm-webservices-ext.xmi|1|13df52d227a|2e2|592bf6f8|377c97c645a14c8eae239ca0ed81119c|0
+f:ibm-web-bnd.xmi|1|13df52d1e7f|126|886a615a|fc32ede341df4438ac4169ab79a85720|0
+17:ibm-webservices-bnd.xmi|1|13df52d2167|221|211fb7d8|292aacd28f3e43c5b85f1224a7bf2729|0
+f:webservices.xml|1|13df52d24c7|468|eb74817b|92f3473c6f394085bf197e234220a349|0
+f:ibm-web-ext.xmi|1|13df52d1fdc|1b1|5e97954f|ac989938170247cdbe7671a9a692e7ee|0
+7:classes|2|0|0|0|afb5881f9fba4aae9be5f6a09c5de491|0
+28:CustSummaryForCustIdSvcsImpl_mapping.xml|1|13df52d1d1e|1be3|d9d5ccae|b5c9d136acdf4656afe78a00bceb56a2|0
+4:wsdl|2|0|0|0|2f60367219924ec38d83a25538067c29|0
+3:lib|2|0|0|0|44399fdd129a470abfaa427a0b3f86d7|0
+7:web.xml|1|13df52d238b|42e|3e4f7065|b9d168a1d01e4ed1ab520df46374d150|0

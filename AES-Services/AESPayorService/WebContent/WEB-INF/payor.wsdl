@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="com_apria_ppi_svcs_ppi_payorDetail_svcs_v1" targetNamespace="http://wpf.ibm.com/2002/03/models/com/apria/ppi/svcs/ppi_payorDetail_svcs_v1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://wpf.ibm.com/2002/03/models/com/apria/ppi/svcs/ppi_payorDetail_svcs_v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd1="http://localhost:10040/Apria_PPI_Svcs/webengine/ppi_mgmg_svcs_provider/get_PayorBenefitDetailsByID_Transform" xmlns:xsd2="com/apria/ppi/svcs/ppi_payorDetail_svcs_v1/get_PayorBenefitDetailsByID_/get_PayorBenefitDetailsByID_Inputs">
+  <wsdl:types>
+  <xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://localhost:10040/Apria_PPI_Svcs/webengine/ppi_mgmg_svcs_provider/get_PayorBenefitDetailsByID_Transform" xmlns:cns="http://localhost:10040/Apria_PPI_Svcs/webengine/ppi_mgmg_svcs_provider/get_PayorBenefitDetailsByID_Transform" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <xsd:annotation>
+  <xsd:documentation xml:lang="en">Schema automatically generated on "Thursday, June 4, 2009 2:12:49 PM PDT" from the content of XML Variable "getSchema_TransformXml"</xsd:documentation> 
+  </xsd:annotation>
+  <xsd:element name="PPI_get_PayorBenefitDetailsByIDArray" type="cns:PPI_get_PayorBenefitDetailsByIDArrayType"/> 
+ <xsd:complexType name="PPI_get_PayorBenefitDetailsByIDArrayType">
+ <xsd:sequence>
+  <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cns:PPI_get_PayorBenefitDetailsByIDDO"/> 
+  </xsd:sequence>
+  </xsd:complexType>
+ <xsd:element name="PPI_get_PayorBenefitDetailsByIDDO">
+ <xsd:complexType>
+ <xsd:sequence>
+  <xsd:element maxOccurs="1" minOccurs="1" name="PYR_BNFT_UNQ_SK" nillable="false" type="xsd:integer"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="PYR_BNFT_ID" nillable="false" type="xsd:string"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="RTHME_AGRMT_UNQ_SK" nillable="false" type="xsd:integer"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="PYR_BNFT_NM" nillable="false" type="xsd:string"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="RPTG_PYR_BNFT_IN" nillable="false" type="xsd:string"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="PYR_BNFT_SUB_GRP_UNQ_SK" nillable="false" type="xsd:integer"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="RPTG_PYR_BNFT_ID" nillable="false" type="xsd:string"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="RPTG_PYR_BNFT_NM" nillable="false" type="xsd:string"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="AGRMT_ID" nillable="true" type="xsd:string"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="AGRMT_NM" nillable="true" type="xsd:string"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="PYR_BNFT_ADDR_UNQ_SK" nillable="true" type="xsd:integer"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="ADDR_LINE_1_TX" nillable="true" type="xsd:string"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="ADDR_LINE_2_TX" nillable="true" type="xsd:string"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="CITY_NM" nillable="true" type="xsd:string"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="ST_CD" nillable="true" type="xsd:string"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="ZIP_CD" nillable="true" type="xsd:string"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="ZIP_EXT_CD" nillable="true" type="xsd:string"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="TLPHN_AREA_NR" nillable="true" type="xsd:integer"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="TLPHN_PREFIX_NR" nillable="true" type="xsd:integer"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="TLPHN_LAST_NR" nillable="true" type="xsd:integer"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="MSTR_AGRMT_UNQ_SK" nillable="true" type="xsd:integer"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="MSTR_AGRMT_ID" nillable="true" type="xsd:string"/> 
+  <xsd:element maxOccurs="1" minOccurs="1" name="MSTR_AGRMT_NM" nillable="true" type="xsd:string"/> 
+  </xsd:sequence>
+  </xsd:complexType>
+  </xsd:element>
+  </xsd:schema>
+ <xsd:schema targetNamespace="com/apria/ppi/svcs/ppi_payorDetail_svcs_v1/get_PayorBenefitDetailsByID_/get_PayorBenefitDetailsByID_Inputs" xmlns:tns="com/apria/ppi/svcs/ppi_payorDetail_svcs_v1/get_PayorBenefitDetailsByID_/get_PayorBenefitDetailsByID_Inputs">
+ <xsd:element name="get_PayorBenefitDetailsByID_Inputs">
+ <xsd:complexType>
+ <xsd:sequence>
+  <xsd:element maxOccurs="1" minOccurs="1" ref="tns:PYR_BNFT_ID"/> 
+  </xsd:sequence>
+  </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="PYR_BNFT_ID" type="xsd:string"/> 
+  </xsd:schema>
+  </wsdl:types>
+ <wsdl:message name="getPayorBenefitDetailsByIDResponse">
+  <wsdl:part element="xsd1:PPI_get_PayorBenefitDetailsByIDArray" name="returnGetPayorBenefitDetailsByIDResults"/> 
+  </wsdl:message>
+ <wsdl:message name="getPayorBenefitDetailsByIDRequest">
+ <wsdl:part element="xsd2:get_PayorBenefitDetailsByID_Inputs" name="get_PayorBenefitDetailsByID_Inputs">
+  <wsdl:documentation>[no description supplied]</wsdl:documentation> 
+  </wsdl:part>
+  </wsdl:message>
+ <wsdl:portType name="ppi_payorDetail_svcs_v1DOCPortType">
+ <wsdl:operation name="getPayorBenefitDetailsByID">
+  <wsdl:input message="tns:getPayorBenefitDetailsByIDRequest" name="getPayorBenefitDetailsByIDRequest"/> 
+  <wsdl:output message="tns:getPayorBenefitDetailsByIDResponse" name="getPayorBenefitDetailsByIDResponse"/> 
+  </wsdl:operation>
+  </wsdl:portType>
+ <wsdl:binding name="ppi_payorDetail_svcs_v1DOCBinding" type="tns:ppi_payorDetail_svcs_v1DOCPortType">
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/> 
+ <wsdl:operation name="getPayorBenefitDetailsByID">
+  <soap:operation soapAction="" style="document"/> 
+ <wsdl:input>
+  <soap:body use="literal"/> 
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal"/> 
+  </wsdl:output>
+  </wsdl:operation>
+  </wsdl:binding>
+ <wsdl:service name="ppi_payorDetail_svcs_v1">
+ <wsdl:port binding="tns:ppi_payorDetail_svcs_v1DOCBinding" name="ppi_payorDetail_svcs_v1SOAPDocument">
+  <soap:address location="http://a3021011:10040/Apria_PPI_Svcs_V2/servlet/AxisServlet"/> 
+  </wsdl:port>
+  </wsdl:service>
+  </wsdl:definitions>

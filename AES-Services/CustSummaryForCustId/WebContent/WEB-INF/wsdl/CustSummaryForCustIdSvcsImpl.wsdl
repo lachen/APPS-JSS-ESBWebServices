@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://acis.svcs.apria.com" xmlns:impl="http://acis.svcs.apria.com" xmlns:intf="http://acis.svcs.apria.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema targetNamespace="http://acis.svcs.apria.com" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <element name="getCustSummaryForCustIdResponse">
+    <complexType>
+     <sequence>
+      <element name="getCustSummaryForCustIdReturn" nillable="true" type="impl:CustSummary"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getCustSummaryForCustId">
+    <complexType>
+     <sequence>
+      <element name="custId" nillable="true" type="xsd:string"/>
+      <element name="acisCPU" nillable="true" type="xsd:string"/>
+      <element name="returnMax" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="CustSummary">
+    <sequence>
+     <element name="custDOB" nillable="true" type="xsd:string"/>
+     <element name="custFirstName" nillable="true" type="xsd:string"/>
+     <element name="custLastName" nillable="true" type="xsd:string"/>
+     <element name="custMidItl" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSFaultType">
+    <sequence>
+     <element name="message" nillable="true" type="xsd:string"/>
+     <element name="type" nillable="true" type="xsd:string"/>
+     <element name="code" nillable="true" type="xsd:string"/>
+     <element name="severity" nillable="true" type="xsd:string"/>
+     <element name="state" nillable="true" type="xsd:string"/>
+     <element name="exceptionState" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="WSFaultType" nillable="true" type="impl:WSFaultType"/>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getCustSummaryForCustIdResponse">
+     <wsdl:part element="intf:getCustSummaryForCustIdResponse" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="getCustSummaryForCustIdRequest">
+     <wsdl:part element="intf:getCustSummaryForCustId" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="WSFaultType">
+     <wsdl:part element="intf:WSFaultType" name="fault"/>
+
+  </wsdl:message>
+
+   <wsdl:portType name="CustSummaryForCustIdSvcsImpl">
+     <wsdl:operation name="getCustSummaryForCustId">
+       <wsdl:input message="intf:getCustSummaryForCustIdRequest" name="getCustSummaryForCustIdRequest"/>
+
+       <wsdl:output message="intf:getCustSummaryForCustIdResponse" name="getCustSummaryForCustIdResponse"/>
+
+       <wsdl:fault message="intf:WSFaultType" name="WSFaultType"/>
+
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+   <wsdl:binding name="CustSummaryForCustIdSvcsImplSoapBinding" type="intf:CustSummaryForCustIdSvcsImpl">
+ <wsaw:UsingAddressing wsdl:required="false" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+
+     <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+     <wsdl:operation name="getCustSummaryForCustId">
+       <wsdlsoap:operation soapAction="getCustSummaryForCustId"/>
+
+       <wsdl:input name="getCustSummaryForCustIdRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="getCustSummaryForCustIdResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+       <wsdl:fault name="WSFaultType">
+         <wsdlsoap:fault name="WSFaultType" use="literal"/>
+
+      </wsdl:fault>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+   <wsdl:service name="CustSummaryForCustIdSvcsImplService">
+     <wsdl:port binding="intf:CustSummaryForCustIdSvcsImplSoapBinding" name="CustSummaryForCustIdSvcsImpl">
+       <wsdlsoap:address location="http://localhost:9080/CustSummaryForCustId/services/CustSummaryForCustIdSvcsImpl"/>
+
+    </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>

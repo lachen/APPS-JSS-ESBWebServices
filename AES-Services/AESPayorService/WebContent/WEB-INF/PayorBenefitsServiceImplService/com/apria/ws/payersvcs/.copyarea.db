@@ -1,0 +1,7 @@
+ClearCase CopyAreaDB|4
+Apria_src\Web Services\AES-Services\AESPayorService\WebContent\WEB-INF\PayorBenefitsServiceImplService\com\apria\ws\payersvcs
+2
+3
+b:deploy.wsdd|1|13df52cd825|ecb|7062044d|60a0f69b5ee54009901351a7b714556f|0
+d:undeploy.wsdd|1|13df52cd9c6|2c9|8a17c995|8f80b029553140aa8a041f3a406c0a17|0
+f:deploy.wsdd.bak|1|13df52cd8f2|f8d|4d681472|cdabfd59baa745cca3caf4ebfa66eea5|0

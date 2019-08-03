@@ -1,0 +1,59 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from PayorBenefitsServiceImplService WSDL service -->
+
+  <service name="PayorBenefitsServiceImpl" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://payersvcs.ws.apria.com"/>
+      <parameter name="wsdlServiceElement" value="PayorBenefitsServiceImplService"/>
+      <parameter name="schemaQualified" value="http://payersvcs.ws.apria.com"/>
+      <parameter name="wsdlServicePort" value="PayorBenefitsServiceImpl"/>
+      <parameter name="className" value="com.apria.ws.payersvcs.PayorBenefitsServiceImplSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="PayorBenefitsServiceImpl"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getPayorBenefitsByID" qname="operNS:getPayorBenefitsByID" xmlns:operNS="http://payersvcs.ws.apria.com" returnQName="retNS:getPayorBenefitsByIDReturn" xmlns:retNS="http://payersvcs.ws.apria.com" returnType="rtns:PayorBenefits" xmlns:rtns="http://payersvcs.ws.apria.com" soapAction="" >
+        <parameter qname="pns:payorId" xmlns:pns="http://payersvcs.ws.apria.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="isMstrAgrmtValid" qname="operNS:isMstrAgrmtValid" xmlns:operNS="http://payersvcs.ws.apria.com" returnQName="retNS:isMstrAgrmtValidReturn" xmlns:retNS="http://payersvcs.ws.apria.com" returnType="rtns:MasterAgreement" xmlns:rtns="http://payersvcs.ws.apria.com" soapAction="" >
+        <parameter qname="pns:mstrAgrmtId" xmlns:pns="http://payersvcs.ws.apria.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="isRthmeAgrmtValid" qname="operNS:isRthmeAgrmtValid" xmlns:operNS="http://payersvcs.ws.apria.com" returnQName="retNS:isRthmeAgrmtValidReturn" xmlns:retNS="http://payersvcs.ws.apria.com" returnType="rtns:RthmeAgreement" xmlns:rtns="http://payersvcs.ws.apria.com" soapAction="" >
+        <parameter qname="pns:rthmeAgrmtId" xmlns:pns="http://payersvcs.ws.apria.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="isMstrAgrmtValid getPayorBenefitsByID isRthmeAgrmtValid"/>
+
+      <typeMapping
+        xmlns:ns="http://payersvcs.ws.apria.com"
+        qname="ns:PayorBenefits"
+        type="java:com.apria.ws.payersvcs.PayorBenefits"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://payersvcs.ws.apria.com"
+        qname="ns:RthmeAgreement"
+        type="java:com.apria.ws.payersvcs.RthmeAgreement"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://payersvcs.ws.apria.com"
+        qname="ns:MasterAgreement"
+        type="java:com.apria.ws.payersvcs.MasterAgreement"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

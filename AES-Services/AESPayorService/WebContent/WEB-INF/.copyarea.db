@@ -1,0 +1,20 @@
+ClearCase CopyAreaDB|4
+Apria_src\Web Services\AES-Services\AESPayorService\WebContent\WEB-INF
+2
+10
+a:payor.wsdl|1|13df52cb421|190b|cf68b2d|ddc9ac1847aa449199812224d37bc78c|0
+24:PayorBenefitsServiceImpl_mapping.xml|1|13df52cb4ad|26dd|997c4982|755411f406f4470db9fce6deabc47733|0
+b:attachments|2|0|0|0|dfa2a75821074f6ca891b740a7e4514b|0
+f:webservices.xml|1|13df52cb6a1|428|9e7d73be|c57111d63002498aa8525ca9bf83b7d7|0
+12:server-config.wsdd|1|13df52cb580|144e|39bb25b1|4b397e8bcb194bbebc541a796c49c17b|0
+f:ibm-web-ext.xmi|1|13df52cb25a|1b1|635e9554|067fcd26e1e7489691a673cfc241ce3a|0
+1d:EligibilityCheckerAccess.wsdl|1|13df52cb106|140a|5b37779b|73eea0273c4747acab5df0f4ea6e5cd0|0
+3:lib|2|0|0|0|6c920e05c92d4fe3b941ed9d6b70d844|0
+17:ibm-webservices-ext.xmi|1|13df52cb386|210|2828b29a|63da4dd912e64c5381722813e361e9cb|0
+a:atest.html|1|13df52cafb4|73|8ed1e88|8449bbc1b3a3473da80b8f9766eaaf03|0
+f:ibm-web-bnd.xmi|1|13df52cb190|1d9|2b6b9902|572854d406954f64954b215b91f35162|0
+17:ibm-webservices-bnd.xmi|1|13df52cb2fe|219|2da8b4b2|825c571a4ea04974a41f73296063b233|0
+1f:PayorBenefitsServiceImplService|2|0|0|0|68ec82c987bf427781ec94269e3e24b2|0
+7:classes|2|0|0|0|4baa19b76a144f51aaa39f59d62bf578|0
+4:wsdl|2|0|0|0|4a4ca4e130664292b1ad901089c54f44|0
+7:web.xml|1|13df52cb60f|92b|538a1f0e|6646ca56931043b6ae710d9a558ad1ce|0

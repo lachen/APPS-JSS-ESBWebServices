@@ -1,0 +1,18 @@
+ClearCase CopyAreaDB|4
+Apria_src\Web Services\AES-Services\CustSummaryForCustId\src\com\apria\svcs\acis
+2
+e
+16:WSFaultType_Deser.java|1|13df52d1437|24c|d451b365|6f67b676f2c547168f9cdc7a445f6dc6|0
+14:WSFaultType_Ser.java|1|13df52d17f0|14d1|4001ee6b|1dfeb873100842f6a69b1f0001a70cb0|0
+10:WSFaultType.java|1|13df52d18f5|b01|10db1ecb|7979f2f6f5704c0a91556892fc59278a|0
+b:Logger.java|1|13df52d12e3|978|f22da2c4|9377e4533df04662a2aab1cc5966e59c|0
+1b:WSFaultType_DeserProxy.java|1|13df52d157f|773|317b3de3|442b91985dd840afa196591aca323317|0
+14:CustSummary_Ser.java|1|13df52d0dc8|1067|beadbcdb|3c673bea26b34505a746372a8485a9df|0
+25:CustSummaryForCustIdSvcsImpl_SEI.java|1|13df52d100d|141|6959743e|63e52add6b854445a4f54a1961bca0b6|0
+16:CustSummary_Deser.java|1|13df52d0c32|9f5|da6afc9f|756a4d4a4be543959733d0f7ba75fd3c|0
+17:CustSummary_Helper.java|1|13df52d0d07|bf8|1831c137|909058867dbd4f8e82743a50322bba29|0
+e:Constants.java|1|13df52d0b6d|43b|19b3276d|137197f4585242b28b97c33ebf015007|0
+10:CustSummary.java|1|13df52d0e94|e6f|ecb60ee7|ac4fcbf560f74fefbe113788816c9435|0
+17:WSFaultType_Helper.java|1|13df52d16e7|f67|e310dce0|759ac73dc84e4b65860fc96face5072c|0
+1d:CustSummaryForCustIdSvcs.java|1|13df52d0f51|4e7|cf086a12|bb406bb181ee48c28082e50815f9d635|0
+21:CustSummaryForCustIdSvcsImpl.java|1|13df52d1150|2152|11220771|f9be8f8083b84124841725b66bd9d7e4|0

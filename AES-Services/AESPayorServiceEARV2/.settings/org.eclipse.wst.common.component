@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="AESPayorServiceEARV2">
+        <wb-resource deploy-path="/" source-path="/"/>
+        <dependent-module deploy-path="/" handle="module:/resource/AESPayorService/AESPayorService">
+            <dependent-object>WebModule_1248454744636</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,24 @@
+ClearCase CopyAreaDB|4
+Apria_src\Web Services\AES-Services\AESPayorService\src\com\apria\ws\payersvcs
+2
+14
+12:PayorBenefits.java|1|13df52ca47d|123e|89f14986|0431efc07a044582bdae6dba22f8e718|0
+14:MasterAgreement.java|1|13df52c9fc9|3aa|2e7c38c9|00b77bfa09a743b5a0fcce11271172a0|0
+18:PayorBenefitsLogger.java|1|13df52ca54f|ef|69ae4756|cf7dd6db3938435b8c54ee6d0c99ed81|0
+17:RthmeAgreement_Ser.java|1|13df52ca920|12a7|35626a71|403f60183ebb426d8925af150bc9cbf9|0
+15:PayorBenefiesDAO.java|1|13df52ca17e|170e|14e6e79a|c644e51f4bdb41929e3ac4f52761d031|0
+19:PayorBenefits_Helper.java|1|13df52ca306|2cb5|aae29eaa|3210cfabb9604558a2b96a373e61d9ea|0
+19:RthmeAgreement_Deser.java|1|13df52ca7a7|b1d|be236202|d0e3d0766c0d4437adfda16ece1fa7d3|0
+1a:MasterAgreement_Deser.java|1|13df52c9d57|b3b|d4b26ea0|1d75ed96f2e0473aa515ccb4a7341176|0
+16:PayorBenefits_Ser.java|1|13df52ca3c6|4712|17f920df|74afae7eade649c5b0eba3ca22eb3292|0
+b:DBTest.java|1|13df52c9c79|63e|d5c9b07e|6fd626b4655b4e7c9a03df36b35372db|0
+e:TestPayor.java|1|13df52cab2e|148|c9be6416|be532f94747b413d9fcad5e58f9d011b|0
+1d:PayorBenefitsServiceImpl.java|1|13df52ca6e1|88f|f4f7b3f7|311d9d2968374fd4b7430d73c0b16427|0
+19:PayorBenefitsService.java|1|13df52ca5fa|142|6d196d6e|68baa5e891e346baaccf79d91a0a0fb5|0
+13:RthmeAgreement.java|1|13df52ca9ed|379|e3522309|54a624e686ef43258432ff6922ceadce|0
+1a:RthmeAgreement_Helper.java|1|13df52ca87d|c7c|16cef333|fb733455e40645eb83d72e225778ffe1|0
+18:MasterAgreement_Ser.java|1|13df52c9f02|12c2|148775d2|de0151cdbb434d0f9f26ddce6266fcb1|0
+16:RthmeAgreementDAO.java|1|13df52caa8f|cf4|b758cbea|c1e6fd43892843b0bacc9b77eea55b56|0
+17:MasterAgreementDAO.java|1|13df52ca0aa|d4e|f887eb69|1febad7a887946a585c0d2ecc7794729|0
+18:PayorBenefits_Deser.java|1|13df52ca234|2504|486c07fc|4c89870ce27b4fd6b2f4c32490efd778|0
+1b:MasterAgreement_Helper.java|1|13df52c9e1d|c97|7ff6fe7f|4b70a89c9ddf416abf682f61d921477f|0

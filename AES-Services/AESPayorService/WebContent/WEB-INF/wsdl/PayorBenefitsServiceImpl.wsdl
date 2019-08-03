@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://payersvcs.ws.apria.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://payersvcs.ws.apria.com" xmlns:intf="http://payersvcs.ws.apria.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.3
+Built on Oct 05, 2005 (05:23:37 EDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://payersvcs.ws.apria.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getPayorBenefitsByID">
+    <complexType>
+     <sequence>
+      <element name="payorId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getPayorBenefitsByIDResponse">
+    <complexType>
+     <sequence>
+      <element name="getPayorBenefitsByIDReturn" type="impl:PayorBenefits"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="PayorBenefits">
+    <sequence>
+     <element name="pyr_bnft_nm" nillable="true" type="xsd:string"/>
+     <element name="rptg_pyr_bnft_in" nillable="true" type="xsd:string"/>
+     <element name="tlphn_prefix_nr" nillable="true" type="xsd:string"/>
+     <element name="tlphn_last_nr" nillable="true" type="xsd:string"/>
+     <element name="st_cd" nillable="true" type="xsd:string"/>
+     <element name="zip_cd" nillable="true" type="xsd:string"/>
+     <element name="mstr_agrmt_id" nillable="true" type="xsd:string"/>
+     <element name="city_nm" nillable="true" type="xsd:string"/>
+     <element name="agrmt_id" nillable="true" type="xsd:string"/>
+     <element name="addr_line_1_tx" nillable="true" type="xsd:string"/>
+     <element name="mstr_agrmt_unq_sk" nillable="true" type="xsd:string"/>
+     <element name="agrmt_nm" nillable="true" type="xsd:string"/>
+     <element name="pyr_bnft_addr_unq_sk" nillable="true" type="xsd:string"/>
+     <element name="pyr_bnft_sub_grp_unq_sk" nillable="true" type="xsd:string"/>
+     <element name="mstr_agrmt_nm" nillable="true" type="xsd:string"/>
+     <element name="tlphn_area_nr" nillable="true" type="xsd:string"/>
+     <element name="pyr_bnft_unq_sk" nillable="true" type="xsd:string"/>
+     <element name="pyr_bnft_id" nillable="true" type="xsd:string"/>
+     <element name="rptg_pyr_bnft_id" nillable="true" type="xsd:string"/>
+     <element name="rptg_pyr_bnft_nm" nillable="true" type="xsd:string"/>
+     <element name="addr_line_2_tx" nillable="true" type="xsd:string"/>
+     <element name="zip_ext_cd" nillable="true" type="xsd:string"/>
+     <element name="rthme_agrmt_unq_sk" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="isMstrAgrmtValid">
+    <complexType>
+     <sequence>
+      <element name="mstrAgrmtId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="isMstrAgrmtValidResponse">
+    <complexType>
+     <sequence>
+      <element name="isMstrAgrmtValidReturn" type="impl:MasterAgreement"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="MasterAgreement">
+    <sequence>
+     <element name="isMstrAgrmtValid" nillable="true" type="xsd:boolean"/>
+     <element name="mstrAgrmtId" nillable="true" type="xsd:string"/>
+     <element name="mstrAgrmtNm" nillable="true" type="xsd:string"/>
+     <element name="mstrAgrmtUnqSk" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="isRthmeAgrmtValid">
+    <complexType>
+     <sequence>
+      <element name="rthmeAgrmtId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="isRthmeAgrmtValidResponse">
+    <complexType>
+     <sequence>
+      <element name="isRthmeAgrmtValidReturn" type="impl:RthmeAgreement"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="RthmeAgreement">
+    <sequence>
+     <element name="agrmtNm" nillable="true" type="xsd:string"/>
+     <element name="isRthmeAgrmtValid" nillable="true" type="xsd:boolean"/>
+     <element name="agrmtId" nillable="true" type="xsd:string"/>
+     <element name="agrmtUnqSk" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="isMstrAgrmtValidRequest">
+
+      <wsdl:part element="intf:isMstrAgrmtValid" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="isRthmeAgrmtValidRequest">
+
+      <wsdl:part element="intf:isRthmeAgrmtValid" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPayorBenefitsByIDResponse">
+
+      <wsdl:part element="intf:getPayorBenefitsByIDResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="isMstrAgrmtValidResponse">
+
+      <wsdl:part element="intf:isMstrAgrmtValidResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPayorBenefitsByIDRequest">
+
+      <wsdl:part element="intf:getPayorBenefitsByID" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="isRthmeAgrmtValidResponse">
+
+      <wsdl:part element="intf:isRthmeAgrmtValidResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="PayorBenefitsServiceImpl">
+
+      <wsdl:operation name="getPayorBenefitsByID">
+
+         <wsdl:input message="intf:getPayorBenefitsByIDRequest" name="getPayorBenefitsByIDRequest"/>
+
+         <wsdl:output message="intf:getPayorBenefitsByIDResponse" name="getPayorBenefitsByIDResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isMstrAgrmtValid">
+
+         <wsdl:input message="intf:isMstrAgrmtValidRequest" name="isMstrAgrmtValidRequest"/>
+
+         <wsdl:output message="intf:isMstrAgrmtValidResponse" name="isMstrAgrmtValidResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isRthmeAgrmtValid">
+
+         <wsdl:input message="intf:isRthmeAgrmtValidRequest" name="isRthmeAgrmtValidRequest"/>
+
+         <wsdl:output message="intf:isRthmeAgrmtValidResponse" name="isRthmeAgrmtValidResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="PayorBenefitsServiceImplSoapBinding" type="intf:PayorBenefitsServiceImpl">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getPayorBenefitsByID">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPayorBenefitsByIDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPayorBenefitsByIDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isMstrAgrmtValid">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isMstrAgrmtValidRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isMstrAgrmtValidResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isRthmeAgrmtValid">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isRthmeAgrmtValidRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isRthmeAgrmtValidResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="PayorBenefitsServiceImplService">
+
+      <wsdl:port binding="intf:PayorBenefitsServiceImplSoapBinding" name="PayorBenefitsServiceImpl">
+
+         <wsdlsoap:address location="http://localhost:9081/AESPayorService/services/PayorBenefitsServiceImpl"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.etools.webservice.wsext:WsExtension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.etools.webservice.wsext="http://www.ibm.com/websphere/appserver/schemas/5.0.2/wsext.xmi" xmi:id="WsExtension_1262036197406">
+  <wsDescExt xmi:id="WsDescExt_1262036197406" wsDescNameLink="CustSummaryForCustIdSvcsService">
+    <pcBinding xmi:id="PcBinding_1262036197406" pcNameLink="CustSummaryForCustIdSvcs"/>
+  </wsDescExt>
+  <wsDescExt xmi:id="WsDescExt_1262127727062" wsDescNameLink="CustSummaryForCustIdSvcsImplService">
+    <pcBinding xmi:id="PcBinding_1262127727062" pcNameLink="CustSummaryForCustIdSvcsImpl"/>
+  </wsDescExt>
+</com.ibm.etools.webservice.wsext:WsExtension>

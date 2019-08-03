@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://elgbtysvcs.svcs.apria.com" xmlns:intf="http://elgbtysvcs.svcs.apria.com" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://elgbtysvcs.svcs.apria.com">
+<!--WSDL created by Apache Axis version: 1.3
+Built on Oct 05, 2005 (05:23:37 EDT)-->
+ <wsdl:types>
+  <schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://elgbtysvcs.svcs.apria.com">
+   <element name="checkEligibility">
+    <complexType>
+     <sequence>
+      <element name="elgbtyInput" type="impl:EligibilityCheckInput"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="Product">
+    <sequence>
+     <element name="hcpc" nillable="true" type="xsd:string"/>
+     <element name="replacementFlag" nillable="true" type="xsd:string"/>
+     <element name="productCategory" nillable="true" type="xsd:string"/>
+     <element name="existingSvcFlg" nillable="true" type="xsd:string"/>
+     <element name="repairFlag" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfProduct">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:Product"/>
+    </sequence>
+   </complexType>
+   <complexType name="EligibilityCheckInput">
+    <sequence>
+     <element name="zipCode" nillable="true" type="xsd:string"/>
+     <element name="buId" nillable="true" type="xsd:string"/>
+     <element name="cbaId" nillable="true" type="xsd:string"/>
+     <element name="payorChangeType" nillable="true" type="xsd:string"/>
+     <element name="products" nillable="true" type="impl:ArrayOfProduct"/>
+     <element name="serviceDate" nillable="true" type="xsd:string"/>
+     <element name="dabccId" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="checkEligibilityResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="checkEligibilityReturn" type="impl:EligibilityStatus"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="EligibilityStatus">
+    <sequence>
+     <element name="elgbtyStatusCode" nillable="true" type="xsd:string"/>
+     <element name="elgbtyStatusMessage" nillable="true" type="xsd:string"/>
+     <element name="hcpc" nillable="true" type="xsd:string"/>
+     <element name="productCategory" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSFaultType">
+    <sequence>
+     <element name="message" nillable="true" type="xsd:string"/>
+     <element name="code" nillable="true" type="xsd:string"/>
+     <element name="severity" nillable="true" type="xsd:string"/>
+     <element name="exceptionState" nillable="true" type="xsd:string"/>
+     <element name="type" nillable="true" type="xsd:string"/>
+     <element name="state" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="fault" type="impl:WSFaultType"/>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="checkEligibilityRequest">
+
+      <wsdl:part element="intf:checkEligibility" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSFaultType">
+
+      <wsdl:part element="intf:fault" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="checkEligibilityResponse">
+
+      <wsdl:part element="intf:checkEligibilityResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="EligibilityCheckerAccess">
+
+      <wsdl:operation name="checkEligibility">
+
+         <wsdl:input message="intf:checkEligibilityRequest" name="checkEligibilityRequest"/>
+
+         <wsdl:output message="intf:checkEligibilityResponse" name="checkEligibilityResponse"/>
+
+         <wsdl:fault message="intf:WSFaultType" name="WSFaultType"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="EligibilityCheckerAccessSoapBinding" type="intf:EligibilityCheckerAccess">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="checkEligibility">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="checkEligibilityRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="checkEligibilityResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSFaultType">
+
+            <wsdlsoap:fault name="WSFaultType" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="EligibilityCheckerAccessService">
+
+      <wsdl:port binding="intf:EligibilityCheckerAccessSoapBinding" name="EligibilityCheckerAccess">
+
+         <wsdlsoap:address location="http://localhost:9080/CBPetSvcs/services/EligibilityCheckerAccess"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
