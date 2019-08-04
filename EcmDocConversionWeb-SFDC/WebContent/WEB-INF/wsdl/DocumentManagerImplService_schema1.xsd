@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema targetNamespace="http://ecm.services.web.apria.com/" version="1.0" xmlns:tns="http://ecm.services.web.apria.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Exception" type="tns:Exception"/>
+
+  <xs:element name="getEcmDocument" type="tns:getEcmDocument"/>
+
+  <xs:element name="getEcmDocumentResponse" type="tns:getEcmDocumentResponse"/>
+
+  <xs:complexType name="getEcmDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:docRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="docRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="convertType" type="xs:string"/>
+      <xs:element minOccurs="0" name="documentId" type="xs:string"/>
+      <xs:element minOccurs="0" name="itemType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getEcmDocumentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:docResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="docResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="imageBytes" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="mimeType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

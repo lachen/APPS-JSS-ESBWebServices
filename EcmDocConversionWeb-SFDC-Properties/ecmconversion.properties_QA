@@ -1,0 +1,13 @@
+###
+### Base configuration file
+### Contains global configuration properties and location of
+### application specific configuration files or database settings.
+###
+
+#Content manager settings
+cmb.generic.service.url=http://tlkfrmaq1.apria.com:12137/CMBGenericWebService/services/CMBGenericWebService
+db.cm.database=CMLT01
+db.cm.username=svc_ecm_qa_rw
+db.cm.password=apria!qa!$
+
+fax.dir.temp.cache=/apps/mobile/faximages

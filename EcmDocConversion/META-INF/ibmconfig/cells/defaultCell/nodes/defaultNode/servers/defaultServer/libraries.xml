@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libraries:Library xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:libraries="http://www.ibm.com/websphere/appserver/schemas/5.0/libraries.xmi" xmi:id="Library_1360193479094" name="JAX-RS [JAX-RS Library]">
+  <classPath>/apps/mobile/jaxrs</classPath>
+  <classPath>/apps/mobile/jaxrs/jackson</classPath>
+</libraries:Library>
